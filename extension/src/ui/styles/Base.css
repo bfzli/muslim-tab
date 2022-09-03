@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+    --secondary: #fff;
+    --border: rgba(168, 179, 207, 0.2);
+    --border: rgba(168, 179, 207, 0.2);
+    --hover: #383e4760;
+    --active: rgba(168, 179, 207, 0.12156862745098039);
+    --transition: all ease-in-out 0.3s;
+    --radius: 0.75em;
+    --input: #1c1f26;
+    --modal: #4d535a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background: #fafafb !important;
+    font-size: 0.95em;
+    overflow: hidden;
+    font-family: "DM Sans" !important;
+}
