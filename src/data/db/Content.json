@@ -24,7 +24,7 @@
         "linkToReference": ""
     },
     {
-        "category": "quote" ,
+        "category": "quote",
         "language": "english",
         "content": "The hijrah to Allah includes abandoning what He hates and doing what He loves and accepts.",
         "arabic": "",
@@ -32,7 +32,7 @@
         "linkToReference": ""
     },
     {
-        "category": "hadith" ,
+        "category": "hadith",
         "language": "shqip",
         "content": "Një namaz në këtë xhaminë time është më i vlefshëm sesa një mijë namaze jashtë saj, përveç në Xhaminë e Qabesë.",
         "arabic": "",
@@ -40,7 +40,7 @@
         "linkToReference": "https://hadithet.com/buhariu/1190"
     },
     {
-        "category": "quote" ,
+        "category": "quote",
         "language": "shqip",
         "content": "Krejt titujt në këtë botë me ti dhënë nuk vlejnë sa titulli që ta ka dhënë Allahu që je Musliman.",
         "arabic": "",
@@ -48,11 +48,1962 @@
         "linkToReference": ""
     },
     {
-        "category": "verse" ,
+        "category": "verse",
         "language": "shqip",
         "content": "Ti bën durim në vendimin e Zotit tënd, se ti je nën mbikëqyrjen Tonë.",
         "arabic": "",
         "reference": "Ajeti 48 i Kaptinës At-Tur",
         "linkToReference": ""
+    },
+    {
+        "content": "None of you will have faith till he loves me more than his father, his children and all mankind.",
+        "reference": "Sahih al-Bukhari 15",
+        "linkToReference": "https://sunnah.com/bukhari:15",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "If a woman puts on perfume and passes by people so that they can smell her fragrance, then she is such and such, and he spoke sternly meaning an adulteress.",
+        "reference": "Imam Ahmad 19212 & al-Nasaa’i 5126",
+        "linkToReference": "",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "I seek the forgiveness of Allah and repent to Him one hundred times each day.",
+        "reference": "Sahih al-Bukhari 6307",
+        "linkToReference": "https://sunnah.com/bukhari:6307",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "While a man was on the way, he found a thorny branch of a tree on the way and removed it. Allah thanked him for that deed and forgave him (his sins).",
+        "reference": "Sahih al-Bukhari 2472",
+        "linkToReference": "https://sunnah.com/bukhari:2472",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "None of you will have faith till he loves me more than his father, his children, and all mankind.",
+        "reference": "Sahih al-Bukhari 15",
+        "linkToReference": "https://sunnah.com/bukhari:15",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Part of the perfection of one's Islam is his leaving that which does not concern him.",
+        "reference": "Al-Nawawi's Forty content 12",
+        "linkToReference": "https://sunnah.com/nawawi40:12",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Beware of suspicion, for suspicion is the falsest of speech.",
+        "reference": "at-Tirmidhi 1988",
+        "linkToReference": "https://sunnah.com/tirmidhi:1988",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever protects his brothers honor, Allah protects his face from the Fire on the Day of Resurrection.",
+        "reference": "at-Tirmidhi 1931",
+        "linkToReference": "https://sunnah.com/tirmidhi:1931",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Do not cut off one another, nor desert one another, nor hate one another, nor envy one another. Be you, O worshippers of Allah, brothers. It is not lawful for the Muslim to shun his brother for more than three (days).",
+        "reference": "at-Tirmidhi 1935",
+        "linkToReference": "https://sunnah.com/tirmidhi:1935",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Allah will not look, on the Day of Resurrection, at a person who drags his Izar (behind him) out of pride and arrogance.",
+        "reference": "al-Bukhari 5788",
+        "linkToReference": "ttps://sunnah.com/bukhari:5788",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "If you were to rely upon Allah with the reliance He is due, you would be given provision like the birds: They go out hungry in the morning and come back with full bellies in the evening.",
+        "reference": "Sunan Ibn Majah 4164",
+        "linkToReference": "https://sunnah.com/ibnmajah:4164,2021-10-02T16:52:28.000Z",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "He who performed ablution well, his sins would come out from his body, even coming out from under his nails.",
+        "reference": "Sahih Muslim 245",
+        "linkToReference": "https://sunnah.com/muslim:245,2021-10-04T12:25:34.000Z",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever fasts Ramadan and follows it with six days of Shawwaal, it will be as if he fasted for a lifetime.",
+        "reference": "Sunan Ibn Majah 1716",
+        "linkToReference": "https://sunnah.com/ibnmajah:1716",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The strong man is not the one who can wrestle, but it is the one who can control himself when he is angry.",
+        "reference": "Sahih Muslim 2609a",
+        "linkToReference": "https://sunnah.com/muslim:2609a",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "No one is humble for the sake of Allah, but Allah will raise him in status.",
+        "reference": "Sahih Muslim 2588",
+        "linkToReference": "https://sunnah.com/muslim:2588",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever fasts Ramadan and follows it with six days of Shawwaal, it will be as if he fasted for a lifetime.",
+        "reference": "Sunan Ibn Majah 1716",
+        "linkToReference": "https://sunnah.com/ibnmajah:1716",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The strong man is not the one who can wrestle, but it is the one who can control himself when he is angry.",
+        "reference": "Sahih Muslim 2609a",
+        "linkToReference": "https://sunnah.com/muslim:2609a",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Beware of suspicion, for suspicion is the falsest of speech.",
+        "reference": "at-Tirmidhi 1988",
+        "linkToReference": "https://sunnah.com/tirmidhi:1988",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "He who asks Allah for martyrdom, Allah will raise him to the high status of the martyrs, even if he dies on his bed.",
+        "reference": "Riyad as-Salihin 57",
+        "linkToReference": "https://sunnah.com/riyadussalihin:57",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The most hated person in the sight of Allah, is the most quarrelsome person.",
+        "reference": "Sahih al-Bukhari 7188",
+        "linkToReference": "https://sunnah.com/bukhari:7188",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever guides others to do good will have a reward like that of the person who does the good deed.",
+        "reference": "Al-Adab Al-Mufrad 242",
+        "linkToReference": "https://sunnah.com/adab:242",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "When Allah wishes good for someone, He bestows upon him the understanding of Deen.",
+        "reference": "Riyad as-Salihin 1376",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1376",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "A true believer does not taunt or curse or abuse or talk indecently.",
+        "reference": "Riyad as-Salihin 1734",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1734",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "He who makes peace between the people by inventing good information or saying good things, is not a liar.",
+        "reference": "Sahih al-Bukhari 2692",
+        "linkToReference": "https://sunnah.com/bukhari:2692",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever harms (others), Allah will harm him, and whoever causes hardship (to others) Allah will cause hardship to him.",
+        "reference": "Sunan Ibn Majah 2342",
+        "linkToReference": "https://sunnah.com/ibnmajah:2342",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "If you hear that it (the plague) is in a land, do not go there, and if it breaks out in a land where you are, do not leave, fleeing from it.",
+        "reference": "Sahih al-Bukhari 5730",
+        "linkToReference": "https://sunnah.com/bukhari:5730",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Have taqwa (fear) of Allah wherever you may be, and follow up a bad deed with a good deed which will wipe it out, and behave well towards the people.",
+        "reference": "at-Tirmidhi 1987",
+        "linkToReference": "https://sunnah.com/tirmidhi:1987",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever prayed at night in it (the month of Ramadan) out of sincere Faith and hoping for a reward from Allah, then all his previous sins will be forgiven.",
+        "reference": "Sahih al-Bukhari 2008",
+        "linkToReference": "https://sunnah.com/bukhari:2008",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Aisha, verily Allah is kind and He loves kindness and confers upon kindness which he does not confer upon severity and does not confer upon anything else besides it (kindness).",
+        "reference": "Sahih Muslim 2594a",
+        "linkToReference": "https://sunnah.com/muslim:2594a",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Do not argue with your brother, do not joke excessively with him, do not make a promise to him then break it",
+        "reference": "at-Tirmidhi 1995",
+        "linkToReference": "https://sunnah.com/tirmidhi:1995",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "If a man loves his brother, let him tell him that he loves him.",
+        "reference": "Sunan Abi Dawud 5124",
+        "linkToReference": "https://sunnah.com/abudawud:5124",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Piety is good manner, and sin is that which creates doubt and you do not like people to know of it.",
+        "reference": "Riyad as-Salihin 589",
+        "linkToReference": "https://sunnah.com/riyadussalihin:589",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Being honorable is wealth and noble character is piety.",
+        "reference": "Sunan Ibn Majah 4219",
+        "linkToReference": "https://sunnah.com/ibnmajah:4219",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Charity does not decrease wealth.",
+        "reference": "Sahih Muslim 2588",
+        "linkToReference": "https://sunnah.com/muslim:2588",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "I have only been sent to perfect good characteristics.",
+        "reference": "Musnad Ahmad 8595",
+        "linkToReference": "https://sunnah.com/urn/516220",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "A good word is sadaqah. also A good deed is sadaqah.",
+        "reference": "Sahih al-Bukhari 2989",
+        "linkToReference": "https://sunnah.com/bukhari:2989",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The person who goes about with calumnies will never enter Jannah.",
+        "reference": "Riyad as-Salihin 1536",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1536",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The blood, honour and property of a Muslim is inviolable for another Muslim.",
+        "reference": "Riyad as-Salihin 1527",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1527",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "He who believes in Allah and the Last Day must either speak good or remain silent.",
+        "reference": "Riyad as-Salihin 1511",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1511",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever prays the two cool prayers (Asr and Fajr) will go to Paradise.",
+        "reference": "Sahih al-Bukhari 574",
+        "linkToReference": "https://sunnah.com/bukhari:574",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The believer is not given to cursing, slandering or obscene and foul speech.",
+        "reference": "Bulugh al-Maram 1503",
+        "linkToReference": "https://sunnah.com/urn/2118170",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Shall I not tell you about the people of Paradise? Every weak and oppressed one.",
+        "reference": "Sunan Ibn Majah 4116",
+        "linkToReference": "https://sunnah.com/ibnmajah:4116",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "How bad is the food of a feast to which the rich are invited and from which the poor are excluded.",
+        "reference": "Sunan Ibn Majah 1913",
+        "linkToReference": "https://sunnah.com/ibnmajah:1913",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whosoever gives me a guarantee to safeguard what is between his jaws and what is between his legs, I shall guarantee him Jannah.",
+        "reference": "Riyad as-Salihin 1513",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1513",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "If you were to rely upon Allah with the reliance He is due, you would be given provision like the birds, They go out hungry in the morning and come back with full bellies in the evening.",
+        "reference": "Sunan Ibn Majah 4164",
+        "linkToReference": "https://sunnah.com/ibnmajah:4164",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Whoever misses Jumuah three times out of negligence, Allah will place a seal over his heart.",
+        "reference": "Sunan an-Nasa'i 1378",
+        "linkToReference": "https://sunnah.com/nasai/14/4",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "A woman is taken as spouse for four reasons, namely her property, her ancestry, her beauty and her religion (her piety). So, get married to the religious one or else you will be a loser.",
+        "reference": "Sahih Muslim 1466",
+        "linkToReference": "https://sunnah.com/muslim:1466",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "One who performs Isha prayer in congregation, is as if he has performed Salat for half of the night. And one who performs the Fajr prayer in congregation, is as if he has performed Salat the whole night.",
+        "reference": "Riyad as-Salihin 1071",
+        "linkToReference": "https://sunnah.com/riyadussalihin:1071",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Do not cut off one another, nor desert one another, nor hate one another, nor envy one another. Be you , O worshippers o Allah, brothers. It is not lawful for the Muslim to shun his brother for more than three (days).",
+        "reference": "at-Tirmidhi 1935",
+        "linkToReference": "https://sunnah.com/tirmidhi:1935",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Have taqwa (fear) of Allah wherever you may be, and follow up a bad deed with a good deed which will wipe it out, and behave well towards the people.",
+        "reference": "Forty content of an-Nawawi",
+        "linkToReference": "https://sunnah.com/nawawi40:18",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "Shall I not tell about the people of the Hellfire? Every one who is harsh, haughty, disdainful and arrogant.",
+        "reference": "Sunan Ibn Majah 4116",
+        "linkToReference": "https://sunnah.com/ibnmajah:4116",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "content": "The first matter that the slave will be brought to account for on the Day of Judgment is the prayer. If it is sound, then the rest of his deeds will be sound. And if it is bad, then the rest of his deeds will be bad.",
+        "reference": "Sunan al-Tirmidhī 413",
+        "linkToReference": "https://www.abuaminaelias.com/dailycontentonline/2012/07/11/first-deed-salat",
+        "language": "english",
+        "arabic": "",
+        "category": "hadith"
+    },
+    {
+        "linkToReference": "",
+        "content": "Or were they created by nothing, or are they their own creators?",
+        "arabic": "أَمْ خُلِقُوا۟ مِنْ غَيْرِ شَىْءٍ أَمْ هُمُ ٱلْخَـٰلِقُونَ",
+        "category": "verse",
+        "reference": "52:35",
+        "language": "english"
+    },
+    {
+        "content": "Atij që falet natën gjatë Ramazanit, duke besuar dhe llogaritur në shpërblimin e Allahut, i falen mëkatet e së kaluarës.",
+        "reference": "Hadithi 2008 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/2008",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Nuk ka besuar asnjëri prej jush, derisa tek ai të jem më i dashur sesa prindi e fëmija i tij, si dhe krejt njerëzimi.",
+        "reference": "Hadithi 15 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/15",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Disa prej shenjave të Kiametit janë: pakësimi i diturisë, rrënjosja e i injorancës, konsumimi i alkoolit dhe përhapja e zinasë.",
+        "reference": "Hadithi 80 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/80",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Mos gënjeni për mua, se ai që gënjen për mua, do të hyjë në Zjarr.",
+        "reference": "Hadithi 106 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/106",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Lehtësoni e mos vështirësoni, përgëzoni e mos trembni.",
+        "reference": "Hadithi 68 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/69",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Ai që thotë për mua atë që nuk kam thënë, le të përgatitet për ulësen e tij në Zjarr.",
+        "reference": "Hadithi 109 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/109",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Imani është gjashtëdhjetë e disa pjesë dhe turpi është pjesë e imanit.",
+        "reference": "Hadithi 9 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/9",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Një njeri pa një qen duke ngrënë (lëpirë) dhé nga etja. Kështu, e mori këpucën e vet, e mbushi me ujë dhe ia shoi etjen qenit. Allahu i ishte mirënjohës për veprën, prandaj e futi në Xhenet.",
+        "reference": "Hadithi 173 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/173",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Kur të hyjë muaji Ramazan, hapen portat e qiellit, mbyllen dyert e Xhehenemit dhe prangosen shejtanët.",
+        "reference": "Hadithi 1899 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/1899",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Allahu nuk ka nevojë që të lërë ushqimin dhe pijen ai që nuk i lë fjalët dhe punët e këqija (gjatë agjërimit).",
+        "reference": "Hadithi 1903 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/1903",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Hani syfyr, sepse në syfyr ka begati.",
+        "reference": "Hadithi 1923 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/1923",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse ha e pi nga harresa, le ta plotësojë agjërimin, se Allahu e ka ushqyer dhe i ka dhënë të pijë.",
+        "reference": "Hadithi 1933 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/1933",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Kushdo që u bën kurthe banorëve të Medinës, do të shkrihet ashtu siç shkrihet kripa në ujë.",
+        "reference": "Hadithi 1877 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/1877",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Pjesa mes shtëpisë dhe minberit tim është një prej kopshteve të Xhenetit, ndërsa minberi im është mbi Hauzin tim.",
+        "reference": "Hadithi 1888 i Buhariut",
+        "linkToReference": "https://hadithet.com/buhariu/1888",
+        "language": "shqip",
+        "category": "hadith",
+        "arabic": ""
+    },
+    {
+        "content": "Varfëria e ka një të mirë, nuk sjell në derë miq interesi.",
+        "reference": "Hoxhë Ekrem Avdiu",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Zilia është një sëmundje shumë e madhe e zemrës, kurse sëmundjet e zemrës nuk mund të shërohen ndryshe përpos me dije dhe vepër.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Asnjë superfuqi nuk mund t'i shkelë muslimanët derisa muslimanët nuk e shkelin udhërin e Zotit të Gjithfuqishëm.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nuk ka kapital më të mirë për një djalë të ri sesa një shok i cili e drejton nga Allahu.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Problemet e rinisë së sotme se ose merren me të kaluarën, ose merren me të ardhmen, ose merren me të huajën.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Prej adhurimeve është edhe mërzia që s'kemundësi për të bërë një vepër të mire.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse nuk ndien mërzi pasi të bësh gjynahun, dije se zemra jote edhe pse është gjallë klinikisht, ajo llogaritet e vdekur fetarisht.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Kush vëren se gjoksi i tij nuk zgjerohet dhe nuk përjeton ëmbëlsinë e Imanit dhe dritën e udhëzimit, le të tëb sa më shumë teube (pendim) dhe instigar (kërkim falje).",
+        "reference": "Ibn Tejmijje",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nuk do mund të gjesh njeri me mendje të rehatshme, zemërgjerë dhe të qetë sikurse besimtari, edhe nëse është i varfër.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Ajo që është shkruar për ty nuk i shkon askujt, andaj qetësohu dhe mos ki zili ndaj askujt.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse dëshiron të ngjitet shpirti lart, shkëputu nga gjërat që e rëndojnë në toke.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Të metat e trupit na i mbulon petku, kurse të metat e mendjes na i zbulon debati.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Do të t'i kompensojë Allahu një ditë të gjithë ato që ke shpresuar, madje edhe më shumë.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Thesari më i mirë në botë është Kur'ani. Shoqëroje në dynja që të shoqërojë e të ndërmjetësojë në ahiret.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Vlera e njeriut nuk është ajo që posedon por, ajo që u jep të tjerëve pa pritur prej tyre asgjë.",
+        "reference": "Hoxhë Bekir Halimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Namazi i sabahut është peshorja e besimtarit.",
+        "reference": "Hoxhë Sadullah Bajrami",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Qaj në këtë dunja, që të qeshësh në ahiret e mos qesh në kët dunja që të qash përgjithmon në ahiret.",
+        "reference": "Hoxhë Sadullah Bajrami",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Mjekra përderisa ishte sunet i Pejgamberit ﷺ u neglizhua, e kur u bë modë dhe model i jobesimtarëve garuam në të.",
+        "reference": "Hoxhë Sadullah Bajrami",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Ah sikur të jetë zemra ime porsi rrobat që vesh!Ebu Sulejman ed-Darani",
+        "reference": "Ebu Sulejman ed-Darani",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Ai që zgjedh sinqeritetin si mjetin e tij, Allahu si çmim do t'i dhurojë kënaqësinë e Tij.",
+        "reference": "Ebu Sulejman ed-Darani",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Ju këshilloj me dy gjëra, të shoqëroheni me dijetarët, dhe të duroni të paditurit.",
+        "reference": "Hamdun el-Kusar",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse ke mundësi të mos zemërohesh për asnjë gjë në këtë dynja, bëje.",
+        "reference": "Hamdun el-Kusar",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Kush studion biografinë e sahabëve do t'i kuptoj mangësit e veta, dhe se sa larg gradës së tyre është.",
+        "reference": "Hamdun el-Kusar",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Kur dikush kyren një gjynah dhe gëzohet, gëzimi i tij është më i keq se kryerja e vetë gjynahut.",
+        "reference": "Mensur ibn Amar",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Ai që kalon kohën duke përmendur njerëzit do të shkëputet nga përmendja e Allahut.",
+        "reference": "Mensur ibn Amar",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Shpëtimi i egozimit është të mos i bindesh atij, ndërsa belaja e tij është ta ndjekësh atë në çdo gjë që të urdhëron.",
+        "reference": "Mensur ibn Amar",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse do të jesh i lumtur dhe i qetë në shpirt, atëherë ndihmoji nevojtarët, kënaqi shokët dhe miqtë dhe sigurohu në përgatitjen kur të ndahesh nga kjo dynja.",
+        "reference": "Ahmed ibn Asim el-Entakij",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Thjeshtësia më e dobishme është ajo që të largon mendjemadhësinë dhe ta vdes zemërimin për të triumfuar egozimin.",
+        "reference": "Ahmed ibn Asim el-Entakij",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Varfëria më e dobishme është kur nuk e shfaq atë, zbukurohesh dhe pastaj je i kënaqur.",
+        "reference": "Ahmed ibn Asim el-Entakij",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Puno sikur të mos ketë mbi tokë asnjë njeri veç teje, dhe të mos ketë në qiell asgjë veç Krijuesit.",
+        "reference": "Ahmed ibn Asim el-Entakij",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Prijësi i çdo pune është dija, ndërsa prijësi i çdo dije është interesimi dhe këmbëngulja në kërkimin e saj.",
+        "reference": "Ahmed ibn Asim el-Entakij",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Allahu i Lartësuar nuk e çon dëm shpërblimin e dhikrit të gjuhës, edhe nëse zemra është e pavëmendshme, por shpërblim i mangët.",
+        "reference": "Ibn Kajjim El-Xheuzije",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse të thahet syri nga të qajturit prej frikërespektit të Allahut të Madhëruar, atëherë dije ajo thatësirë është nga zemra e ngurtë.",
+        "reference": "Ibn Kajjim El-Xheuzije",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Qejfet e kësaj bote janë si teatri i hijeve, i padituri kufizohet vetëm në atë që i shohin sytë, ndërsa një njeri i mençur, shikon edhe përtej perdeve nga ku luhet loja.",
+        "reference": "Ibn Kajjim El-Xheuzije",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Edhe vdekja do të vdes, që në fund të mbet veç jeta, asnjë rrenë s'do të mbesë, kur të gjykojë veç e vërteta.",
+        "reference": "Qëndrim Jashari",
+        "linkToReference": "https://twitter.com/QndrimJashari1",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Dersi është jetë, dhe jeta është ders.",
+        "reference": "Qëndrim Jashari",
+        "linkToReference": "https://twitter.com/QndrimJashari1",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Mos e shaj shejtanin, veç mos i shko pas.",
+        "reference": "Qëndrim Jashari",
+        "linkToReference": "https://twitter.com/QndrimJashari1",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Dezinfektuesi global është në prag, andaj, le t’i pastrojmë zemrat tona, të mbajmë distancë prej gjynaheve, të hyjmë në karantinë të adhurimit, me shpresë që të kalojmë të pastër në Xhennet e Zotit të botrave. ",
+        "reference": "Qëndrim Jashari",
+        "linkToReference": "https://twitter.com/QndrimJashari1",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Dituria dhe adhurimi pa devotshmëri është hipokrizi.",
+        "reference": "Nexhati Ameti",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nëse fillon diçka me 'Bismilah', atëherë Allahu vendos bereqet për atë çështje.",
+        "reference": "Shejkh Uthejmini",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Sa njeriu ka qenë i udhëzuar, për shkak të një shikimi haram i është marrë imani.",
+        "reference": "Ibn Kajjimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Gëzimi me të keqen e vëllaut është mallkim, andaj mos lejo veten të jesh në atë zonë!",
+        "reference": "Rexhep Memishi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Islami është sikurse dielli për tokën, nuk mungon asnjëherë; nëse perëndon në një vend, lind në tjetrin.",
+        "reference": "Shejkh Abdulaziz Et-Tarifi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Mos e shih si të vonuar përgjigjien e lutjeve tua, kur ia ke bllokuar rrugën me mëkate.",
+        "reference": "Jahja ibn Muadh",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Kush ka vdekur në Islam dhe Sunnet, ka vdekur në të gjitha mirësitë.",
+        "reference": "Ahmed ibn Hanbeli",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Bëhu tek Allahu ashtu siç dëshiron Ai, dhe Ai do të jetë për ty më shumë nga sa mendon.",
+        "reference": "Ibn Kajjimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Të vepruarit për inati të dikujt është shkatrrim!",
+        "reference": "Hoxhë Rexhep Memishi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Çdo punë e cila nuk të ndihmon ditën kur do të ringjallesh pa rroba, është punë që do bëhesh pishman!",
+        "reference": "Hoxhë Rexhep Memishi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nuk është prekur robi me dënim më të rëndë sesa me ngurtësim të zemrës dhe distancim prej Allahut.",
+        "reference": "Ibn Kajjimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Nga ilaçet më të dobishme është insistimi në lutje.",
+        "reference": "Ibn Kajjimi",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "The hijrah to Allah includes abandoning what He hates and doing what He loves and accepts.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Wasting time is worse than death, because death separates you from this world whereas wasting time separates you from Allah.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "The perfection of Tawheed is found when there remains nothing in the heart except Allaah.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "As long as you are performing prayer, you are knocking at the door of Allah, and whoever is knocking at the door of Allah, Allah will open it for him.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "A real man is one who fears the death of his heart, not of his body.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "If a heart becomes attached to anything other than Allah, Allah makes him dependent on what he is attached to. And he will be betrayed by it.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "The heart will rest and feel relief if it is settled with Allah. And it will worry and feel anxious if it is settled with the people.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Sins have many side-effects. One of them is that they steal knowledge from you.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "If the heart becomes hardened, the eye becomes dry.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Sins have many side-effects. One of them is that they steal knowledge from you.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Love of Allah is the power of the heart, the sustenance of the heart, the light of the heart.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "When Allah tests you it is never to destroy you. When He removes something in your possession it is only in order to empty your hands for an even greater gift.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Whoever desires to purify his heart, then let him prefer Allah to his desires.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "This wordly life is like a shadow. If you try to catch it, you will never be able to do so. If you turn your back towards it, it has no choice but to follow you.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Be sincere in your aim and you will find the support of Allaah surrounding you.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "A person’s tongue can give you the taste of his heart.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Speech remains as a slave to you, but the moment it leaves your mouth, you become its slave.",
+        "reference": "Ibn Qayyim Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Appreciate what you have, and do not think of what you do not have. What you have is from Allah’s Blessing, and what you do not have is from Allah’s wisdom.",
+        "reference": "Dr. Ahmad E’sa al-Ma’sarawy",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Whoever thinks that falsehood overcomes righteousness, they don’t have full trust in Allah!",
+        "reference": "Imam Ibnul-Qayyem",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "If you do good in secret, Allah will shower His good on you in public.",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "What really counts are good endings, not flawed beginnings.",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Dhikr (remembrance of Allah) is to the heart as water is to a fish; see what happens to a fish when it is taken out of water",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Don't depend too much on anyone in this world because even your own shadow leaves you when you are in darkness.",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "If I remained silent and you remained silent, then who will teach the ignorant?",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Allah will support the just state even if it is led by unbelievers, but Allah will not support the oppressive state even if it is led by believers",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "A calamity that makes you turn to Allah is better for you then a blessing which makes you forget the remembrance of Allah",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Imprisoned is he whose heart is imprisoned from Allah. Captured is he who is captured by his desires.",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Avoiding the temptation to sin and being patient upon that, is greater than being patient whilst being afflicted with trials.",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "The disease that knowledge brings is arrogance, and the disease that worship brings is showing off",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Men mixing with women is like fire mixing with wood.",
+        "reference": "Ibn Taymiyyah",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "If you could hear the sound of the pens of the angels writing your name among those who remember Allah, you’d die out of joy.",
+        "reference": "Ibn Qayym Al-Jawziyya",
+        "linkToReference": "",
+        "language": "english",
+        "category": "quote",
+        "arabic": ""
+    },
+    {
+        "content": "Or were they created by nothing, or are they their own creators?",
+        "reference": "Surah At-Tur 52:35",
+        "linkToReference": "https://quran.com/52/35",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, my Lord is near and responsive.",
+        "reference": "Surah Hud 11:61",
+        "linkToReference": "https://quran.com/11/61",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Or were they created by nothing, or are they their own creators?",
+        "reference": "Surah At-Tur 52:35",
+        "linkToReference": "https://quran.com/52/35",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And Allah would not punish them while they seek forgivenes.",
+        "reference": "Surah Al-Anfal 8:33",
+        "linkToReference": "https://quran.com/8/33",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Call upon me, I will respond to you.",
+        "reference": "Surah Ghafir 40:60",
+        "linkToReference": "https://quran.com/40/60",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And He has made me blessed wherever I am.",
+        "reference": "Surah Maryam 19:31",
+        "linkToReference": "https://quran.com/19/31",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "So remember me, I will remember you.",
+        "reference": "Surah Al-Baqarah 2:152",
+        "linkToReference": "https://quran.com/2/152",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And verily the hereafter, will be better for thee. Than the present",
+        "reference": "Surah Al-Dhuha 93:4",
+        "linkToReference": "https://quran.com/93/4",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And [remember] when your Lord proclaimed, ‘If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, ‘My punishment is severe.",
+        "reference": "Surah Ibrahim 14:7",
+        "linkToReference": "https://quran.com/14/7",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "It may be that you dislike a thing which is good for you and that you like a thing which is bad for you. Allah knows but you do not know.",
+        "reference": "Surah Al-Baqarah 2:216",
+        "linkToReference": "https://quran.com/2/216",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, Allah is my Lord and your Lord, so worship Him. That is the straight path.",
+        "reference": " Surah Ali ‘Imran 3:51",
+        "linkToReference": "https://quran.com/3/51",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Our Lord, forgive me and my parents and the believers the Day the account is established.",
+        "reference": "Surah Ibrahim 14:41",
+        "linkToReference": "https://quran.com/14/41",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And let there be from you a nation inviting to good, enjoining what is right and forbidding what is wrong, and those will be the successful.",
+        "reference": "Surah Ali Imran 3:104",
+        "linkToReference": "https://quran.com/3/104",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "If the sea were ink for the words of my lord, the sea would surely be consumed before the words of my lord are exhausted.",
+        "reference": "Al-Kahf 18:109",
+        "linkToReference": "https://quran.com/18/109",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And He found you lost and guided [you].",
+        "reference": "Surah Ad-Duhaa 93:7",
+        "linkToReference": "https://quran.com/93/7",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Between them is a barrier which they do not transgress.",
+        "reference": "Surah Ar-Rahman 55:20",
+        "linkToReference": "https://quran.com/55/20",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, those who have believed and done righteous deeds will have gardens beneath which rivers flow that is a great attainment.",
+        "reference": "Surah al-Buruj 85:11",
+        "linkToReference": "https://quran.com/85/11",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And whoever puts all his trust in Allah, He will be enough for him.",
+        "reference": "Surah At-Talaq 65:3",
+        "linkToReference": "https://quran.com/65/1-3",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "He knows what is within the heavens and earth and knows what you conceal and what you declare. And Allah is Knowing of that within the breasts.",
+        "reference": "At-Taghabun 64:4",
+        "linkToReference": "https://quran.com/64/4",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "My mercy embraces all things.",
+        "reference": "Surat Al-A’raf 7:156",
+        "linkToReference": "https://quran.com/7/156",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And who despairs from the mercy of his Lord, except those astray?",
+        "reference": "Surah Al-Hijr 15:56",
+        "linkToReference": "https://quran.com/15/56",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "You prefer the life of this world, while the hereafter is better & more lasting.",
+        "reference": "Surah Al-A’la 87:16",
+        "linkToReference": "https://quran.com/87/16",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Unquestionably, to Allah belongs whatever is in the heavens and the earth.",
+        "reference": "Surah Yunus 10:55",
+        "linkToReference": "https://quran.com/10/55",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, Allah is ever Knowing and Wise.",
+        "reference": "Surah Al-Insan 76:30",
+        "linkToReference": "https://quran.com/76/30",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "They are [varying] degrees in the sight of Allah and Allah is Seeing of whatever they do.",
+        "reference": "Surah Ali Imran 3:163",
+        "linkToReference": "https://quran.com/3/163",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And We created you in pairs.",
+        "reference": "Surah An-Naba 78:8",
+        "linkToReference": "https://quran.com/78/8",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And We have not sent you, [O Muhammad], except as a mercy to the worlds.",
+        "reference": "Surah Al-Anbya 21:107",
+        "linkToReference": "https://quran.com/21/107",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And He is with you wherever you are.",
+        "reference": "Surah Al Hadid 57:4",
+        "linkToReference": "https://quran.com/57/4",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, Prayer prohibits immorality and wrongdoing.",
+        "reference": "Surah Al'Ankabut 29:45",
+        "linkToReference": "https://quran.com/29/45",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And Allah is the best of providers.",
+        "reference": "Surah Al-Jumu’ah 62:11",
+        "linkToReference": "https://quran.com/62/11",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, my Lord is the Hearer of Supplication.",
+        "reference": "Surah Ibrahim 14:39",
+        "linkToReference": "https://quran.com/14/30",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, those who disbelieve it is all the same for them whether you warn them or do not warn them they will not believe.",
+        "reference": "Surah Al-Baqarah 2:6",
+        "linkToReference": "quran.com/2/6",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "O mankind, worship your Lord, who created you and those before you, that you may become righteous.",
+        "reference": "Surah Al-Baqarah 2:39",
+        "linkToReference": "https://quran.com/2/39",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And do not mix the truth with falsehood or conceal the truth while you know [it].",
+        "reference": "Surah Al-Baqarah 2:43",
+        "linkToReference": "https://quran.com/2:43",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "But do they not know that Allah knows what they conceal and what they declare?",
+        "reference": "Surah Al-Baqarah 2:107",
+        "linkToReference": "https://quran.com/2/107",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Do you not know that to Allah belongs the dominion of the heavens and the earth and [that] you have not besides Allah any protector or any helper?",
+        "reference": "Surah Al-Baqarah 2:117",
+        "linkToReference": "https://quran.com/2/117",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "When He decrees a matter, He only says to it, \"Be,\" and it is.",
+        "reference": "Surah Al-Baqarah 2:147",
+        "linkToReference": "https://quran.com/2/147",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "The truth is from your Lord, so never be among the doubters.",
+        "reference": "Surah Al-Baqarah 2:152",
+        "linkToReference": "https://quran.com/2/152",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "So remember Me, I will remember you. And be grateful to Me and do not deny Me.",
+        "reference": "Surah Al-Baqarah 2:153",
+        "linkToReference": "https://quran.com/2/153",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "There is no deity [worthy of worship] except Him, the Entirely Merciful, the Especially Merciful.",
+        "reference": "Surah Al-Baqarah 2:163",
+        "linkToReference": "https://quran.com/2/163",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "O mankind, eat from whatever is on earth [that is] lawful and good and do not follow the footsteps of Satan. Indeed, he is to you a clear enemy.",
+        "reference": "Surah Al-Baqarah 2:168",
+        "linkToReference": "https://quran.com/2/168",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Allah has sent down the Book in truth. And indeed, those who differ over the Book are in extreme dissension.",
+        "reference": "Surah Al-Baqarah 2:183",
+        "linkToReference": "https://quran.com/2/183",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous.",
+        "reference": "Surah Al-Baqarah 2:190",
+        "linkToReference": "https://quran.com/2/190",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Fight in the way of Allah those who fight against you but do not transgress. Indeed, Allah does not like transgressors.",
+        "reference": "Surah Al-Baqarah 2:244",
+        "linkToReference": "https://quran.com/2:244",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, Allah does not like transgressors.",
+        "reference": "Surah Al-Baqarah 2:244",
+        "linkToReference": "https://quran.com/2/244",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Fight in the way of Allah those who fight against you but do not transgress. ",
+        "reference": "Surah Al-Baqarah 2:244",
+        "linkToReference": "https://quran.com/2/244",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And fight in the cause of Allah and know that Allah is Hearing and Knowing.",
+        "reference": "Surah Al-Baqarah 2:263",
+        "linkToReference": "https://quran.com/2/263",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Kind speech and forgiveness are better than charity followed by injury.",
+        "reference": "Surah Al-Baqarah 2:263",
+        "linkToReference": "https://quran.com/2/263",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Satan threatens you with poverty and orders you to immorality, while Allah promises you forgiveness from Him and bounty.",
+        "reference": "Surah Al-Baqarah 2:269",
+        "linkToReference": "https://quran.com/2/269",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "He gives wisdom to whom He wills, and whoever has been given wisdom has certainly been given much good. ",
+        "reference": "Surah Al-Baqarah 2:271",
+        "linkToReference": "https://quran.com/2/271",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And none will remember except those of understanding.",
+        "reference": "Surah Al-Baqarah 2:271",
+        "linkToReference": "https://quran.com/2/271",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "He gives wisdom to whom He wills, and whoever has been given wisdom has certainly been given much good. And none will remember except those of understanding.",
+        "reference": "Surah Al-Baqarah 2:271",
+        "linkToReference": "https://quran.com/2/271",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Those who spend their wealth [in Allah's way] by night and by day, secretly and publicly, they will have their reward with their Lord.",
+        "reference": "Surah Al-Baqarah 2:278",
+        "linkToReference": "https://quran.com/2/278",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And no fear will there be concerning them, nor will they grieve.",
+        "reference": "Surah Al-Baqarah 2:278",
+        "linkToReference": "https://quran.com/2/278",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Those who spend their wealth [in Allah's way] by night and by day, secretly and publicly, they will have their reward with their Lord. And no fear will there be concerning them, nor will they grieve.",
+        "reference": "Surah Al-Baqarah 2:278",
+        "linkToReference": "https://quran.com/2/278",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "O you who have believed, fear Allah and give up what remains [due to you] of interest, if you should be believers.",
+        "reference": "Surah Al-Baqarah 2:278",
+        "linkToReference": "https://quran.com/2/278",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And fear a Day when you will be returned to Allah. Then every soul will be compensated for what it earned, and they will not be wronged [i.e., treated unjustly].",
+        "reference": "Surah Al-Baqarah 2:281",
+        "linkToReference": "https://quran.com/2/281",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And once you have taken a decision, place your trust in Allah. Surely, Allah loves those who place their trust in Him.",
+        "reference": "Surah Ali Imran 3:159",
+        "linkToReference": "https://quran.com/3/159",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Allah loves those who place their trust in Him.",
+        "reference": "Surah Ali Imran 3:159",
+        "linkToReference": "https://quran.com/3/159",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Say to those who disbelieve, \"You will be overcome and gathered together to Hell, and wretched is the resting place.\"",
+        "reference": "Surah Ali Imran 3:31",
+        "linkToReference": "https://quran.com/3/31",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Say, [O Muḥammad], \"If you should love Allah, then follow me, [so] Allah will love you and forgive you your sins. And Allah is Forgiving and Merciful.\"",
+        "reference": "Surah Ali Imran 3:32",
+        "linkToReference": "https://quran/3/32",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Say, \"Obey Allah and the Messenger. But if you turn away - then indeed, Allah does not like the disbelievers.\"",
+        "reference": "Surah Ali Imran 3:51",
+        "linkToReference": "https://quran.com/3/51",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, Allah is my Lord and your Lord, so worship Him. That is the straight path.",
+        "reference": "Surah Ali Imran 3:54",
+        "linkToReference": "https://quran.com/3/54",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "But if they turn away, then indeed, Allah is Knowing of the corrupters.",
+        "reference": "Surah Ali Imran 3:73",
+        "linkToReference": "https://quran.com/3/73",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "But yes, whoever fulfills his commitment and fears Allah - then indeed, Allah loves those who fear Him.",
+        "reference": "Surah Ali Imran 3:85",
+        "linkToReference": "https://quran.com/3/85",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Allah loves those who fear Him.",
+        "reference": "Surah Ali Imran 3:85",
+        "linkToReference": "https://quran.com/3/85",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And whoever desires other than Islam as religion, never will it be accepted from him, and he, in the Hereafter, will be among the losers.",
+        "reference": "Surah Ali Imran 3:92",
+        "linkToReference": "https://quran.com/3/92",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Never will you attain the good [reward] until you spend [in the way of Allah] from that which you love. ",
+        "reference": "Surah Ali Imran 3:98",
+        "linkToReference": "https://quran.com/3/98",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Never will you attain the good [reward] until you spend [in the way of Allah] from that which you love. And whatever you spend, indeed, Allah is Knowing of it.",
+        "reference": "Surah Ali Imran 3:98",
+        "linkToReference": "https://quran.com/3/98",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Say, \"O People of the Scripture, why do you disbelieve in the verses of Allah while Allah is Witness over what you do?\"",
+        "reference": "Surah Ali Imran 3:102",
+        "linkToReference": "https://quran.com/3/102",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "O you who have believed, fear Allah as He should be feared and do not die except as Muslims [in submission to Him].",
+        "reference": "Surah Ali Imran 3:131",
+        "linkToReference": "https://quran.com/3/131",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And fear the Fire, which has been prepared for the disbelievers.",
+        "reference": "Surah Ali Imran 3:132",
+        "linkToReference": "https://quran.com/3/132",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And obey Allah and the Messenger that you may obtain mercy.",
+        "reference": "Surah Ali Imran 3:134",
+        "linkToReference": "https://quran.com/3/134",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Who spend [in the cause of Allah] during ease and hardship and who restrain anger and who pardon the people, and Allah loves the doers of good.",
+        "reference": "Surah Ali Imran 3:138",
+        "linkToReference": "https://quran.com/3/138",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "and Allah loves the doers of good.",
+        "reference": "Surah Ali Imran 3:138",
+        "linkToReference": "https://quran.com/3/138",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "This [Qur’ān] is a clear statement to [all] the people and a guidance and instruction for those conscious of Allah.",
+        "reference": "Surah Ali Imran 3:139",
+        "linkToReference": "https://quran.com/3/139",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And whoever desires the reward of this world, We will give him thereof, and whoever desires the reward of the Hereafter, We will give him thereof. And We will reward the grateful.",
+        "reference": "Surah Ali Imran 3:150",
+        "linkToReference": "https://quran.com/3/150",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And We will reward the grateful.",
+        "reference": "Surah Ali Imran 3:150",
+        "linkToReference": "https://quran.com/3/150",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Allah is your protector, and He is the best of helpers.",
+        "reference": "Surah Ali Imran 3:158",
+        "linkToReference": "https://quran.com/3/158",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "And whether you die or are killed, unto Allah you will be gathered.",
+        "reference": "Surah Ali Imran 3:160",
+        "linkToReference": "https://quran.com/3/160",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "If Allah should aid you, no one can overcome you, but if He should forsake you, who is there that can aid you after Him?",
+        "reference": "Surah Ali Imran 3:177",
+        "linkToReference": "https://quran.com/3/177",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Indeed, those who purchase disbelief [in exchange] for faith, never will they harm Allah at all, and for them is a painful punishment.",
+        "reference": "Surah Ali Imran 3:200",
+        "linkToReference": "https://quran.com/3/200",
+        "language": "english",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "reference": "Ajeti 48 i Kaptinës At-Tur",
+        "linkToReference": "https://quran.com/52/48",
+        "content": "Ti bën durim në vendimin e Zotit tënd, se ti je nën mbikëqyrjen Tonë.",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Mos u ndalni, së përmenduri Mua.\n",
+        "reference": "Ta Ha 42",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "E mos e teproni, se Allahu nuk i do ata që e teprojnë.",
+        "reference": "Bekare 190",
+        "linkToReference": "",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Mos jini nga ata të cilët e harruan Zotin e tyre dhe Allahu i harroi ata.",
+        "reference": "Ajeti 19 i Kaptinës el-Hashr",
+        "linkToReference": "https://quran.com/59/19",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Zoti ynë, mos na i lako zemrat tona pasi na drejtove, na dhuro mëshirën Tënde, sepse vetëm Ti je dhuruesi i madh.",
+        "reference": "Ajeti i 8 Kaptinës Ali Imran",
+        "linkToReference": "https://quran.com/3/8",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Kushdo që i kthen shpinën këshillës Sime, do të ketë jetë të mjeruar dhe Ne, në Ditën e Kiametit, do ta ringjallim të verbër.",
+        "reference": "Ajeti 124 i Kaptinës Ta-Ha",
+        "linkToReference": "https://quran.com/20/124",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Të keqen ktheje me të mirë.",
+        "reference": "Ajeti 34 i Kaptinës Fussilet",
+        "linkToReference": "https://quran.com/41/34",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "E me lutjen time ndaj Teje o Zoti im, asnjëherë nuk kam qenë i dëshpëruar.",
+        "reference": "Ajeti 4 i Kaptinës Mejrem",
+        "linkToReference": "https://quran.com/19/4",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Mjerë për secilin që ofendon e përqesh (njerëzit).",
+        "reference": "Ajeti 1 i Kaptinës Humazah",
+        "linkToReference": "https://quran.com/104/1",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Ne e kemi krijuar njeriun, dhe e dimë se ç'pëshpërit ai në vete.",
+        "reference": "Ajeti 16 i Kaptinës Kaf",
+        "linkToReference": "https://quran.com/50/16",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Dhe adhuroje Zotin tënd deri sa të vijë ty e vërteta (vdekja).\n",
+        "reference": "Ajeti 99 i Kaptinës Hixhr",
+        "linkToReference": "https://quran.com/15/99",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Sa i përket atij që besoi dhe bëri vepra të mira, atij i takon shpërblimi më i mirë (xhenneti) dhe atij nga ana Jonë do t'i bëjmë lehtësi (në jetë). ",
+        "reference": "Ajeti 88 i Kaptinës El-Kehf ",
+        "linkToReference": "https://quran.com/18/88",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Mos u mërzit, se Allahu është vërtetë me ne.",
+        "reference": "Ajeti 40 i Kaptinës At-Tawbah",
+        "linkToReference": "https://quran.com/09/40",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
+    },
+    {
+        "content": "Mos u mërzit, se Allahu është vërtetë me ne.",
+        "reference": "Ajeti 40 i Kaptinës Et-Teube",
+        "linkToReference": "https://quran.com/9/40",
+        "language": "shqip",
+        "category": "verse",
+        "arabic": ""
     }
 ]

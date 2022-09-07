@@ -28,18 +28,6 @@ const Loading = styled.section`
   }
 `;
 
-const Error = styled.p`
-  width: 50%;
-  color: #fff;
-  font-size: .9em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all ease-in-out 0.3s;
-  text-align: center;
-  margin-top: .75em;
-`
-
 const Powered = styled.p`
   color: #fff;
   font-size: 1em;
@@ -61,5 +49,4 @@ export {
   Container, 
   Loading, 
   Powered, 
-  Error
 };
