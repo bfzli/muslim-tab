@@ -28,15 +28,19 @@ export default function Authenticator() {
           <Button
             onClick={() => dispatch(CloseAuthentication())}
             text='Cancel'
+            mode='outline'
+            style={{marginRight: '.5em'}}
           />
         
           {!authentication.Authenticated ? (
             <Button
+              mode="primary"
               onClick={() => Authorize(dispatch, authentication.Code)}
               text='Authenticate Me'
             />
           ) : (
             <Button
+              mode="primary"
               onClick={() => Authorize(dispatch, authentication.Code)}
               text='Unauthenticate Me'
             />

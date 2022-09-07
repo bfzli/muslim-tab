@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+    width: 100%;
+    background: #fafafb;
+    color: #555;
+    margin-bottom: 1em;
+    overflow: hidden !important;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
