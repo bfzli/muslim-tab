@@ -15,7 +15,10 @@ export default function Content() {
 
       <Text>
         {content.content}
-        <Reference href={content.linkToReference}>{content.reference}</Reference>
+
+        <Reference onClick={() => window.open(content.linkToReference, '_blank')} href={content.linkToReference} target="_blank">
+          {content.reference}
+        </Reference>
       </Text>
 
       <Footer bottom={bottom} setIsHover={setIsHover} />

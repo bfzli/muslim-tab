@@ -20,7 +20,7 @@ export const contentSlice = createSlice({
     category: null,
     language: null,
     wallpaper: null,
-    website: null,
+    linkToReference: null,
     status: false,
   },
   reducers: {},
