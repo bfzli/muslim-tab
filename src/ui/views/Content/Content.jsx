@@ -10,13 +10,13 @@ export default function Content() {
   const bottom = isHover === false ? { marginBottom: '-30vh' } : { marginBottom: '-2em' };
 
   return (
-    <Container background={content.wallpaper}>
+    <Container background={`http://localhost:3333/${content.wallpaper}`}>
       <Logo top={top} setIsHover={setIsHover} />
 
       <Text>
         {content.content}
 
-        <Reference onClick={() => window.open(content.linkToReference, '_blank')} href={content.linkToReference} target="_blank">
+        <Reference href={content.linkToReference} target="_blank">
           {content.reference}
         </Reference>
       </Text>

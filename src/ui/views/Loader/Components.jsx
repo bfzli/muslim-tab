@@ -28,7 +28,7 @@ const Loading = styled.section`
   }
 `;
 
-const Powered = styled.p`
+const Powered = styled.a`
   color: #fff;
   font-size: 1em;
   display: flex;

@@ -9,8 +9,8 @@ export default function Loader() {
         <LogoIcon size='2.25em' />
       </Loading>
 
-      <Powered onClick={() => window.open(Variables.benkco, '_blank')}>
-        Powered by&nbsp; <BenkcoIcon color='#fff' size='4em' />
+      <Powered href={Variables.benkco} target="_blank">
+        Powered by&nbsp; <BenkcoIcon style={{marginTop: '1px'}} color='#fff' size='4em' />
       </Powered>
     </Container>
   );

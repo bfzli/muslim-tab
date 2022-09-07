@@ -1,6 +1,7 @@
 const Variables = {
     patreon: 'https://www.patreon.com/muslimtab',
     benkco: 'https://benkco.io',
+    wallpaper: 'https://api.muslim-tab.com/',
     google: 'https://chrome.google.com/webstore/detail/muslim-tab-islamic-remind/jjnohnifpemmdnbidcgcojdjfabfocgm',
     firefox: 'https://addons.mozilla.org/en-US/firefox/addon/muslim-tab',
     opera: 'https://chrome.google.com/webstore/detail/muslim-tab-islamic-remind/jjnohnifpemmdnbidcgcojdjfabfocgm',

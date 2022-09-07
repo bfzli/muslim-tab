@@ -1,6 +1,6 @@
 {
-    "name": "muslimtab",
-    "version": "3.3.0",
+    "name": "muslim-tab",
+    "version": "5.0.0",
     "private": true,
     "dependencies": {
         "@reduxjs/toolkit": "^1.7.1",

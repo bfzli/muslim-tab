@@ -26,7 +26,7 @@ const Text = styled.h2`
   align-items: center;
   padding: 0em 12.5%;
   text-align: center;
-  color: white;
+  color: white !important;
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: white;
   -webkit-animation: fill 0.5s infinite alternate;
@@ -50,9 +50,11 @@ const Reference = styled.a`
   padding: 0.3em 0.7em;
   border-radius: 0.75em;
   transition: var(--transition);
-  font-weight: 400 !important;
-  font-size: .4em !important;
+  font-size: 0.35em !important;
   z-index: 100;
+  color: white !important;
+  -webkit-text-stroke: 0px white;
+  -webkit-text-fill-color: white;
 
   &:hover {
     background: var(--hover);

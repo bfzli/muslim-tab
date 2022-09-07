@@ -1,5 +1,2 @@
 import Variables from "./Variables";
-
-export {
-    Variables
-}
+export { Variables }

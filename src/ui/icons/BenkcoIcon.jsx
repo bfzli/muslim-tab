@@ -1,6 +1,7 @@
 export default function BenkcoIcon(props) {
   return (
     <svg
+      {...props}
       width={props.size || '1em'}
       viewBox='0 0 546 156'
       fill='none'
@@ -9,7 +10,10 @@ export default function BenkcoIcon(props) {
         d='M423.481 123.992V94.7827H393.721V123.992H423.481Z'
         fill={props.color || '#fff'}
       />
-      <path d='M422.93 83.2092V54L393.169 54V83.2092H422.93Z' fill={props.color || '#fff'} />
+      <path
+        d='M422.93 83.2092V54L393.169 54V83.2092H422.93Z'
+        fill={props.color || '#fff'}
+      />
       <path
         d='M423.205 94.8457V124C442.549 124 458.201 108.348 458.201 89.004H429.047C429.047 92.2556 426.402 94.8457 423.205 94.8457Z'
         fill={props.color || '#fff'}

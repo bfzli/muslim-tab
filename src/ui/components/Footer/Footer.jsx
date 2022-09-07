@@ -4,8 +4,8 @@ import { languageSwitcher } from '../../../data/redux/Language';
 import { viewSwitcher } from '../../../data/redux/View';
 import { Contenter, Copy, Languager, Screenshot, Report, Rate } from '../../../data/utils';
 import { Variables } from '../../../data/constants';
-import { FetchContent } from '../../../data/redux/Content';
 import { useTranslation } from 'react-i18next';
+import { SetContent } from '../../../data/redux/Content';
 
 import {
   Container,
@@ -27,7 +27,6 @@ import {
   VerseIcon,
   CameraIcon,
   CopiedIcon,
-  BookIcon,
   FeedbackIcon,
   RateIcon,
 } from '../../icons';
@@ -60,7 +59,7 @@ export default function Footer(props) {
 
         <Breakspace />
 
-        <Element onClick={() => dispatch(FetchContent({ view: view.value, language: language.value }))}>
+        <Element onClick={() => dispatch(SetContent())}>
           <NextIcon size='1.6em' />
           <Name>Random</Name>
         </Element>
@@ -115,19 +114,11 @@ export default function Footer(props) {
         </Element>
 
         <Breakspace />
-{/* 
-        <Element onClick={() => window.open(content.website + content.reference, '_blank')}>
-          <BookIcon size='1.6em' />
-          <Name>
-            {content.reference === '' ? 'Unknown' : content.reference}
-          </Name>
-        </Element> */}
-
         <Linebreak />
 
-        <Element onClick={() => Report(content)}>
+        <Element onClick={() => Report()}>
           <FeedbackIcon size='1.6em' />
-          <Name>Report</Name>
+          <Name>GitHub</Name>
         </Element>
 
         <Breakspace />
