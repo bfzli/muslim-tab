@@ -14,7 +14,7 @@ const Container = styled.section`
 `;
 
 const Elements = styled.section`
-  transition: var(--transition);
+  transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;

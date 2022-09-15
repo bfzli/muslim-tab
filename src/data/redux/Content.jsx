@@ -16,8 +16,13 @@ export const contentSlice = createSlice({
   },
   reducers: {
     SetContent: (state) => {
+      const content = localStorage.getItem('view');
+      const language = localStorage.getItem('language');
+
       const randomImage = Images[Math.floor(Math.random() * Images.length)];
-      const data = Database[Math.floor(Math.random() * Database.length)];
+      const filterContent = Database.filter(object => object.category === content);
+      const filterLanguage = filterContent.filter(object => object.language === language);
+      const data = filterLanguage[Math.floor(Math.random() * filterLanguage.length)];
 
       state.content = data.content;
       state.arabic = data.arabic;

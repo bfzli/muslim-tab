@@ -4,7 +4,6 @@ import { languageSwitcher } from '../../../data/redux/Language';
 import { viewSwitcher } from '../../../data/redux/View';
 import { Contenter, Copy, Languager, Screenshot, Report, Rate } from '../../../data/utils';
 import { Variables } from '../../../data/constants';
-import { useTranslation } from 'react-i18next';
 import { SetContent } from '../../../data/redux/Content';
 
 import {
@@ -36,6 +35,7 @@ export default function Footer(props) {
   const content = useSelector((state) => state.content);
   const view = useSelector((state) => state.view);
   const language = useSelector((state) => state.language);
+  const t = useSelector((state) => state.language.t);
   const [copied, setCopied] = useState(false);
 
   return (
@@ -46,7 +46,7 @@ export default function Footer(props) {
       <Elements style={props.bottom}>
         <Element onClick={() => Screenshot()}>
           <CameraIcon size='1.6em' />
-          <Name>Screen</Name>
+          <Name>{t.screenshot}</Name>
         </Element>
 
         <Breakspace />
@@ -54,14 +54,14 @@ export default function Footer(props) {
         <Element
           onClick={() => (!copied ? Copy(content.content, setCopied) : '')}>
           {copied ? <CopiedIcon size='1.6em' /> : <CopyIcon size='1.6em' />}
-          <Name>{copied ? 'Copied' : 'Copy'}</Name>
+          <Name>{copied ? t.copied : t.copy}</Name>
         </Element>
 
         <Breakspace />
 
         <Element onClick={() => dispatch(SetContent())}>
           <NextIcon size='1.6em' />
-          <Name>Random</Name>
+          <Name>{t.random}</Name>
         </Element>
 
         <Breakspace />
@@ -73,13 +73,13 @@ export default function Footer(props) {
               english: (
                 <>
                   <EnglishIcon size='1.6em' />
-                  <Name>English</Name>
+                  <Name>{t.en}</Name>
                 </>
               ),
               shqip: (
                 <>
                   <AlbanianIcon size='1.6em' />
-                  <Name>Shqip</Name>
+                  <Name>{t.sq}</Name>
                 </>
               ),
             }[language.value]
@@ -94,19 +94,19 @@ export default function Footer(props) {
               verse: (
                 <>
                   <VerseIcon size='1.6em' />
-                  <Name>Verses</Name>
+                  <Name>{t.verses}</Name>
                 </>
               ),
               hadith: (
                 <>
                   <HadithIcon size='1.6em' />
-                  <Name>Hadiths</Name>
+                  <Name>{t.hadiths}</Name>
                 </>
               ),
               quote: (
                 <>
                   <QuoteIcon size='1.6em' />
-                  <Name>Quotes</Name>
+                  <Name>{t.quotes}</Name>
                 </>
               ),
             }[view.value]
@@ -118,21 +118,21 @@ export default function Footer(props) {
 
         <Element onClick={() => Report()}>
           <FeedbackIcon size='1.6em' />
-          <Name>GitHub</Name>
+          <Name>{t.git}</Name>
         </Element>
 
         <Breakspace />
 
         <Element onClick={() => Rate()}>
           <RateIcon size='1.6em' />
-          <Name>Rate</Name>
+          <Name>{t.rate}</Name>
         </Element>
 
         <Breakspace />
 
         <Element onClick={() => window.open(Variables.patreon, '_blank')}>
           <DonateIcon size='1.6em' />
-          <Name>Donate</Name>
+          <Name>{t.donate}</Name>
         </Element>
       </Elements>
     </Container>

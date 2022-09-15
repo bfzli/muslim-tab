@@ -49,7 +49,7 @@ const Reference = styled.a`
   margin-top: 1em;
   padding: 0.3em 0.7em;
   border-radius: 0.75em;
-  transition: var(--transition);
+  transition: all ease-in-out 0.3s;
   font-size: 0.35em !important;
   z-index: 100;
   color: white !important;
@@ -57,7 +57,7 @@ const Reference = styled.a`
   -webkit-text-fill-color: white;
 
   &:hover {
-    background: var(--hover);
+    background: #383e4760;
     cursor: pointer;
   }
 `;

@@ -14,7 +14,7 @@ const Container = styled.section`
 `;
 
 const Elements = styled.section`
-  transition: var(--transition);
+  transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,12 +29,12 @@ const Element = styled.section`
   justify-content: center;
   text-align: center;
   padding: 1em;
-  border-radius: var(--radius);
-  transition: var(--transition);
+  border-radius: 0.75em;
+  transition: all ease-in-out 0.3s;
   cursor: pointer;
 
   &:hover {
-    background: var(--hover);
+    background: #383e4760;
   }
 
   &:last-of-type {

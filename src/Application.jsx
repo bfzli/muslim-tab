@@ -1,30 +1,24 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useTranslation } from 'react-i18next';
 import { Loader, Content } from './ui/views';
 import { SetContent } from './data/redux/Content';
+import { languageLoader } from './data/redux/Language';
+import { viewLoader } from './data/redux/View';
 
 export default function Application() {
   const dispatch = useDispatch();
   const content = useSelector((state) => state.content);
-  const language = useSelector((state) => state.language.value);
-  const { i18n } = useTranslation();
-
-  const changeLang = (lang) => i18n.changeLanguage(lang);
-
-  useEffect(() => { if(content.status === false) dispatch(SetContent()) }, [])
+  const language = useSelector((state) => state.language);
+  const view = useSelector((state) => state.view);
 
   useEffect(() => {
-    switch (language) {
-      case 'english':
-        changeLang('en');
-          break;
-      default:
-        changeLang('sq');
-          break;
-    }
-  }, [language]);
+    if(language.status === false) dispatch(languageLoader());
+    if(view.status === false) dispatch(viewLoader());
+    if(language.status && view.status) dispatch(SetContent());
+  }, [language, view]);
 
-  if (content.status === true) return <Content id='screen' />;
+  const isLoaded = content.status === true && language.status === true && view.status === true;
+
+  if (isLoaded) return <Content id='screen' />;
   else return <Loader stauts={content.status} />;
 }

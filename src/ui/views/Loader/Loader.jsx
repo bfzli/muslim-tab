@@ -1,6 +1,5 @@
-import { BenkcoIcon, LogoIcon } from '../../icons';
-import { Container, Loading, Powered } from './Components';
-import { Variables } from '../../../data/constants';
+import { LogoIcon } from '../../icons';
+import { Container, Loading } from './Components';
 
 export default function Loader() {
   return (
@@ -8,10 +7,6 @@ export default function Loader() {
       <Loading>
         <LogoIcon size='2.25em' />
       </Loading>
-
-      <Powered href={Variables.benkco} target="_blank">
-        Powered by&nbsp; <BenkcoIcon style={{marginTop: '1px'}} color='#fff' size='4em' />
-      </Powered>
     </Container>
   );
 }
