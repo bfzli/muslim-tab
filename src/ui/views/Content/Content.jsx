@@ -10,7 +10,7 @@ export default function Content() {
   const bottom = isHover === false ? { marginBottom: '-30vh' } : { marginBottom: '-2em' };
 
   return (
-    <Container background={`http://localhost:3333/${content.wallpaper}`}>
+    <Container background={`http://api.muslim-tab.com/${content.wallpaper}`}>
       <Logo top={top} setIsHover={setIsHover} />
 
       <Text>

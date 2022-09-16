@@ -10,8 +10,7 @@
 body {
     width: 100%;
     height: auto;
-    background: #fafafb !important;
     font-size: 0.95em;
     overflow: hidden;
-    font-family: "DM Sans";
+    font-family: "DM Sans" !important;
 }
