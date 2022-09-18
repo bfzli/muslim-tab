@@ -28,7 +28,6 @@ const Title = styled.h1`
     font-size: 73px;
     font-weight: bold;
     color: #333;
-    margin-top: 1em;
 `;
 
 const Description = styled.p`

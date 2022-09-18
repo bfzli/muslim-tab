@@ -1,7 +1,7 @@
 export default function LogoIcon() {
   return (
     <svg
-      width='1.8em'
+      width='2.5em'
       viewBox='0 0 608 486'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'>
