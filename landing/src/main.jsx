@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home, Privacy } from './ui/pages';
+import { Contact, Home, Privacy } from './ui/pages';
 
 import './ui/styles/Base.css';
 
@@ -23,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/privacy' element={<Privacy />} />
         <Route path="/install" element={<Redirect />} />
         <Route path="/rate" element={<Redirect />} />
+        <Route path="/contact" element={<Contact />} />
         <Route exact path='/*' element={<Home />} />
       </Routes>
     </BrowserRouter>
