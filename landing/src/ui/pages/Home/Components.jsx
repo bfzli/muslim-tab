@@ -4,38 +4,27 @@ const Container = styled.section`
   display: flex;
   height: 100vh;
   flex-direction: column;
-  padding: 7.5% 12.5%;
-`;
-
-const LeftSide = styled.section`
-  width: 50%;
-  height: 100%;
-  background: blue;
-`;
-
-const RightSide = styled.section`
-  width: 50%;
-  height: 100%;
-  background: red;
-  display: flex;
-  flex-direction: column;
+  padding: 5% 12.5% 7.5% 12.5%;
+  aling-items: center;
   justify-content: center;
-  align-items: center;
 `;
 
 const Title = styled.h1`
-    /* font-size: 3.5em; */
-    font-size: 73px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 1em;
+    width: 75%;
+    font-size: 50px;
+    font-weight: 900;
+    color: #2F2F2F;
+    margin-top: .5em;
+    line-height: 125%;
 `;
 
 const Description = styled.p`
+    width: 75%;
     font-size: 1.15em;
     margin-top: .25em;
-    margin-left: .2em;
-    margin-bottom: 1em;
+    margin-left: .1em;
+    color: #2F2F2F95;
+    line-height: 150%;
 `;
 
-export { Container, LeftSide, RightSide, Title, Description };
+export { Container, Title, Description };

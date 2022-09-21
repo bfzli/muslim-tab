@@ -7,11 +7,12 @@
     outline: none;
     text-decoration: none;
     font-family: 'DM Sans', sans-serif;
+    user-select: none;
 }
 
 body {
     width: 100%;
-    background: #fafafb;
+    background: #F5F5F5;
     color: #555;
     margin-bottom: 1em;
     overflow: hidden !important;

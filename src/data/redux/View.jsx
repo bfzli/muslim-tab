@@ -34,11 +34,13 @@ export const viewSlice = createSlice({
     viewLoader: (state) => {
       const view = localStorage.getItem('view');
 
-      if (view === null) {
+      if (view === null || view === undefined) {
         state.value = 'verse';
         state.status = true;
 
-      } else {
+      } 
+      
+      else {
         state.value = view;
         state.status = true;
       }

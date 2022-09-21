@@ -1,9 +1,12 @@
-import { Container } from "./Components"
+import { LogoIcon } from '../../icons';
+import { Container } from './Components';
 
 export default function Button(props) {
   return (
     <Container {...props}>
-        {props.text}
+      <LogoIcon style={{marginRight: '.75em'}} color='#fff' size='1.25em' />
+
+      {props.text}
     </Container>
-  )
+  );
 }

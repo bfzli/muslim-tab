@@ -31,14 +31,14 @@ export const languageSlice = createSlice({
     languageLoader: (state) => {
       const language = localStorage.getItem('language');
 
-      if (language === null) {
+      if (language === null || language === undefined) {
         state.value = 'english';
         state.status = true;
         state.t = English;
 
         localStorage.setItem('language', state.value);
       } 
-    
+      
       else {
         state.value = language;
         state.status = true;
