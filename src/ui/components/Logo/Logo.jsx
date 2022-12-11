@@ -9,7 +9,7 @@ export default function Logo(props) {
       onMouseLeave={() => props.setIsHover(false)}>
       <Elements style={props.top}>
         <a href='https://muslim-tab.com' target='_blank' rel='noreferrer'>
-          <LogoIcon size='2.1em' />
+          <LogoIcon size='3em' />
         </a>
       </Elements>
     </Container>

@@ -12,8 +12,10 @@ export default function Contact() {
       <Title>Contact Us</Title>
 
       <Description>
-        Our team is always ready to review the emails that we receive. If you have any questions or
-        suggestions, please contact us via our email address, and we will try to respond as soon as we can but please don't spam.
+        Our team is always ready to review the emails that we receive. If you
+        have any questions or suggestions, please contact us via our email
+        address, and we will try to respond as soon as we can but please don't
+        spam.
       </Description>
 
       <a href='mailto:muslimtab@benkco.io'>
