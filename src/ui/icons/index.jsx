@@ -1,25 +1,29 @@
-import DonateIcon from './DonateIcon';
-import CopyIcon from './CopyIcon';
-import NextIcon from './NextIcon';
-import ViewIcon from './ViewIcon';
-import CameraIcon from './CameraIcon';
-import LogoIcon from './LogoIcon';
-import CopiedIcon from './CopiedIcon';
-import BookIcon from './BookIcon';
-import FeedbackIcon from './FeedbackIcon';
-import RateIcon from './RateIcon';
-import BenkcoIcon from './BenkcoIcon';
+import ProIcon from "./ProIcon";
+import CopyIcon from "./CopyIcon";
+import NextIcon from "./NextIcon";
+import ViewIcon from "./ViewIcon";
+import CameraIcon from "./CameraIcon";
+import LogoIcon from "./LogoIcon";
+import CopiedIcon from "./CopiedIcon";
+import ContactIcon from "./ContactIcon";
+import AccountIcon from "./AccountIcon";
+import MoreIcon from "./MoreIcon";
+import FavoriteIcon from "./FavoriteIcon";
+import FavoritesIcon from "./FavoritesIcon";
+import FavoritedIcon from "./FavoritedIcon";
 
 export {
-  DonateIcon,
+  ProIcon,
   CopyIcon,
   NextIcon,
   ViewIcon,
   CameraIcon,
   LogoIcon,
   CopiedIcon,
-  BookIcon,
-  FeedbackIcon,
-  RateIcon,
-  BenkcoIcon,
+  ContactIcon,
+  AccountIcon,
+  MoreIcon,
+  FavoriteIcon,
+  FavoritesIcon,
+  FavoritedIcon,
 };

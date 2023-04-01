@@ -21,8 +21,9 @@ const Title = styled.h1`
 const Description = styled.p`
     width: 75%;
     font-size: 1.15em;
-    margin-top: .25em;
+    margin-top: .65em;
     margin-left: .1em;
+    margin-bottom: .5em;
     color: #2F2F2F95;
     line-height: 150%;
 `;

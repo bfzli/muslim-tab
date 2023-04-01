@@ -1,16 +1,15 @@
 {
-    "manifest_version": 2,
-    "name": "Muslim Tab",
-    "short_name": "MT",
-    "description": "Your daily Islamic reminder assistant, and remind for indeed, the reminder benefits the believers.",
-    "author": "Muslim Tab",
-    "version": "5.2",
-    "content_security_policy": "script-src 'self' 'sha256-c2PmglUvg1TK6aIrnIkg2rl4L934scU6b3VcUXocAYU='; object-src 'self'",
+    "manifest_version": 3,
+    "name": "Entrepreneur Tab",
+    "short_name": "ET",
+    "description": "Entrepreneur reminders on each new tab you open.",
+    "author": "Benkco",
+    "version": "1.0.0",
     "chrome_url_overrides": { "newtab": "index.html" },
     "icons": {
-        "16": "icons/muslim-tab-16.png",
-        "32": "icons/muslim-tab-32.png",
-        "48": "icons/muslim-tab-48.png",
-        "128": "icons/muslim-tab-128.png"
+        "16": "icons/entrepreneur-tab-16.png",
+        "32": "icons/entrepreneur-tab-32.png",
+        "48": "icons/entrepreneur-tab-48.png",
+        "128": "icons/entrepreneur-tab-128.png"
     }
 }

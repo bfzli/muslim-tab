@@ -1,22 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Application from './Application';
-import contentReducer from './data/redux/Content';
+import React from "react";
+import ReactDOM from "react-dom";
+import Application from "./Application";
 
-import { configureStore } from '@reduxjs/toolkit';
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
+import { Redux } from "./configs/Redux";
 
-import './ui/styles/Base.css';
-
-const store = configureStore({
-  reducer: { content: contentReducer },
-});
+import "./ui/styles/entrepreneur-tab.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={Redux}>
       <Application />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

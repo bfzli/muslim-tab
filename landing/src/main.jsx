@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Contact, Home, Privacy } from './ui/pages';
 
@@ -10,9 +11,8 @@ const Redirect = () => {
 
   switch (true) {
       case whichAgent(/edg/i): window.location.href = "https://microsoftedge.microsoft.com/addons/detail/muslim-tab-islamic-remi/afgmjcggmedjodhagihcebmjlmcdcnfa"; break;
-      case whichAgent(/firefox|fxios/i): window.location.href = "https://addons.mozilla.org/en-US/firefox/addon/mt/"; break;
-      // case whichAgent(/safari/i): window.location.href = "https://google.com"; break;
-      default: window.location.href = "https://chrome.google.com/webstore/detail/muslim-tab/jjnohnifpemmdnbidcgcojdjfabfocgm"; break;
+      case whichAgent(/firefox|fxios/i): window.location.href = "https://addons.mozilla.org/en-GB/firefox/addon/entrepreneur-tab"; break;
+      default: window.location.href = "https://chrome.google.com/webstore/detail/dfhcpfkmflkelihfcdegckkfpenilbjb"; break;
   }
 }
 

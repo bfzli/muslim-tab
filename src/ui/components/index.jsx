@@ -1,3 +1,9 @@
 import Footer from './Footer'
 import Logo from './Logo'
-export { Footer, Logo }
+import Pro from './Pro';
+
+export { 
+    Footer, 
+    Logo,
+    Pro
+}

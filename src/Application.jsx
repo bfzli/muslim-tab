@@ -1,16 +1,35 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { Loader, Content } from "./ui/views";
-import { SetContent } from "./data/redux/Content";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SetContent } from "./redux/Content";
+import { Checker, Content as Fetch } from "./methods";
+import { onAuthStateChanged } from "firebase/auth";
+import { Auth } from "./configs/Firebase";
 
 export default function Application() {
   const dispatch = useDispatch();
-  const content = useSelector((state) => state.content);
 
-  useEffect(() => dispatch(SetContent()), []);
+  const content = useSelector((state) => state.Content);
+  const account = useSelector((state) => state.Account);
 
-  const isLoaded = content.status === true;
+  useEffect(() => {
+    const pass = account.Loading;
+    const action = async (user) => Checker(user, dispatch);
+    if (pass) onAuthStateChanged(Auth, action);
+  }, [account]);
 
-  if (isLoaded) return <Content id="screen" />;
-  else return <Loader stauts={content.status} />;
+  useEffect(() => {
+    if (!account.Loading) {
+      const quote = Fetch(true);
+
+      quote.then((q) => {
+        if (!content.Loaded) {
+          dispatch(SetContent(q));
+        }
+      });
+    }
+  }, [account, content]);
+
+  if (!content.Loading) return <Content id="screen" />;
+  else return <Loader />;
 }

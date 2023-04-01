@@ -1,26 +1,29 @@
-import { LogoIcon } from '../../icons';
-import { Container, Title, Description } from './Components';
-import { Button } from '../../components';
+import { LogoIcon } from "../../icons";
+import { Container, Title, Description } from "./Components";
+import { Button } from "../../components";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <Container>
-      <a href='https://muslim-tab.com'>
-        <LogoIcon size='2.5em' />
-      </a>
+      <Link to="https://entrepreneur-tab.com">
+        <LogoIcon size="2.3em" />
+      </Link>
 
-      <Title>Islamic reminders on each new tab you open.</Title>
+      <Title>Entrepreneur reminders on each new tab you open.</Title>
 
       <Description>
-        Muslim Tab is an Islamic reminder app that can be installed in browsers
-        as an extension. The mission of the app is to remind people when they
-        are using their devices on each new tab they open.
+        Entrepreneur Tab is an app that can be installed in browsers as an
+        extension. The mission of the app is to remind people with an
+        entrepreneur quote on each new tab they open so as to boost their
+        productivity and give optimists thoughts to its users daily.
       </Description>
 
       <Button
-        onClick={() => window.open('https://muslim-tab.com/install', '_blank')}
-        text='Install Muslim Tab'
-        icon=''
+        onClick={() =>
+          window.open("https://entrepreneur-tab.com/install", "_blank")
+        }
+        text="Install Entrepreneur Tab"
       />
     </Container>
   );

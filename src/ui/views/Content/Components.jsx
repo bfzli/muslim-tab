@@ -24,7 +24,7 @@ const Text = styled.h2`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 0em 12.5%;
+  padding: 0em 15%;
   text-align: center;
   color: white !important;
   -webkit-text-stroke: 1px white;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.section`
   width: 100%;
@@ -20,45 +20,15 @@ const Elements = styled.section`
   align-items: center;
 `;
 
-const Element = styled.section`
-  width: 92px;
-  height: 92px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1em;
-  border-radius: 0.75em;
-  transition: all ease-in-out 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    background: #383e4760;
-  }
-
-  &:last-of-type {
-    margin-right: 0em;
-  }
-`;
-
 const Linebreak = styled.section`
   width: 1px;
   height: 64px;
   background: #e6e6e650;
-  margin: 0em .75em;
-`;
-
-const Name = styled.p`
-  font-size: 1.15em;
-  text-align: center;
-  font-weight: 400;
-  margin-top: 0.75em;
-  color: #fff;
+  margin: 0em 0.75em;
 `;
 
 const Breakspace = styled.section`
-  margin: 0em .25em;
-`
+  margin: 0em 0.25em;
+`;
 
-export { Container, Elements, Element, Name, Linebreak, Breakspace };
+export { Container, Elements, Linebreak, Breakspace };

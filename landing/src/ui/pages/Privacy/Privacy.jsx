@@ -1,13 +1,13 @@
-import { LogoIcon } from '../../icons';
-import { Container, Title, Description } from './Components';
-import { Button } from '../../components';
+import { Link } from "react-router-dom";
+import { LogoIcon } from "../../icons";
+import { Container, Title, Description } from "./Components";
 
 export default function Home() {
   return (
     <Container>
-      <a href='https://muslim-tab.com'>
-        <LogoIcon size='2.5em' />
-      </a>
+      <Link to="https://entrepreneur-tab.com">
+        <LogoIcon size="2.3em" />
+      </Link>
 
       <Title>Privacy Policy</Title>
 
