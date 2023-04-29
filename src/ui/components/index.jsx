@@ -1,9 +1,5 @@
-import Footer from './Footer'
-import Logo from './Logo'
-import Pro from './Pro';
+import Footer from "./Footer";
+import Logo from "./Logo";
+import Content from "./Content";
 
-export { 
-    Footer, 
-    Logo,
-    Pro
-}
+export { Footer, Logo, Content };

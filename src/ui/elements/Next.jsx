@@ -1,13 +1,17 @@
+import Quotes from '../../data/Quotes.json'
+
 import { Element, Name } from "./Components";
 import { NextIcon } from "../icons";
-import { SetContent } from "../../redux/Content";
-import { useDispatch } from "react-redux";
+import { RandomNumber } from '../../utils';
 
-export default function Next() {
-  const dispatch = useDispatch();
+export default function Next(props) {
+  const next = () => {
+    props.setContent(Quotes[Math.floor(Math.random() * Quotes.length)] || undefined);
+    props.setWallpaper(RandomNumber);
+  }
 
   return (
-    <Element onClick={() => dispatch(SetContent())}>
+    <Element onClick={next}>
       <NextIcon size="1.6em" />
       <Name>Next</Name>
     </Element>

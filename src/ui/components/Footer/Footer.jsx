@@ -1,16 +1,5 @@
 import { Container, Elements, Linebreak, Breakspace } from "./Components";
-
-import {
-  Account,
-  Contact,
-  Favorite,
-  Favorites,
-  More,
-  Next,
-  Pro,
-  Screenshot,
-  Copy,
-} from "../../elements";
+import { Contact, More, Next, Copy, Donate, Mode } from "../../elements";
 
 export default function Footer(props) {
   const enter = () => props.setIsHover(true);
@@ -19,25 +8,18 @@ export default function Footer(props) {
   return (
     <Container onMouseEnter={enter} onMouseLeave={leave}>
       <Elements style={props.bottom}>
-        <Screenshot />
         <Breakspace />
-        <Copy />
+        <Copy {...props} />
         <Breakspace />
-        <Favorite />
+        <Mode {...props} />
         <Breakspace />
-        <Next />
-        <Breakspace />
-        <Linebreak />
-        <Breakspace />
-        <Favorites />
-        <Breakspace />
-        <Pro />
-        <Breakspace />
-        <Account />
+        <Next {...props} />
         <Breakspace />
         <Linebreak />
         <Breakspace />
         <Contact />
+        <Breakspace />
+        <Donate />
         <Breakspace />
         <More />
       </Elements>

@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Muslim Tab: Each Tab, a Reflection",
+  "description": "Your daily Islamic whisper, nurturing faith and wisdom – for a reminder truly benefits the believers.",
+  "version": "6.0",
+  "chrome_url_overrides": { "newtab": "index.html" },
+  "icons": { "128": "muslim-tab.png" }
+}

@@ -1,16 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
 }
 
 body {
-    width: 100%;
-    height: auto;
-    font-size: 0.95em;
-    overflow: hidden;
-    font-family: "DM Sans" !important;
+  width: 100%;
+  height: auto;
+  font-size: 0.95em;
+  overflow: hidden;
+  font-family: "DM Sans" !important;
+}
+
+.st0 {
+  fill: #010202;
+}
+
+.st1 {
+  fill: #ffdd06;
 }

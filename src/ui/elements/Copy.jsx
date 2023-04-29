@@ -1,14 +1,12 @@
 import { Element, Name } from "./Components";
 import { CopiedIcon, CopyIcon } from "../icons";
-import { useSelector } from "react-redux";
 import { useState } from "react";
-import { Copy as Copier } from "../../utils";
+import { CopyToClipboard } from "../../utils";
 
-export default function Copy() {
+export default function Copy({content}) {
   const [copied, setCopied] = useState(false);
-  const content = useSelector((state) => state.content);
 
-  const action = () => (!copied ? Copier(content.quote, setCopied) : "");
+  const action = () => (!copied ? CopyToClipboard(content?.main_content, setCopied) : "");
 
   return (
     <Element onClick={action}>
