@@ -19,7 +19,7 @@ export default function Footer(props) {
         <Breakspace />
         <Contact />
         <Breakspace />
-        <Donate />
+        {/* <Donate /> */}
         <Breakspace />
         <More />
       </Elements>

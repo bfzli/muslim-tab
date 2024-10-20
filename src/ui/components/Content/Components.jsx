@@ -55,6 +55,7 @@ const Reference = styled.a`
   color: white !important;
   -webkit-text-stroke: 0px white;
   -webkit-text-fill-color: white;
+  background: #383e4740;
 
   &:hover {
     background: #383e4760;

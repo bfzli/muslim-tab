@@ -8,9 +8,9 @@ export default function Logo(props) {
   return (
     <Container onMouseEnter={enter} onMouseLeave={leave}>
       <Elements style={props.top}>
-        <a href="https://entrepreneur-tab.com" target="_blank" rel="noreferrer">
-          <LogoIcon size="2.3em" />
-        </a>
+        {/* <a href="https://entrepreneur-tab.com" target="_blank" rel="noreferrer"> */}
+          <LogoIcon size="2.5em" />
+        {/* </a> */}
       </Elements>
     </Container>
   );
