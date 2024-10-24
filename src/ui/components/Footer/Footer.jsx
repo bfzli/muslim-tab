@@ -1,5 +1,5 @@
 import { Container, Elements, Linebreak, Breakspace } from "./Components";
-import { Contact, More, Next, Copy, Donate, Mode } from "../../elements";
+import { Contact, More, Next, Copy, Mode } from "../../elements";
 
 export default function Footer(props) {
   const enter = () => props.setIsHover(true);
@@ -19,7 +19,6 @@ export default function Footer(props) {
         <Breakspace />
         <Contact />
         <Breakspace />
-        {/* <Donate /> */}
         <Breakspace />
         <More />
       </Elements>
