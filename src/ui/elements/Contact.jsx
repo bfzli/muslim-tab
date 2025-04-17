@@ -3,7 +3,7 @@ import { Element, Name } from "./Components";
 
 export default function Contact() {
   return (
-    <Element onClick={() => window.open('mailto:hello@miniapps.site', "_blank")}>
+    <Element onClick={() => window.open('https://miniapps.site/contact', "_blank")}>
       <ContactIcon size="1.6em" />
       <Name>Contact</Name>
     </Element>

@@ -6,7 +6,7 @@ import { ContentGenerator, InitalMode, RandomNumber, mb_2, mb_30, mt_2, mt_30 } 
 export default function Content() {
   const [mode, setMode] = useState(InitalMode());
   const [content, setContent] = useState(ContentGenerator(mode, null, true))
-  const [wallpaper, setWallpaper] = useState(RandomNumber)
+  const [wallpaper, setWallpaper] = useState(RandomNumber())
   const [isHover, setIsHover] = useState(false);
   const [isModal, setIsModal] = useState(false);
 
@@ -16,7 +16,7 @@ export default function Content() {
   const link = mode === "quote" ? `https://www.google.com/search?q=${content?.reference_content}` : content?.reference_link
 
   useEffect(() => {
-    setWallpaper(RandomNumber);
+    setWallpaper(RandomNumber());
     ContentGenerator(mode, setContent, false);
   }, [mode])
 

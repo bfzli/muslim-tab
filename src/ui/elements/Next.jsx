@@ -7,7 +7,7 @@ import { RandomNumber } from '../../utils';
 export default function Next(props) {
   const next = () => {
     props.setContent(Quotes[Math.floor(Math.random() * Quotes.length)] || undefined);
-    props.setWallpaper(RandomNumber);
+    props.setWallpaper(RandomNumber())
   }
 
   return (
