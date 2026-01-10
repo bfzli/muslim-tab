@@ -25,6 +25,8 @@ interface SettingsProps {
     setShowSearch: (value: boolean) => void
     searchProvider: SearchProvider
     setSearchProvider: (value: SearchProvider) => void
+    showContent: boolean
+    setShowContent: (value: boolean) => void
 }
 
 const Settings: React.FC<SettingsProps> = ({
@@ -37,7 +39,9 @@ const Settings: React.FC<SettingsProps> = ({
     showSearch,
     setShowSearch,
     searchProvider,
-    setSearchProvider
+    setSearchProvider,
+    showContent,
+    setShowContent
 }) => {
     const [isClosing, setIsClosing] = useState(false)
     const [shouldRender, setShouldRender] = useState(isOpen)
@@ -80,6 +84,12 @@ const Settings: React.FC<SettingsProps> = ({
     const handleProviderChange = (provider: SearchProvider) => {
         setSearchProvider(provider)
         localStorage.setItem('searchProvider', provider)
+    }
+
+    const handleContentToggle = () => {
+        const newValue = !showContent
+        setShowContent(newValue)
+        localStorage.setItem('showContent', JSON.stringify(newValue))
     }
 
     return (
@@ -153,6 +163,16 @@ const Settings: React.FC<SettingsProps> = ({
                             checked={showBookmarks}
                             onClick={handleBookmarksToggle}
                             id="bookmarks-toggle"
+                        />
+                    </SettingItem>
+                    <SettingItem>
+                        <SettingLabel htmlFor="content-toggle">
+                            Show Content
+                        </SettingLabel>
+                        <ToggleSwitch
+                            checked={showContent}
+                            onClick={handleContentToggle}
+                            id="content-toggle"
                         />
                     </SettingItem>
                 </ModalBody>

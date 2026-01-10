@@ -173,14 +173,12 @@ export const SettingsButton = styled.button`
     background: transparent;
     border: none;
     border-radius: 0.75em;
-    width: 32px;
-    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all ease-in-out 0.3s;
-    padding: 0.65em;
+    padding: 1em;
     color: white;
 
     &:hover {

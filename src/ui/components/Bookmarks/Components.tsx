@@ -7,8 +7,6 @@ export const BookmarksContainer = styled.div`
     justify-content: center;
     align-items: start;
     gap: 1.25rem 0.75rem;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
     padding: 0.5rem 1rem 0;
     max-width: 100%;
     margin-left: auto;
@@ -35,14 +33,14 @@ export const BookmarkItem = styled.a`
 export const BookmarkIcon = styled.div`
     width: 32px;
     height: 32px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(10px);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
 
     img {

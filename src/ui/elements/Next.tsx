@@ -9,7 +9,11 @@ type NextProps = ContentProps & WallpaperProps & { mode: ContentMode; wallpaper:
 const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWallpaper }) => {
     const next = async (): Promise<void> => {
         const newWallpaper = getRandomNumber(wallpaper)
-        await preloadImage(newWallpaper)
+        try {
+            await preloadImage(newWallpaper)
+        } catch (error) {
+            console.warn('Failed to preload wallpaper:', error)
+        }
         ContentGenerator(mode, setContent, false, content)
         setWallpaper(newWallpaper)
     }

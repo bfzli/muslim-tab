@@ -5,7 +5,6 @@ const VerseIcon: React.FC<IconProps> = ({ size = '1em' }) => {
     return (
         <svg
             width={size}
-            height='123'
             viewBox='0 0 123 123'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'

@@ -1,6 +1,6 @@
 import { ContentItem, ContentMode, SearchProvider } from '@types'
 import React, { useEffect, useState } from 'react'
-import { Container, ContentWrapper, Title, Reference } from '@styled/content'
+import { Container, ContentWrapper, QuoteContainer, Title, Reference } from '@styled/content'
 import Footer from '@components/Footer'
 import Logo from '@components/Logo'
 import Bookmarks from '@components/Bookmarks'
@@ -43,6 +43,10 @@ const Content: React.FC = () => {
         const saved = localStorage.getItem('showClock')
         return saved !== null ? JSON.parse(saved) : true
     })
+    const [showContent, setShowContent] = useState<boolean>(() => {
+        const saved = localStorage.getItem('showContent')
+        return saved !== null ? JSON.parse(saved) : true
+    })
 
     const top = isHover === false ? mt_30 : mt_2
     const bottom = isHover === false ? mb_30 : mb_2
@@ -50,7 +54,11 @@ const Content: React.FC = () => {
     useEffect(() => {
         const loadContent = async () => {
             const newWallpaper = getRandomNumber(wallpaper)
-            await preloadImage(newWallpaper)
+            try {
+                await preloadImage(newWallpaper)
+            } catch (error) {
+                console.warn('Failed to preload wallpaper:', error)
+            }
             ContentGenerator(mode, setContent, false, content)
             setWallpaper(newWallpaper)
         }
@@ -82,30 +90,36 @@ const Content: React.FC = () => {
                 {showSearch && <SearchBar provider={searchProvider} />}
                 {showBookmarks && <Bookmarks />}
 
-                <Title
-                    compact={showClock && showSearch && showBookmarks}
-                    hasSettings={showClock || showSearch || showBookmarks}
-                >
-                    {content?.content}
-                </Title>
+                {showContent && (
+                    <QuoteContainer hasOtherElements={showClock || showSearch || showBookmarks}>
+                        <Title
+                            compact={showClock && showSearch && showBookmarks}
+                            hasSettings={showClock || showSearch || showBookmarks}
+                        >
+                            {content?.content}
+                        </Title>
 
-                <Reference>
-                    {content?.reference}
-                </Reference>
+                        <Reference>
+                            {content?.reference}
+                        </Reference>
+                    </QuoteContainer>
+                )}
             </ContentWrapper>
 
-            <Footer
-                mode={mode}
-                setMode={setMode}
-                content={content}
-                setContent={setContent}
-                wallpaper={wallpaper}
-                setWallpaper={setWallpaper}
-                bottom={bottom}
-                setIsHover={setIsHover}
-                isModal={isModal}
-                setModal={setIsModal}
-            />
+            {showContent && (
+                <Footer
+                    mode={mode}
+                    setMode={setMode}
+                    content={content}
+                    setContent={setContent}
+                    wallpaper={wallpaper}
+                    setWallpaper={setWallpaper}
+                    bottom={bottom}
+                    setIsHover={setIsHover}
+                    isModal={isModal}
+                    setModal={setIsModal}
+                />
+            )}
 
             <Settings
                 isOpen={isSettingsOpen}
@@ -118,6 +132,8 @@ const Content: React.FC = () => {
                 setShowSearch={setShowSearch}
                 searchProvider={searchProvider}
                 setSearchProvider={setSearchProvider}
+                showContent={showContent}
+                setShowContent={setShowContent}
             />
         </Container>
     )

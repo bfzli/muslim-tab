@@ -32,6 +32,15 @@ export const ContentWrapper = styled.div`
     align-items: center;
     padding: 0em 15% 2.5em 15%;
     background: rgba(0, 0, 0, 0.8);
+    gap: 2.5rem;
+`
+
+export const QuoteContainer = styled.div<{ hasOtherElements?: boolean }>`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: ${(props) => (props.hasOtherElements ? '2rem' : '0')};
+    gap: 1rem;
 `
 
 interface TitleProps {
@@ -95,7 +104,6 @@ export const Text = styled.h2`
 `
 
 export const Reference = styled.p`
-    margin-top: 1rem;
     padding: 0.25rem 0.75rem;
     font-size: 0.9rem !important;
     font-weight: 300;

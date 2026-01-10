@@ -26,8 +26,8 @@ export const ClockContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
     perspective: 1000px;
+    gap: 0.5rem;
 `
 
 export const TimeDisplay = styled.div`
@@ -38,7 +38,6 @@ export const TimeDisplay = styled.div`
     font-weight: 300;
     color: white;
     letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
 `
 
 export const TimeDigit = styled.span<{ isChanging: boolean; isSeconds?: boolean }>`
