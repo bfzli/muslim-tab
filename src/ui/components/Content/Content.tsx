@@ -1,4 +1,4 @@
-import { ContentItem, ContentMode, SearchProvider } from '@types'
+import { ContentItem, ContentMode, SearchProvider, GradientType, gradients } from '@types'
 import React, { useEffect, useState } from 'react'
 import { Container, ContentWrapper, QuoteContainer, Title, Reference } from '@styled/content'
 import Footer from '@components/Footer'
@@ -47,6 +47,14 @@ const Content: React.FC = () => {
         const saved = localStorage.getItem('showContent')
         return saved !== null ? JSON.parse(saved) : true
     })
+    const [showPhotos, setShowPhotos] = useState<boolean>(() => {
+        const saved = localStorage.getItem('showPhotos')
+        return saved !== null ? JSON.parse(saved) : true
+    })
+    const [selectedGradient, setSelectedGradient] = useState<GradientType>(() => {
+        const saved = localStorage.getItem('selectedGradient')
+        return (saved as GradientType) || 'ocean'
+    })
 
     const top = isHover === false ? mt_30 : mt_2
     const bottom = isHover === false ? mb_30 : mb_2
@@ -77,6 +85,8 @@ const Content: React.FC = () => {
         <Container
             background={`/backgrounds/${wallpaper}.webp`}
             isSettingsOpen={isSettingsOpen}
+            showPhotos={showPhotos}
+            gradient={gradients[selectedGradient].gradient}
         >
             <Logo
                 top={top}
@@ -134,6 +144,10 @@ const Content: React.FC = () => {
                 setSearchProvider={setSearchProvider}
                 showContent={showContent}
                 setShowContent={setShowContent}
+                showPhotos={showPhotos}
+                setShowPhotos={setShowPhotos}
+                selectedGradient={selectedGradient}
+                setSelectedGradient={setSelectedGradient}
             />
         </Container>
     )

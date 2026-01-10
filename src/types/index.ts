@@ -65,3 +65,7 @@ export interface LogoProps extends HoverProps {
 // Re-export search provider types
 export type { SearchProvider, SearchProviderConfig } from './searchProviders'
 export { searchProviders } from './searchProviders'
+
+// Re-export gradient types
+export type { GradientType, GradientConfig } from './gradients'
+export { gradients } from './gradients'

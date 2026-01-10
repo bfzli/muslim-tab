@@ -10,7 +10,8 @@ export const Element = styled.section`
     border-radius: 0.75em;
     transition: all ease-in-out 0.3s;
     cursor: pointer;
-    min-width: 90px;
+    width: 75px;
+    max-width: 75px;
 
     &:hover {
         background: #383e4760;

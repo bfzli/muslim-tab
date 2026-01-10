@@ -192,3 +192,30 @@ export const SettingsButton = styled.button`
         display: block;
     }
 `
+
+export const GradientButton = styled.button<{ gradient: string; selected: boolean }>`
+    width: 42px;
+    height: 32px;
+    background: ${(props) => props.gradient};
+    border-radius: 6px;
+    border: 2px solid
+        ${(props) => (props.selected ? 'rgb(59, 130, 246)' : 'rgba(255, 255, 255, 0.2)')};
+    cursor: ${(props) => (props.selected ? 'default' : 'pointer')};
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:hover {
+        border-color: ${(props) =>
+            props.selected ? 'rgb(59, 130, 246)' : 'rgba(59, 130, 246, 0.6)'};
+        transform: ${(props) => (props.selected ? 'none' : 'translateY(-2px)')};
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 4px;
+        background: ${(props) =>
+            props.selected ? 'rgba(59, 130, 246, 0.1)' : 'transparent'};
+    }
+`

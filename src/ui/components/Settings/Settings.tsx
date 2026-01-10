@@ -10,9 +10,10 @@ import {
     SettingLabel,
     ToggleSwitch,
     ProviderSelector,
-    ProviderButton
+    ProviderButton,
+    GradientButton
 } from './Components'
-import { SearchProvider, searchProviders } from '@types'
+import { SearchProvider, searchProviders, GradientType, gradients } from '@types'
 
 interface SettingsProps {
     isOpen: boolean
@@ -27,6 +28,10 @@ interface SettingsProps {
     setSearchProvider: (value: SearchProvider) => void
     showContent: boolean
     setShowContent: (value: boolean) => void
+    showPhotos: boolean
+    setShowPhotos: (value: boolean) => void
+    selectedGradient: GradientType
+    setSelectedGradient: (value: GradientType) => void
 }
 
 const Settings: React.FC<SettingsProps> = ({
@@ -41,7 +46,11 @@ const Settings: React.FC<SettingsProps> = ({
     searchProvider,
     setSearchProvider,
     showContent,
-    setShowContent
+    setShowContent,
+    showPhotos,
+    setShowPhotos,
+    selectedGradient,
+    setSelectedGradient
 }) => {
     const [isClosing, setIsClosing] = useState(false)
     const [shouldRender, setShouldRender] = useState(isOpen)
@@ -90,6 +99,17 @@ const Settings: React.FC<SettingsProps> = ({
         const newValue = !showContent
         setShowContent(newValue)
         localStorage.setItem('showContent', JSON.stringify(newValue))
+    }
+
+    const handlePhotosToggle = () => {
+        const newValue = !showPhotos
+        setShowPhotos(newValue)
+        localStorage.setItem('showPhotos', JSON.stringify(newValue))
+    }
+
+    const handleGradientChange = (gradient: GradientType) => {
+        setSelectedGradient(gradient)
+        localStorage.setItem('selectedGradient', gradient)
     }
 
     return (
@@ -175,6 +195,34 @@ const Settings: React.FC<SettingsProps> = ({
                             id="content-toggle"
                         />
                     </SettingItem>
+                    <SettingItem>
+                        <SettingLabel htmlFor="photos-toggle">
+                            Show Photos
+                        </SettingLabel>
+                        <ToggleSwitch
+                            checked={showPhotos}
+                            onClick={handlePhotosToggle}
+                            id="photos-toggle"
+                        />
+                    </SettingItem>
+                    {!showPhotos && (
+                        <SettingItem style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
+                            <SettingLabel>Background Gradient</SettingLabel>
+                            <ProviderSelector>
+                                {Object.entries(gradients).map(([key, config]) => (
+                                    <GradientButton
+                                        key={key}
+                                        gradient={config.gradient}
+                                        selected={selectedGradient === key}
+                                        onClick={() =>
+                                            handleGradientChange(key as GradientType)
+                                        }
+                                        title={config.name}
+                                    />
+                                ))}
+                            </ProviderSelector>
+                        </SettingItem>
+                    )}
                 </ModalBody>
             </ModalContainer>
         </ModalBackdrop>

@@ -3,6 +3,8 @@ import { BackgroundProps } from '@types'
 
 interface ContainerProps extends BackgroundProps {
     isSettingsOpen?: boolean
+    showPhotos?: boolean
+    gradient?: string
 }
 
 export const Container = styled.section<ContainerProps>`
@@ -12,7 +14,10 @@ export const Container = styled.section<ContainerProps>`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: url('${(props) => props.background}');
+    background: ${(props) =>
+        props.showPhotos
+            ? `url('${props.background}')`
+            : props.gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'};
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
