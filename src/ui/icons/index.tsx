@@ -8,6 +8,7 @@ import QuoteIcon from '@icons/QuoteIcon'
 import VerseIcon from '@icons/VerseIcon'
 import HadithIcon from '@icons/HadithIcon'
 import AutoIcon from '@icons/AutoIcon'
+import SettingsIcon from '@icons/SettingsIcon'
 
 export {
     CopyIcon,
@@ -19,5 +20,6 @@ export {
     QuoteIcon,
     VerseIcon,
     HadithIcon,
-    AutoIcon
+    AutoIcon,
+    SettingsIcon
 }

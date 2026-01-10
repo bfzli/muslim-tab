@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import { BackgroundProps } from '@types'
 
-export const Container = styled.section<BackgroundProps>`
-    width: 100%;
+interface ContainerProps extends BackgroundProps {
+    isSettingsOpen?: boolean
+}
+
+export const Container = styled.section<ContainerProps>`
+    width: ${(props) => (props.isSettingsOpen ? 'calc(100vw - 320px)' : '100vw')};
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,12 +17,56 @@ export const Container = styled.section<BackgroundProps>`
     background-size: cover;
     object-fit: cover;
     background-position: center center;
+    transition: width 0.3s ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+`
+
+export const ContentWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 15% 2.5em 15%;
+    background: rgba(0, 0, 0, 0.8);
+`
+
+interface TitleProps {
+    compact?: boolean
+    hasSettings?: boolean
+}
+
+export const Title = styled.h2<TitleProps>`
+    max-width: ${(props) => (props.hasSettings ? '65%' : '100%')};
+    font-size: ${(props) => (props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em')};
+    font-weight: 500;
+    letter-spacing: 0.85px;
+    text-align: center;
+    color: white !important;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: white;
+    -webkit-animation: fill 0.5s infinite alternate;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: ${(props) => (props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em')};
+    }
+
+    @media only screen and (max-width: 850px) {
+        font-size: ${(props) => (props.hasSettings ? '1.75rem' : props.compact ? '1.5em' : '2.5em')};
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: ${(props) => (props.hasSettings ? '1.5rem' : props.compact ? '1.5em' : '2.25em')} !important;
+    }
 `
 
 export const Text = styled.h2`
     width: 100%;
     height: 100%;
-    font-size: 2.9em;
+    font-size: 2.75em;
     font-weight: 500;
     letter-spacing: 0.85px;
     display: flex;
@@ -47,19 +95,18 @@ export const Text = styled.h2`
 `
 
 export const Reference = styled.p`
-    margin-top: 1em;
-    padding: 0.3em 0.7em;
-    border-radius: 0.75em;
+    margin-top: 1rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem !important;
+    font-weight: 300;
+    border-radius: 99rem;
     transition: all ease-in-out 0.3s;
-    font-size: 0.3em !important;
     z-index: 100;
     color: white !important;
+    font-size: 0.8rem !important;
     -webkit-text-stroke: 0px white;
     -webkit-text-fill-color: white;
     background: #383e4720;
     text-decoration: none;
-
-    &:hover {
-        opacity: 0.8;
-    }
+    cursor: default;
 `

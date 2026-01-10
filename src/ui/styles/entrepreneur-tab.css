@@ -7,12 +7,16 @@
     user-select: none;
 }
 
+html,
 body {
     width: 100%;
-    height: auto;
+    height: 100%;
     font-size: 0.95em;
     overflow: hidden;
+    overflow-x: hidden;
     font-family: 'DM Sans' !important;
+    position: relative;
+    background: #000;
 }
 
 .st0 {

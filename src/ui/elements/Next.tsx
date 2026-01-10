@@ -4,13 +4,13 @@ import { Element, Name } from '@styled/elements'
 import NextIcon from '@icons/NextIcon'
 import { getRandomNumber, ContentGenerator, preloadImage } from '@utils'
 
-type NextProps = ContentProps & WallpaperProps & { mode: ContentMode }
+type NextProps = ContentProps & WallpaperProps & { mode: ContentMode; wallpaper: number }
 
-const Next: React.FC<NextProps> = ({ mode, setContent, setWallpaper }) => {
+const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWallpaper }) => {
     const next = async (): Promise<void> => {
-        const newWallpaper = getRandomNumber()
+        const newWallpaper = getRandomNumber(wallpaper)
         await preloadImage(newWallpaper)
-        ContentGenerator(mode, setContent, false)
+        ContentGenerator(mode, setContent, false, content)
         setWallpaper(newWallpaper)
     }
 

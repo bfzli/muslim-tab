@@ -1,8 +1,12 @@
-import { ContentItem, ContentMode } from '@types'
+import { ContentItem, ContentMode, SearchProvider } from '@types'
 import React, { useEffect, useState } from 'react'
-import { Container, Text, Reference } from '@styled/content'
+import { Container, ContentWrapper, Title, Reference } from '@styled/content'
 import Footer from '@components/Footer'
 import Logo from '@components/Logo'
+import Bookmarks from '@components/Bookmarks'
+import Settings from '@components/Settings'
+import SearchBar from '@components/SearchBar'
+import Clock from '@components/Clock'
 import {
     ContentGenerator,
     InitalMode,
@@ -22,40 +26,98 @@ const Content: React.FC = () => {
     const [wallpaper, setWallpaper] = useState<number>(getRandomNumber())
     const [isHover, setIsHover] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false)
+    const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false)
+    const [showBookmarks, setShowBookmarks] = useState<boolean>(() => {
+        const saved = localStorage.getItem('showBookmarks')
+        return saved !== null ? JSON.parse(saved) : true
+    })
+    const [showSearch, setShowSearch] = useState<boolean>(() => {
+        const saved = localStorage.getItem('showSearch')
+        return saved !== null ? JSON.parse(saved) : true
+    })
+    const [searchProvider, setSearchProvider] = useState<SearchProvider>(() => {
+        const saved = localStorage.getItem('searchProvider')
+        return (saved as SearchProvider) || 'google'
+    })
+    const [showClock, setShowClock] = useState<boolean>(() => {
+        const saved = localStorage.getItem('showClock')
+        return saved !== null ? JSON.parse(saved) : true
+    })
 
     const top = isHover === false ? mt_30 : mt_2
     const bottom = isHover === false ? mb_30 : mb_2
 
     useEffect(() => {
         const loadContent = async () => {
-            const newWallpaper = getRandomNumber()
+            const newWallpaper = getRandomNumber(wallpaper)
             await preloadImage(newWallpaper)
-            ContentGenerator(mode, setContent, false)
+            ContentGenerator(mode, setContent, false, content)
             setWallpaper(newWallpaper)
         }
         loadContent()
     }, [mode])
 
+    const handleSettingsClick = () => {
+        setIsSettingsOpen(true)
+    }
+
+    const handleSettingsClose = () => {
+        setIsSettingsOpen(false)
+    }
+
     return (
-        <Container background={`/backgrounds/${wallpaper}.webp`}>
-            <Logo top={top} setIsHover={setIsHover} />
+        <Container
+            background={`/backgrounds/${wallpaper}.webp`}
+            isSettingsOpen={isSettingsOpen}
+        >
+            <Logo
+                top={top}
+                setIsHover={setIsHover}
+                onSettingsClick={handleSettingsClick}
+                isSettingsOpen={isSettingsOpen}
+            />
 
-            <Text>
-                {content?.content}
+            <ContentWrapper>
+                {showClock && <Clock />}
+                {showSearch && <SearchBar provider={searchProvider} />}
+                {showBookmarks && <Bookmarks />}
 
-                <Reference>{content?.reference}</Reference>
-            </Text>
+                <Title
+                    compact={showClock && showSearch && showBookmarks}
+                    hasSettings={showClock || showSearch || showBookmarks}
+                >
+                    {content?.content}
+                </Title>
+
+                <Reference>
+                    {content?.reference}
+                </Reference>
+            </ContentWrapper>
 
             <Footer
                 mode={mode}
                 setMode={setMode}
                 content={content}
                 setContent={setContent}
+                wallpaper={wallpaper}
                 setWallpaper={setWallpaper}
                 bottom={bottom}
                 setIsHover={setIsHover}
                 isModal={isModal}
                 setModal={setIsModal}
+            />
+
+            <Settings
+                isOpen={isSettingsOpen}
+                onClose={handleSettingsClose}
+                showClock={showClock}
+                setShowClock={setShowClock}
+                showBookmarks={showBookmarks}
+                setShowBookmarks={setShowBookmarks}
+                showSearch={showSearch}
+                setShowSearch={setShowSearch}
+                searchProvider={searchProvider}
+                setSearchProvider={setSearchProvider}
             />
         </Container>
     )

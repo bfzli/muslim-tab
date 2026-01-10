@@ -6,7 +6,14 @@ export const mb_30: StyleProp = { marginBottom: '-30em' }
 export const mb_2: StyleProp = { marginBottom: '-2em' }
 
 // Convert to function to avoid re-evaluation issues
-export const getRandomNumber = (): number => Math.floor(Math.random() * 179) + 1
+// Now supports excluding a number to avoid repetition
+export const getRandomNumber = (exclude?: number): number => {
+    let num: number
+    do {
+        num = Math.floor(Math.random() * 179) + 1
+    } while (num === exclude && exclude !== undefined)
+    return num
+}
 
 // Keep as constant for backward compatibility
 export const RandomNumber: number = getRandomNumber()

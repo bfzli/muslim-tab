@@ -1,15 +1,17 @@
 {
   "version": "7.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "lucide-react": "^0.263.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
     "styled-components": "^5.3.3"
   },
   "scripts": {
-    "extension:start": "craco start",
-    "extension:build": "craco build",
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
     "lint": "eslint src --ext .ts,.tsx",
@@ -63,18 +65,21 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0",
     "@types/chrome": "^0.1.32",
+    "@types/node": "^25.0.5",
     "@types/react": "^17.0.90",
     "@types/react-dom": "^17.0.26",
     "@types/styled-components": "^5.1.36",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "craco-alias": "^3.0.1",
+    "@vitejs/plugin-react": "^4.7.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "prettier": "^3.7.4",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vite": "^6.4.1",
+    "vite-plugin-static-copy": "^3.1.4",
+    "vite-tsconfig-paths": "^6.0.4"
   }
 }

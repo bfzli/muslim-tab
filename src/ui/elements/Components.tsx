@@ -10,6 +10,7 @@ export const Element = styled.section`
     border-radius: 0.75em;
     transition: all ease-in-out 0.3s;
     cursor: pointer;
+    min-width: 80px;
 
     &:hover {
         background: #383e4760;
@@ -26,4 +27,5 @@ export const Name = styled.p`
     font-weight: 400;
     margin-top: 0.75em;
     color: #fff;
+    white-space: nowrap;
 `

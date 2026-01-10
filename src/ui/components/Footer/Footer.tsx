@@ -21,6 +21,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                     mode={props.mode}
                     content={props.content}
                     setContent={props.setContent}
+                    wallpaper={props.wallpaper}
                     setWallpaper={props.setWallpaper}
                 />
             </Elements>

@@ -36,6 +36,7 @@ export interface ContentProps {
 }
 
 export interface WallpaperProps {
+    wallpaper: number
     setWallpaper: React.Dispatch<React.SetStateAction<number>>
 }
 
@@ -57,4 +58,10 @@ export interface FooterProps
 // Logo props
 export interface LogoProps extends HoverProps {
     top: StyleProp
+    onSettingsClick: () => void
+    isSettingsOpen: boolean
 }
+
+// Re-export search provider types
+export type { SearchProvider, SearchProviderConfig } from './searchProviders'
+export { searchProviders } from './searchProviders'
