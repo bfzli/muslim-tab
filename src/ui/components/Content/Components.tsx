@@ -6,7 +6,7 @@ interface ContainerProps extends BackgroundProps {
 }
 
 export const Container = styled.section<ContainerProps>`
-    width: ${(props) => (props.isSettingsOpen ? 'calc(100vw - 320px)' : '100vw')};
+    width: ${(props) => (props.isSettingsOpen ? 'calc(100vw - 300px)' : '100vw')};
     height: 100vh;
     display: flex;
     justify-content: center;

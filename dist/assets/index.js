@@ -171,7 +171,7 @@ Add a <Suspense fallback=...> component higher in the tree to provide a loading 
     right: 0;
     background: rgb(25, 25, 25);
     border-left: 1px solid rgba(255, 255, 255, 0.05);
-    width: 320px;
+    width: 300px;
     height: 100vh;
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
@@ -233,15 +233,15 @@ Add a <Suspense fallback=...> component higher in the tree to provide a loading 
     gap: 0.5rem;
     flex-wrap: wrap;
 `,b1=re.button`
-    background: ${o=>o.selected?o.color+"20":"rgba(255, 255, 255, 0.05)"};
-    color: ${o=>o.selected?o.color:"rgba(255, 255, 255, 0.7)"};
+    background: ${o=>o.selected?"rgba(59, 130, 246, 0.2)":"rgba(255, 255, 255, 0.05)"};
+    color: ${o=>o.selected?"rgb(59, 130, 246)":"rgba(255, 255, 255, 0.7)"};
     border: 1px solid
-        ${o=>o.selected?o.color+"60":"rgba(255, 255, 255, 0.1)"};
+        ${o=>o.selected?"rgba(59, 130, 246, 0.6)":"rgba(255, 255, 255, 0.1)"};
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     font-size: 0.85rem;
     font-weight: 300;
-    cursor: pointer;
+    cursor: ${o=>o.selected?"default":"pointer"};
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -249,31 +249,31 @@ Add a <Suspense fallback=...> component higher in the tree to provide a loading 
     font-family: inherit;
 
     &:hover {
-        background: ${o=>o.color+"30"};
-        border-color: ${o=>o.color+"80"};
-        color: ${o=>o.color};
+        background: ${o=>o.selected?"rgba(59, 130, 246, 0.2)":"rgba(59, 130, 246, 0.3)"};
+        border-color: ${o=>o.selected?"rgba(59, 130, 246, 0.6)":"rgba(59, 130, 246, 0.8)"};
+        color: rgb(59, 130, 246);
     }
 
     svg {
         flex-shrink: 0;
     }
 `,Qr=re.div`
-    width: 48px;
-    height: 24px;
-    background: ${o=>o.checked?"rgba(100, 200, 100, 0.5)":"rgba(255, 255, 255, 0.15)"};
-    border-radius: 12px;
+    width: 40px;
+    height: 20px;
+    background: ${o=>o.checked?"rgba(59, 130, 246, 0.8)":"rgba(255, 255, 255, 0.15)"};
+    border-radius: 10px;
     position: relative;
     cursor: pointer;
     transition: background 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid ${o=>o.checked?"rgba(59, 130, 246, 0.5)":"rgba(255, 255, 255, 0.2)"};
 
     &::after {
         content: '';
         position: absolute;
         top: 2px;
-        left: ${o=>o.checked?"26px":"2px"};
-        width: 18px;
-        height: 18px;
+        left: ${o=>o.checked?"22px":"2px"};
+        width: 14px;
+        height: 14px;
         background: white;
         border-radius: 50%;
         transition: left 0.3s ease;
@@ -299,7 +299,7 @@ Add a <Suspense fallback=...> component higher in the tree to provide a loading 
         display: block;
     }
 `;var j1={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};const _1=o=>o.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase();var P1=(o,u)=>{const s=fe.forwardRef(({color:a="currentColor",size:f=24,strokeWidth:h=2,absoluteStrokeWidth:p,children:g,...C},A)=>fe.createElement("svg",{ref:A,...j1,width:f,height:f,stroke:a,strokeWidth:p?Number(h)*24/Number(f):h,className:`lucide lucide-${_1(o)}`,...C},[...u.map(([b,R])=>fe.createElement(b,R)),...(Array.isArray(g)?g:[g])||[]]));return s.displayName=`${o}`,s};const L1=P1("Settings",[["path",{d:"M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z",key:"1qme2f"}],["circle",{cx:"12",cy:"12",r:"3",key:"1v7zrd"}]]),M1=({top:o,setIsHover:u,onSettingsClick:s,isSettingsOpen:a})=>{const[f,h]=fe.useState(!1),p=()=>{u(!0),h(!0)},g=()=>{u(!1),h(!1)};return E.jsx(h1,{onMouseEnter:p,onMouseLeave:g,children:E.jsxs(p1,{style:o,children:[E.jsx(m1,{children:E.jsx(g1,{size:"2.5em"})}),E.jsx(y1,{visible:f,disabled:a,children:E.jsx(T1,{onClick:s,children:E.jsx(L1,{size:18})})})]})})},O1=re.section`
-    width: ${o=>o.isSettingsOpen?"calc(100vw - 320px)":"100vw"};
+    width: ${o=>o.isSettingsOpen?"calc(100vw - 300px)":"100vw"};
     height: 100vh;
     display: flex;
     justify-content: center;

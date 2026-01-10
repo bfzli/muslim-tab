@@ -38,7 +38,7 @@ export const ModalContainer = styled.div<{ isClosing?: boolean }>`
     right: 0;
     background: rgb(25, 25, 25);
     border-left: 1px solid rgba(255, 255, 255, 0.05);
-    width: 320px;
+    width: 300px;
     height: 100vh;
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
@@ -117,16 +117,16 @@ export const ProviderSelector = styled.div`
 
 export const ProviderButton = styled.button<{ selected: boolean; color: string }>`
     background: ${(props) =>
-        props.selected ? props.color + '20' : 'rgba(255, 255, 255, 0.05)'};
-    color: ${(props) => (props.selected ? props.color : 'rgba(255, 255, 255, 0.7)')};
+        props.selected ? 'rgba(59, 130, 246, 0.2)' : 'rgba(255, 255, 255, 0.05)'};
+    color: ${(props) => (props.selected ? 'rgb(59, 130, 246)' : 'rgba(255, 255, 255, 0.7)')};
     border: 1px solid
         ${(props) =>
-            props.selected ? props.color + '60' : 'rgba(255, 255, 255, 0.1)'};
+            props.selected ? 'rgba(59, 130, 246, 0.6)' : 'rgba(255, 255, 255, 0.1)'};
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     font-size: 0.85rem;
     font-weight: 300;
-    cursor: pointer;
+    cursor: ${(props) => (props.selected ? 'default' : 'pointer')};
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -134,9 +134,11 @@ export const ProviderButton = styled.button<{ selected: boolean; color: string }
     font-family: inherit;
 
     &:hover {
-        background: ${(props) => props.color + '30'};
-        border-color: ${(props) => props.color + '80'};
-        color: ${(props) => props.color};
+        background: ${(props) =>
+            props.selected ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.3)'};
+        border-color: ${(props) =>
+            props.selected ? 'rgba(59, 130, 246, 0.6)' : 'rgba(59, 130, 246, 0.8)'};
+        color: rgb(59, 130, 246);
     }
 
     svg {
@@ -145,23 +147,24 @@ export const ProviderButton = styled.button<{ selected: boolean; color: string }
 `
 
 export const ToggleSwitch = styled.div<{ checked: boolean }>`
-    width: 48px;
-    height: 24px;
+    width: 40px;
+    height: 20px;
     background: ${(props) =>
-        props.checked ? 'rgba(100, 200, 100, 0.5)' : 'rgba(255, 255, 255, 0.15)'};
-    border-radius: 12px;
+        props.checked ? 'rgba(59, 130, 246, 0.8)' : 'rgba(255, 255, 255, 0.15)'};
+    border-radius: 10px;
     position: relative;
     cursor: pointer;
     transition: background 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid ${(props) =>
+        props.checked ? 'rgba(59, 130, 246, 0.5)' : 'rgba(255, 255, 255, 0.2)'};
 
     &::after {
         content: '';
         position: absolute;
         top: 2px;
-        left: ${(props) => (props.checked ? '26px' : '2px')};
-        width: 18px;
-        height: 18px;
+        left: ${(props) => (props.checked ? '22px' : '2px')};
+        width: 14px;
+        height: 14px;
         background: white;
         border-radius: 50%;
         transition: left 0.3s ease;
