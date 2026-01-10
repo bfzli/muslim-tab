@@ -21,7 +21,7 @@ function ContentGenerator(
     setContent: React.Dispatch<
         React.SetStateAction<ContentItem | undefined>
     > | null,
-    state: boolean = false
+    state = false
 ): ContentItem | void {
     let SelectedContent: ContentItem[] = []
 
