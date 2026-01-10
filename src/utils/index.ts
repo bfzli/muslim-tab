@@ -2,6 +2,7 @@ import CopyToClipboard from '@utils/CopyToClipboard'
 import InitalMode from '@utils/InitalMode'
 import ModeSwitcher from '@utils/ModeSwitcher'
 import ContentGenerator from '@utils/ContentGenerator'
+import preloadImage from '@utils/PreloadImage'
 import {
     RandomNumber,
     mt_30,
@@ -16,6 +17,7 @@ export {
     InitalMode,
     ModeSwitcher,
     ContentGenerator,
+    preloadImage,
     RandomNumber,
     getRandomNumber,
     mt_30,

@@ -6,7 +6,8 @@ import Logo from '@components/Logo'
 import {
     ContentGenerator,
     InitalMode,
-    RandomNumber,
+    getRandomNumber,
+    preloadImage,
     mb_2,
     mb_30,
     mt_2,
@@ -18,7 +19,7 @@ const Content: React.FC = () => {
     const [content, setContent] = useState<ContentItem | undefined>(
         ContentGenerator(mode, null, true)
     )
-    const [wallpaper, setWallpaper] = useState<number>(RandomNumber)
+    const [wallpaper, setWallpaper] = useState<number>(getRandomNumber())
     const [isHover, setIsHover] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false)
 
@@ -26,8 +27,13 @@ const Content: React.FC = () => {
     const bottom = isHover === false ? mb_30 : mb_2
 
     useEffect(() => {
-        setWallpaper(RandomNumber)
-        ContentGenerator(mode, setContent, false)
+        const loadContent = async () => {
+            const newWallpaper = getRandomNumber()
+            await preloadImage(newWallpaper)
+            ContentGenerator(mode, setContent, false)
+            setWallpaper(newWallpaper)
+        }
+        loadContent()
     }, [mode])
 
     return (

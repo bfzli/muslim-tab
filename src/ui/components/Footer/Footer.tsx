@@ -18,6 +18,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                 <Mode mode={props.mode} setMode={props.setMode} />
                 <Breakspace />
                 <Next
+                    mode={props.mode}
                     content={props.content}
                     setContent={props.setContent}
                     setWallpaper={props.setWallpaper}

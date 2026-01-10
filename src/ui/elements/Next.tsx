@@ -1,17 +1,17 @@
-import { ContentProps, WallpaperProps } from '@types'
+import { ContentProps, WallpaperProps, ContentMode } from '@types'
 import React from 'react'
 import { Element, Name } from '@styled/elements'
 import NextIcon from '@icons/NextIcon'
-import Quotes from '@data/Quotes.json'
-import { RandomNumber } from '@utils'
+import { getRandomNumber, ContentGenerator, preloadImage } from '@utils'
 
-type NextProps = ContentProps & WallpaperProps
+type NextProps = ContentProps & WallpaperProps & { mode: ContentMode }
 
-const Next: React.FC<NextProps> = ({ setContent, setWallpaper }) => {
-    const next = (): void => {
-        const randomQuote = Quotes[Math.floor(Math.random() * Quotes.length)]
-        setContent(randomQuote || undefined)
-        setWallpaper(RandomNumber)
+const Next: React.FC<NextProps> = ({ mode, setContent, setWallpaper }) => {
+    const next = async (): Promise<void> => {
+        const newWallpaper = getRandomNumber()
+        await preloadImage(newWallpaper)
+        ContentGenerator(mode, setContent, false)
+        setWallpaper(newWallpaper)
     }
 
     return (
