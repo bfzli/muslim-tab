@@ -1,5 +1,5 @@
 // Mode types
-export type ContentMode = 'verse' | 'hadith' | 'quote'
+export type ContentMode = 'verse' | 'hadith' | 'quote' | 'auto'
 
 // Content data structure
 export interface ContentItem {

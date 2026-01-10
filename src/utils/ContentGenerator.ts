@@ -25,9 +25,14 @@ function ContentGenerator(
 ): ContentItem | void {
     let SelectedContent: ContentItem[] = []
 
-    if (mode === 'quote') SelectedContent = Quotes
-    if (mode === 'hadith') SelectedContent = Hadiths
-    if (mode === 'verse') SelectedContent = Verses
+    if (mode === 'auto') {
+        // Combine all content and select randomly
+        SelectedContent = [...Quotes, ...Hadiths, ...Verses]
+    } else {
+        if (mode === 'quote') SelectedContent = Quotes
+        if (mode === 'hadith') SelectedContent = Hadiths
+        if (mode === 'verse') SelectedContent = Verses
+    }
 
     const SelectedQuote =
         SelectedContent[Math.floor(Math.random() * SelectedContent.length)]

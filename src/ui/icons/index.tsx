@@ -7,6 +7,7 @@ import CupIcon from '@icons/CupIcon'
 import QuoteIcon from '@icons/QuoteIcon'
 import VerseIcon from '@icons/VerseIcon'
 import HadithIcon from '@icons/HadithIcon'
+import AutoIcon from '@icons/AutoIcon'
 
 export {
     CopyIcon,
@@ -17,5 +18,6 @@ export {
     CupIcon,
     QuoteIcon,
     VerseIcon,
-    HadithIcon
+    HadithIcon,
+    AutoIcon
 }

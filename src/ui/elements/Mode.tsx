@@ -4,18 +4,21 @@ import { Element, Name } from '@styled/elements'
 import HadithIcon from '@icons/HadithIcon'
 import QuoteIcon from '@icons/QuoteIcon'
 import VerseIcon from '@icons/VerseIcon'
+import AutoIcon from '@icons/AutoIcon'
 import { ModeSwitcher } from '@utils'
 
 const modeIcons: Record<ContentMode, React.ReactElement> = {
     verse: <VerseIcon size='1em' />,
     hadith: <HadithIcon size='1em' />,
-    quote: <QuoteIcon size='1em' />
+    quote: <QuoteIcon size='1em' />,
+    auto: <AutoIcon size='1em' />
 }
 
 const modeLabels: Record<ContentMode, string> = {
     verse: 'Verses',
     hadith: 'Hadiths',
-    quote: 'Quotes'
+    quote: 'Quotes',
+    auto: 'Random'
 }
 
 const Mode: React.FC<ModeProps> = ({ mode, setMode }) => {
