@@ -21,7 +21,6 @@ const hijriMonths = [
 ]
 
 export const convertToHijri = (date: Date): HijriDate => {
-    // Using the Kuwaiti algorithm for Hijri conversion
     const day = date.getDate()
     const month = date.getMonth() + 1
     const year = date.getFullYear()

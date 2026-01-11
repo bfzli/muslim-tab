@@ -3,7 +3,6 @@ import Quotes from '@data/Quotes.json'
 import Hadiths from '@data/Hadiths.json'
 import Verses from '@data/Verses.json'
 
-// Function overloads for different behaviors
 function ContentGenerator(
     mode: ContentMode,
     setContent: null,
@@ -29,7 +28,6 @@ function ContentGenerator(
     let SelectedContent: ContentItem[] = []
 
     if (mode === 'auto') {
-        // Combine all content and select randomly
         SelectedContent = [...Quotes, ...Hadiths, ...Verses]
     } else {
         if (mode === 'quote') SelectedContent = Quotes
@@ -37,17 +35,15 @@ function ContentGenerator(
         if (mode === 'verse') SelectedContent = Verses
     }
 
-    // If we have only 1 item, return it (can't exclude)
     if (SelectedContent.length === 1) {
         if (state === true) return SelectedContent[0]
         else if (setContent) setContent(SelectedContent[0])
         return
     }
 
-    // Select a random quote, ensuring it's different from the previous one
     let SelectedQuote: ContentItem
     let attempts = 0
-    const maxAttempts = 50 // Prevent infinite loop
+    const maxAttempts = 50
 
     do {
         SelectedQuote =

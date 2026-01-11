@@ -17,7 +17,7 @@ import {
     FontSelectorButton,
     FontDropdown,
     FontOption
-} from './Components'
+} from '@styled/settings'
 import { SearchProvider, searchProviders, GradientType, gradients, FontFamily, fonts } from '@types'
 
 interface SettingsProps {

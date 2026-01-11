@@ -4,7 +4,7 @@ import {
     BookmarkItem,
     BookmarkIcon,
     BookmarkTitle
-} from './Components'
+} from '@styled/bookmarks'
 
 interface Bookmark {
     id: string
@@ -12,7 +12,6 @@ interface Bookmark {
     url?: string
 }
 
-// Filter out inappropriate content
 const isAppropriateContent = (url: string, title: string): boolean => {
     const inappropriate = [
         'porn',
@@ -54,10 +53,8 @@ const Bookmarks: React.FC<BookmarksProps> = ({ themeColor }) => {
     const fetchBookmarks = async () => {
         if (typeof chrome !== 'undefined' && chrome.bookmarks) {
             try {
-                // Get bookmarks bar (id '1' is typically the bookmarks bar)
                 const bookmarkBar = await chrome.bookmarks.getChildren('1')
 
-                // Filter to only URLs (not folders), exclude inappropriate content, and limit to first 16
                 const urls = bookmarkBar
                     .filter(
                         (bookmark) =>
@@ -75,29 +72,23 @@ const Bookmarks: React.FC<BookmarksProps> = ({ themeColor }) => {
                     }))
 
                 setBookmarks(urls)
-            } catch (error) {
-                console.error('Error fetching bookmarks:', error)
-            }
+            } catch (error) {}
         }
     }
 
     useEffect(() => {
-        // Initial fetch
         fetchBookmarks()
 
-        // Set up listeners for bookmark changes
         if (typeof chrome !== 'undefined' && chrome.bookmarks) {
             const handleBookmarkChange = () => {
                 fetchBookmarks()
             }
 
-            // Listen for bookmark creation, removal, changes, and moves
             chrome.bookmarks.onCreated.addListener(handleBookmarkChange)
             chrome.bookmarks.onRemoved.addListener(handleBookmarkChange)
             chrome.bookmarks.onChanged.addListener(handleBookmarkChange)
             chrome.bookmarks.onMoved.addListener(handleBookmarkChange)
 
-            // Cleanup listeners on unmount
             return () => {
                 chrome.bookmarks.onCreated.removeListener(handleBookmarkChange)
                 chrome.bookmarks.onRemoved.removeListener(handleBookmarkChange)

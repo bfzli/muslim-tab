@@ -7,7 +7,7 @@ import {
     DateDisplay,
     GregorianDate,
     HijriDate
-} from './Components'
+} from '@styled/clock'
 import { convertToHijri } from '@utils/HijriConverter'
 
 interface TimeString {
@@ -54,7 +54,6 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
             const changed = new Set<string>()
             const prev = previousTimeRef.current
 
-            // Compare individual digits for hours
             if (timeString.hours[0] !== prev.hours[0]) {
                 changed.add('h0')
             }
@@ -62,7 +61,6 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
                 changed.add('h1')
             }
 
-            // Compare individual digits for minutes
             if (timeString.minutes[0] !== prev.minutes[0]) {
                 changed.add('m0')
             }
@@ -70,7 +68,6 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
                 changed.add('m1')
             }
 
-            // Compare individual digits for seconds
             if (timeString.seconds[0] !== prev.seconds[0]) {
                 changed.add('s0')
             }
@@ -78,7 +75,6 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
                 changed.add('s1')
             }
 
-            // Compare period (AM/PM)
             if (timeString.period !== prev.period) {
                 changed.add('period')
             }
@@ -86,7 +82,6 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
             if (changed.size > 0) {
                 setChangedDigits(changed)
 
-                // Clear animation state after animation completes
                 const timer = setTimeout(() => {
                     setChangedDigits(new Set())
                 }, 400)

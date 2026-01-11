@@ -34,7 +34,11 @@
       "@styled/content": ["ui/components/Content/Components"],
       "@styled/footer": ["ui/components/Footer/Components"],
       "@styled/logo": ["ui/components/Logo/Components"],
-      "@styled/elements": ["ui/elements/Components"]
+      "@styled/elements": ["ui/elements/Components"],
+      "@styled/clock": ["ui/components/Clock/Components"],
+      "@styled/bookmarks": ["ui/components/Bookmarks/Components"],
+      "@styled/searchbar": ["ui/components/SearchBar/Components"],
+      "@styled/settings": ["ui/components/Settings/Components"]
     }
   },
   "include": ["src/**/*"],

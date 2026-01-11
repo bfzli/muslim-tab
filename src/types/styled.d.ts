@@ -1,12 +1,9 @@
 import 'styled-components'
 
 declare module 'styled-components' {
-    export interface DefaultTheme {
-        // Add theme interface if needed in future
-    }
+    export interface DefaultTheme {}
 }
 
-// Extend styled-components props for background
 export interface BackgroundProps {
     background?: string
 }

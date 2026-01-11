@@ -5,8 +5,6 @@ export const mt_2: StyleProp = { marginTop: '-8vh' }
 export const mb_30: StyleProp = { marginBottom: '-30em' }
 export const mb_2: StyleProp = { marginBottom: '-2em' }
 
-// Convert to function to avoid re-evaluation issues
-// Now supports excluding a number to avoid repetition
 export const getRandomNumber = (exclude?: number): number => {
     let num: number
     do {
@@ -15,5 +13,4 @@ export const getRandomNumber = (exclude?: number): number => {
     return num
 }
 
-// Keep as constant for backward compatibility
 export const RandomNumber: number = getRandomNumber()

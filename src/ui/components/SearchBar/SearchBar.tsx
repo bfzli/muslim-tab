@@ -5,7 +5,7 @@ import {
     SearchInput,
     SearchIcon,
     GoogleIcon
-} from './Components'
+} from '@styled/searchbar'
 import { SearchProvider, searchProviders } from '@types'
 
 interface SearchBarProps {

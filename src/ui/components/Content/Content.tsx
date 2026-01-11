@@ -78,9 +78,7 @@ const Content: React.FC = () => {
             const newWallpaper = getRandomNumber(wallpaper)
             try {
                 await preloadImage(newWallpaper)
-            } catch (error) {
-                console.warn('Failed to preload wallpaper:', error)
-            }
+            } catch (error) {}
             ContentGenerator(mode, setContent, false, content)
             setWallpaper(newWallpaper)
         }
@@ -110,7 +108,6 @@ const Content: React.FC = () => {
             try {
                 await loadFont(selectedFont)
 
-                // Wait for the font to be actually ready before applying
                 if (selectedFont !== 'dm-sans') {
                     const fontName = fonts[selectedFont].name
                     await document.fonts.load(`400 16px "${fontName}"`)
@@ -119,9 +116,6 @@ const Content: React.FC = () => {
 
                 document.body.style.setProperty('font-family', fonts[selectedFont].family, 'important')
             } catch (error) {
-                console.error('Failed to load font:', error)
-                // Fallback to local DM Sans if font fails to load (no internet or other error)
-                console.warn('Falling back to DM Sans')
                 document.body.style.setProperty('font-family', fonts['dm-sans'].family, 'important')
             }
         }

@@ -1,3 +1,1 @@
-import Bookmarks from './Bookmarks'
-
-export default Bookmarks
+export { default } from '@components/Bookmarks/Bookmarks'

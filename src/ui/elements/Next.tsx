@@ -11,9 +11,7 @@ const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWa
         const newWallpaper = getRandomNumber(wallpaper)
         try {
             await preloadImage(newWallpaper)
-        } catch (error) {
-            console.warn('Failed to preload wallpaper:', error)
-        }
+        } catch (error) {}
         ContentGenerator(mode, setContent, false, content)
         setWallpaper(newWallpaper)
     }
