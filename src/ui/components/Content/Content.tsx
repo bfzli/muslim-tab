@@ -109,6 +109,14 @@ const Content: React.FC = () => {
         const applyFont = async () => {
             try {
                 await loadFont(selectedFont)
+
+                // Wait for the font to be actually ready before applying
+                if (selectedFont !== 'dm-sans') {
+                    const fontName = fonts[selectedFont].name
+                    await document.fonts.load(`400 16px "${fontName}"`)
+                    await document.fonts.ready
+                }
+
                 document.body.style.setProperty('font-family', fonts[selectedFont].family, 'important')
             } catch (error) {
                 console.error('Failed to load font:', error)
