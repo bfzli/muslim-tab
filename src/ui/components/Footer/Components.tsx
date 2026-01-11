@@ -20,10 +20,10 @@ export const Elements = styled.section`
     align-items: center;
 `
 
-export const Linebreak = styled.section`
+export const Linebreak = styled.section<{ themeColor?: string }>`
     width: 1px;
     height: 64px;
-    background: #e6e6e650;
+    background: ${(props) => props.themeColor ? props.themeColor + '50' : '#e6e6e650'};
     margin: 0em 0.75em;
 `
 

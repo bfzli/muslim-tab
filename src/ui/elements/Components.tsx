@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Element = styled.section`
+export const Element = styled.section<{ themeColor?: string }>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,9 +12,15 @@ export const Element = styled.section`
     cursor: pointer;
     width: 75px;
     max-width: 75px;
+    color: ${(props) => props.themeColor || '#fff'};
+
+    svg {
+        color: ${(props) => props.themeColor || '#fff'};
+        stroke: ${(props) => props.themeColor || '#fff'};
+    }
 
     &:hover {
-        background: #383e4760;
+        background: ${(props) => props.themeColor ? props.themeColor + '30' : '#383e4760'};
     }
 
     &:last-of-type {
@@ -22,12 +28,12 @@ export const Element = styled.section`
     }
 `
 
-export const Name = styled.p`
+export const Name = styled.p<{ themeColor?: string }>`
     font-size: 1em;
     text-align: center;
     font-weight: 400;
     margin-top: 0.75em;
-    color: #fff !important;
+    color: ${(props) => props.themeColor || '#fff'} !important;
     white-space: nowrap;
     opacity: 1;
     visibility: visible;

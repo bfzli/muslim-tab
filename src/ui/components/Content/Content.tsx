@@ -1,4 +1,4 @@
-import { ContentItem, ContentMode, SearchProvider, GradientType, gradients } from '@types'
+import { ContentItem, ContentMode, SearchProvider, GradientType, gradients, FontFamily, fonts, loadFont } from '@types'
 import React, { useEffect, useState } from 'react'
 import { Container, ContentWrapper, QuoteContainer, Title, Reference } from '@styled/content'
 import Footer from '@components/Footer'
@@ -56,6 +56,20 @@ const Content: React.FC = () => {
         return (saved as GradientType) || 'ocean'
     })
 
+    const [actualGradient, setActualGradient] = useState<GradientType>(() => {
+        const saved = localStorage.getItem('selectedGradient') as GradientType
+        if (saved === 'random') {
+            const gradientKeys = Object.keys(gradients).filter(key => key !== 'random') as GradientType[]
+            return gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
+        }
+        return saved || 'ocean'
+    })
+
+    const [selectedFont, setSelectedFont] = useState<FontFamily>(() => {
+        const saved = localStorage.getItem('selectedFont')
+        return (saved as FontFamily) || 'dm-sans'
+    })
+
     const top = isHover === false ? mt_30 : mt_2
     const bottom = isHover === false ? mb_30 : mb_2
 
@@ -73,6 +87,39 @@ const Content: React.FC = () => {
         loadContent()
     }, [mode])
 
+    useEffect(() => {
+        if (selectedGradient === 'random') {
+            const gradientKeys = Object.keys(gradients).filter(key => key !== 'random' && key !== actualGradient) as GradientType[]
+            const randomGradient = gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
+            setActualGradient(randomGradient)
+        } else {
+            setActualGradient(selectedGradient)
+        }
+    }, [selectedGradient])
+
+    useEffect(() => {
+        if (selectedGradient === 'random') {
+            const gradientKeys = Object.keys(gradients).filter(key => key !== 'random' && key !== actualGradient) as GradientType[]
+            const randomGradient = gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
+            setActualGradient(randomGradient)
+        }
+    }, [wallpaper, selectedGradient])
+
+    useEffect(() => {
+        const applyFont = async () => {
+            try {
+                await loadFont(selectedFont)
+                document.body.style.setProperty('font-family', fonts[selectedFont].family, 'important')
+            } catch (error) {
+                console.error('Failed to load font:', error)
+                // Fallback to local DM Sans if font fails to load (no internet or other error)
+                console.warn('Falling back to DM Sans')
+                document.body.style.setProperty('font-family', fonts['dm-sans'].family, 'important')
+            }
+        }
+        applyFont()
+    }, [selectedFont])
+
     const handleSettingsClick = () => {
         setIsSettingsOpen(true)
     }
@@ -86,30 +133,32 @@ const Content: React.FC = () => {
             background={`/backgrounds/${wallpaper}.webp`}
             isSettingsOpen={isSettingsOpen}
             showPhotos={showPhotos}
-            gradient={gradients[selectedGradient].gradient}
+            gradient={gradients[actualGradient].gradient}
         >
             <Logo
                 top={top}
                 setIsHover={setIsHover}
                 onSettingsClick={handleSettingsClick}
                 isSettingsOpen={isSettingsOpen}
+                themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
             />
 
-            <ContentWrapper>
-                {showClock && <Clock />}
-                {showSearch && <SearchBar provider={searchProvider} />}
-                {showBookmarks && <Bookmarks />}
+            <ContentWrapper themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}>
+                {showClock && <Clock themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
+                {showSearch && <SearchBar provider={searchProvider} themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
+                {showBookmarks && <Bookmarks themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
 
                 {showContent && (
                     <QuoteContainer hasOtherElements={showClock || showSearch || showBookmarks}>
                         <Title
                             compact={showClock && showSearch && showBookmarks}
                             hasSettings={showClock || showSearch || showBookmarks}
+                            themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
                         >
                             {content?.content}
                         </Title>
 
-                        <Reference>
+                        <Reference themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}>
                             {content?.reference}
                         </Reference>
                     </QuoteContainer>
@@ -128,6 +177,7 @@ const Content: React.FC = () => {
                     setIsHover={setIsHover}
                     isModal={isModal}
                     setModal={setIsModal}
+                    themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
                 />
             )}
 
@@ -148,6 +198,8 @@ const Content: React.FC = () => {
                 setShowPhotos={setShowPhotos}
                 selectedGradient={selectedGradient}
                 setSelectedGradient={setSelectedGradient}
+                selectedFont={selectedFont}
+                setSelectedFont={setSelectedFont}
             />
         </Container>
     )

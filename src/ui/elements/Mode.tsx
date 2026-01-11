@@ -7,13 +7,6 @@ import VerseIcon from '@icons/VerseIcon'
 import AutoIcon from '@icons/AutoIcon'
 import { ModeSwitcher } from '@utils'
 
-const modeIcons: Record<ContentMode, React.ReactElement> = {
-    verse: <VerseIcon size='1em' />,
-    hadith: <HadithIcon size='1em' />,
-    quote: <QuoteIcon size='1em' />,
-    auto: <AutoIcon size='1em' />
-}
-
 const modeLabels: Record<ContentMode, string> = {
     verse: 'Verses',
     hadith: 'Hadiths',
@@ -21,15 +14,26 @@ const modeLabels: Record<ContentMode, string> = {
     auto: 'Random'
 }
 
-const Mode: React.FC<ModeProps> = ({ mode, setMode }) => {
+interface ModeExtendedProps extends ModeProps {
+    themeColor?: string
+}
+
+const Mode: React.FC<ModeExtendedProps> = ({ mode, setMode, themeColor }) => {
     const action = (): void => {
         ModeSwitcher(mode, setMode)
     }
 
+    const modeIcons: Record<ContentMode, React.ReactElement> = {
+        verse: <VerseIcon size='1em' color={themeColor} />,
+        hadith: <HadithIcon size='1em' color={themeColor} />,
+        quote: <QuoteIcon size='1em' color={themeColor} />,
+        auto: <AutoIcon size='1em' color={themeColor} />
+    }
+
     return (
-        <Element onClick={action}>
+        <Element onClick={action} themeColor={themeColor}>
             {modeIcons[mode]}
-            <Name>{modeLabels[mode]}</Name>
+            <Name themeColor={themeColor}>{modeLabels[mode]}</Name>
         </Element>
     )
 }

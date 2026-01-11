@@ -4,9 +4,9 @@ import { Element, Name } from '@styled/elements'
 import NextIcon from '@icons/NextIcon'
 import { getRandomNumber, ContentGenerator, preloadImage } from '@utils'
 
-type NextProps = ContentProps & WallpaperProps & { mode: ContentMode; wallpaper: number }
+type NextProps = ContentProps & WallpaperProps & { mode: ContentMode; wallpaper: number; themeColor?: string }
 
-const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWallpaper }) => {
+const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWallpaper, themeColor }) => {
     const next = async (): Promise<void> => {
         const newWallpaper = getRandomNumber(wallpaper)
         try {
@@ -19,9 +19,9 @@ const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWa
     }
 
     return (
-        <Element onClick={next}>
+        <Element onClick={next} themeColor={themeColor}>
             <NextIcon size='1em' />
-            <Name>Next</Name>
+            <Name themeColor={themeColor}>Next</Name>
         </Element>
     )
 }

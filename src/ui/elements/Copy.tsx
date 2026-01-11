@@ -5,7 +5,11 @@ import CopiedIcon from '@icons/CopiedIcon'
 import CopyIcon from '@icons/CopyIcon'
 import { CopyToClipboard } from '@utils'
 
-const Copy: React.FC<ContentProps> = ({ content }) => {
+interface CopyProps extends ContentProps {
+    themeColor?: string
+}
+
+const Copy: React.FC<CopyProps> = ({ content, themeColor }) => {
     const [copied, setCopied] = useState<boolean>(false)
 
     const action = (): void => {
@@ -15,9 +19,9 @@ const Copy: React.FC<ContentProps> = ({ content }) => {
     }
 
     return (
-        <Element onClick={action}>
+        <Element onClick={action} themeColor={themeColor}>
             {copied ? <CopiedIcon size='1em' /> : <CopyIcon size='1em' />}
-            <Name>{copied ? 'Copied' : 'Copy'}</Name>
+            <Name themeColor={themeColor}>{copied ? 'Copied' : 'Copy'}</Name>
         </Element>
     )
 }

@@ -12,28 +12,28 @@ export const SearchForm = styled.form`
     position: relative;
 `
 
-export const SearchInput = styled.input`
+export const SearchInput = styled.input<{ themeColor?: string }>`
     width: 100%;
     padding: 0.9rem 1.2rem 0.9rem 3rem;
     font-size: 0.95rem;
     font-weight: 300 !important;
-    color: white;
-    background: rgba(255, 255, 255, 0.12);
+    color: ${(props) => props.themeColor || 'white'};
+    background: ${(props) => props.themeColor ? props.themeColor + '20' : 'rgba(255, 255, 255, 0.12)'};
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid ${(props) => props.themeColor ? props.themeColor + '60' : 'rgba(255, 255, 255, 0.25)'};
     border-radius: 50px;
     outline: none;
     transition: all 0.3s ease;
     font-family: inherit;
 
     &::placeholder {
-        color: rgba(255, 255, 255, 0.6);
+        color: ${(props) => props.themeColor ? props.themeColor + '99' : 'rgba(255, 255, 255, 0.6)'};
         font-weight: 300 !important;
     }
 
     &:focus {
-        background: rgba(255, 255, 255, 0.18);
-        border-color: rgba(255, 255, 255, 0.4);
+        background: ${(props) => props.themeColor ? props.themeColor + '30' : 'rgba(255, 255, 255, 0.18)'};
+        border-color: ${(props) => props.themeColor ? props.themeColor : 'rgba(255, 255, 255, 0.4)'};
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 `
@@ -47,7 +47,7 @@ export const GoogleIcon = styled.div<{ color: string }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: ${(props) => props.color || 'white'};
     opacity: 1;
     z-index: 1;
 
@@ -55,12 +55,12 @@ export const GoogleIcon = styled.div<{ color: string }>`
         display: block;
         width: 16px;
         height: 16px;
-        color: white;
+        color: ${(props) => props.color || 'white'};
         fill: currentColor;
     }
 `
 
-export const SearchIcon = styled.div`
+export const SearchIcon = styled.div<{ themeColor?: string }>`
     position: absolute;
     right: 1.2rem;
     top: 50%;
@@ -70,4 +70,9 @@ export const SearchIcon = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: ${(props) => props.themeColor || 'white'};
+
+    svg {
+        stroke: ${(props) => props.themeColor || 'white'};
+    }
 `

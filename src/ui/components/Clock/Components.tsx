@@ -30,13 +30,13 @@ export const ClockContainer = styled.div`
     gap: 0.5rem;
 `
 
-export const TimeDisplay = styled.div`
+export const TimeDisplay = styled.div<{ themeColor?: string }>`
     display: flex;
     align-items: center;
     gap: 0.25rem;
     font-size: 4rem;
     font-weight: 300;
-    color: white;
+    color: ${(props) => props.themeColor || 'white'};
     letter-spacing: 0.5px;
 `
 
@@ -67,14 +67,14 @@ export const DateDisplay = styled.div`
     gap: 0.25rem;
 `
 
-export const GregorianDate = styled.div`
+export const GregorianDate = styled.div<{ themeColor?: string }>`
     font-size: 1rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.8);
+    color: ${(props) => (props.themeColor ? props.themeColor + 'dd' : 'rgba(255, 255, 255, 0.8)')};
 `
 
-export const HijriDate = styled.div`
+export const HijriDate = styled.div<{ themeColor?: string }>`
     font-size: 0.9rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
+    color: ${(props) => (props.themeColor ? props.themeColor + '99' : 'rgba(255, 255, 255, 0.6)')};
 `

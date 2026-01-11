@@ -5,7 +5,11 @@ import Next from '@elements/Next'
 import Copy from '@elements/Copy'
 import Mode from '@elements/Mode'
 
-const Footer: React.FC<FooterProps> = (props) => {
+interface FooterExtendedProps extends FooterProps {
+    themeColor?: string
+}
+
+const Footer: React.FC<FooterExtendedProps> = (props) => {
     const enter = (): void => props.setIsHover(true)
     const leave = (): void => props.setIsHover(false)
 
@@ -13,9 +17,9 @@ const Footer: React.FC<FooterProps> = (props) => {
         <Container onMouseEnter={enter} onMouseLeave={leave}>
             <Elements style={props.bottom}>
                 <Breakspace />
-                <Copy content={props.content} setContent={props.setContent} />
+                <Copy content={props.content} setContent={props.setContent} themeColor={props.themeColor} />
                 <Breakspace />
-                <Mode mode={props.mode} setMode={props.setMode} />
+                <Mode mode={props.mode} setMode={props.setMode} themeColor={props.themeColor} />
                 <Breakspace />
                 <Next
                     mode={props.mode}
@@ -23,6 +27,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                     setContent={props.setContent}
                     wallpaper={props.wallpaper}
                     setWallpaper={props.setWallpaper}
+                    themeColor={props.themeColor}
                 />
             </Elements>
         </Container>

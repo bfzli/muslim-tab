@@ -69,3 +69,7 @@ export { searchProviders } from './searchProviders'
 // Re-export gradient types
 export type { GradientType, GradientConfig } from './gradients'
 export { gradients } from './gradients'
+
+// Re-export font types
+export type { FontFamily, FontConfig } from './fonts'
+export { fonts, loadFont } from './fonts'

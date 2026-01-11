@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./DMSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./DMSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./DMSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./DMSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./DMSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('./DMSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./DMSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./DMSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('./DMSans-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('./DMSans-ExtraLight.ttf') format('truetype');
+}

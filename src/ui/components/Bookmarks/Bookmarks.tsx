@@ -44,7 +44,11 @@ const isAppropriateContent = (url: string, title: string): boolean => {
     )
 }
 
-const Bookmarks: React.FC = () => {
+interface BookmarksProps {
+    themeColor?: string
+}
+
+const Bookmarks: React.FC<BookmarksProps> = ({ themeColor }) => {
     const [bookmarks, setBookmarks] = useState<Bookmark[]>([])
 
     const fetchBookmarks = async () => {
@@ -129,7 +133,7 @@ const Bookmarks: React.FC = () => {
                     href={bookmark.url}
                     target='_self'
                 >
-                    <BookmarkIcon>
+                    <BookmarkIcon themeColor={themeColor}>
                         {bookmark.url ? (
                             <img
                                 src={getFaviconUrl(bookmark.url)}
@@ -148,7 +152,7 @@ const Bookmarks: React.FC = () => {
                             getFirstLetter(bookmark.title)
                         )}
                     </BookmarkIcon>
-                    <BookmarkTitle>{bookmark.title}</BookmarkTitle>
+                    <BookmarkTitle themeColor={themeColor}>{bookmark.title}</BookmarkTitle>
                 </BookmarkItem>
             ))}
         </BookmarksContainer>

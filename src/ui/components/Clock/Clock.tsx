@@ -17,7 +17,11 @@ interface TimeString {
     period: string
 }
 
-const Clock: React.FC = () => {
+interface ClockProps {
+    themeColor?: string
+}
+
+const Clock: React.FC<ClockProps> = ({ themeColor }) => {
     const [time, setTime] = useState<Date>(new Date())
     const [changedDigits, setChangedDigits] = useState<Set<string>>(new Set())
     const previousTimeRef = useRef<TimeString | null>(null)
@@ -111,7 +115,7 @@ const Clock: React.FC = () => {
 
     return (
         <ClockContainer>
-            <TimeDisplay>
+            <TimeDisplay themeColor={themeColor}>
                 <TimeDigit isChanging={changedDigits.has('h0')}>
                     {timeString.hours[0]}
                 </TimeDigit>
@@ -139,8 +143,8 @@ const Clock: React.FC = () => {
                 </TimeSeparator>
             </TimeDisplay>
             <DateDisplay>
-                <GregorianDate>{formatGregorianDate(time)}</GregorianDate>
-                <HijriDate>{formatHijriDate(time)}</HijriDate>
+                <GregorianDate themeColor={themeColor}>{formatGregorianDate(time)}</GregorianDate>
+                <HijriDate themeColor={themeColor}>{formatHijriDate(time)}</HijriDate>
             </DateDisplay>
         </ClockContainer>
     )

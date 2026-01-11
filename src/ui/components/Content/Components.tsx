@@ -28,7 +28,7 @@ export const Container = styled.section<ContainerProps>`
     left: 0;
 `
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<{ themeColor?: string }>`
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,7 +36,10 @@ export const ContentWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0em 15% 2.5em 15%;
-    background: rgba(0, 0, 0, 0.8);
+    background: ${(props) =>
+        props.themeColor
+            ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5))`
+            : 'rgba(0, 0, 0, 0.8)'};
     gap: 2.5rem;
 `
 
@@ -51,17 +54,18 @@ export const QuoteContainer = styled.div<{ hasOtherElements?: boolean }>`
 interface TitleProps {
     compact?: boolean
     hasSettings?: boolean
+    themeColor?: string
 }
 
 export const Title = styled.h2<TitleProps>`
-    max-width: ${(props) => (props.hasSettings ? '65%' : '100%')};
+    width: ${(props) => (props.hasSettings ? '600px' : '100%')};
     font-size: ${(props) => (props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em')};
     font-weight: 500;
     letter-spacing: 0.85px;
     text-align: center;
-    color: white !important;
-    -webkit-text-stroke: 1px white;
-    -webkit-text-fill-color: white;
+    color: ${(props) => props.themeColor || 'white'} !important;
+    -webkit-text-stroke: 1px ${(props) => props.themeColor || 'white'};
+    -webkit-text-fill-color: ${(props) => props.themeColor || 'white'};
     -webkit-animation: fill 0.5s infinite alternate;
 
     @media only screen and (max-width: 1000px) {
@@ -108,18 +112,18 @@ export const Text = styled.h2`
     }
 `
 
-export const Reference = styled.p`
+export const Reference = styled.p<{ themeColor?: string }>`
     padding: 0.25rem 0.75rem;
     font-size: 0.9rem !important;
     font-weight: 300;
     border-radius: 99rem;
     transition: all ease-in-out 0.3s;
     z-index: 100;
-    color: white !important;
+    color: ${(props) => props.themeColor ? props.themeColor + 'cc' : 'white'} !important;
     font-size: 0.8rem !important;
-    -webkit-text-stroke: 0px white;
-    -webkit-text-fill-color: white;
-    background: #383e4720;
+    -webkit-text-stroke: 0px ${(props) => props.themeColor || 'white'};
+    -webkit-text-fill-color: ${(props) => props.themeColor ? props.themeColor + 'cc' : 'white'};
+    background: ${(props) => props.themeColor ? props.themeColor + '15' : '#383e4720'};
     text-decoration: none;
     cursor: default;
 `

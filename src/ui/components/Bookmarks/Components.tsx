@@ -30,17 +30,17 @@ export const BookmarkItem = styled.a`
     }
 `
 
-export const BookmarkIcon = styled.div`
+export const BookmarkIcon = styled.div<{ themeColor?: string }>`
     width: 32px;
     height: 32px;
-    background: rgba(255, 255, 255, 0.10);
+    background: ${(props) => props.themeColor ? props.themeColor + '25' : 'rgba(255, 255, 255, 0.05)'};
     backdrop-filter: blur(10px);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid ${(props) => props.themeColor ? props.themeColor + '60' : 'rgba(255, 255, 255, 0.05)'};
     overflow: hidden;
 
     img {
@@ -49,12 +49,12 @@ export const BookmarkIcon = styled.div`
     }
 `
 
-export const BookmarkTitle = styled.p`
+export const BookmarkTitle = styled.p<{ themeColor?: string }>`
     font-size: 0.65rem;
     font-weight: 300 !important;
     max-width: 64px;
     text-align: center;
-    color: white !important;
+    color: ${(props) => props.themeColor || 'white'} !important;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

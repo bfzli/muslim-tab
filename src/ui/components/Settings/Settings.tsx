@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
     ModalBackdrop,
     ModalContainer,
@@ -11,9 +11,14 @@ import {
     ToggleSwitch,
     ProviderSelector,
     ProviderButton,
-    GradientButton
+    GradientButton,
+    GradientSelector,
+    FontSelectorWrapper,
+    FontSelectorButton,
+    FontDropdown,
+    FontOption
 } from './Components'
-import { SearchProvider, searchProviders, GradientType, gradients } from '@types'
+import { SearchProvider, searchProviders, GradientType, gradients, FontFamily, fonts } from '@types'
 
 interface SettingsProps {
     isOpen: boolean
@@ -32,6 +37,8 @@ interface SettingsProps {
     setShowPhotos: (value: boolean) => void
     selectedGradient: GradientType
     setSelectedGradient: (value: GradientType) => void
+    selectedFont: FontFamily
+    setSelectedFont: (value: FontFamily) => void
 }
 
 const Settings: React.FC<SettingsProps> = ({
@@ -50,10 +57,15 @@ const Settings: React.FC<SettingsProps> = ({
     showPhotos,
     setShowPhotos,
     selectedGradient,
-    setSelectedGradient
+    setSelectedGradient,
+    selectedFont,
+    setSelectedFont
 }) => {
     const [isClosing, setIsClosing] = useState(false)
     const [shouldRender, setShouldRender] = useState(isOpen)
+    const [isFontDropdownOpen, setIsFontDropdownOpen] = useState(false)
+    const [highlightedIndex, setHighlightedIndex] = useState<number>(-1)
+    const fontDropdownRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         if (isOpen) {
@@ -69,6 +81,33 @@ const Settings: React.FC<SettingsProps> = ({
         }
         return undefined
     }, [isOpen, shouldRender])
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (fontDropdownRef.current && !fontDropdownRef.current.contains(event.target as Node)) {
+                setIsFontDropdownOpen(false)
+            }
+        }
+
+        if (isFontDropdownOpen) {
+            document.addEventListener('mousedown', handleClickOutside)
+            return () => {
+                document.removeEventListener('mousedown', handleClickOutside)
+            }
+        }
+
+        return undefined
+    }, [isFontDropdownOpen])
+
+    useEffect(() => {
+        if (highlightedIndex >= 0 && fontDropdownRef.current) {
+            const dropdown = fontDropdownRef.current.querySelector('[data-dropdown]')
+            const highlightedOption = dropdown?.children[highlightedIndex] as HTMLElement
+            if (highlightedOption) {
+                highlightedOption.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+            }
+        }
+    }, [highlightedIndex])
 
     if (!shouldRender) return null
 
@@ -110,6 +149,51 @@ const Settings: React.FC<SettingsProps> = ({
     const handleGradientChange = (gradient: GradientType) => {
         setSelectedGradient(gradient)
         localStorage.setItem('selectedGradient', gradient)
+    }
+
+    const handleFontChange = (font: FontFamily) => {
+        setSelectedFont(font)
+        localStorage.setItem('selectedFont', font)
+        setIsFontDropdownOpen(false)
+        setHighlightedIndex(-1)
+    }
+
+    const fontEntries = Object.entries(fonts)
+
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (!isFontDropdownOpen) {
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                e.preventDefault()
+                setIsFontDropdownOpen(true)
+                setHighlightedIndex(0)
+            }
+            return
+        }
+
+        switch (e.key) {
+            case 'ArrowDown':
+                e.preventDefault()
+                setHighlightedIndex((prev) =>
+                    prev < fontEntries.length - 1 ? prev + 1 : prev
+                )
+                break
+            case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex((prev) => (prev > 0 ? prev - 1 : 0))
+                break
+            case 'Enter':
+                e.preventDefault()
+                if (highlightedIndex >= 0) {
+                    const [key] = fontEntries[highlightedIndex]
+                    handleFontChange(key as FontFamily)
+                }
+                break
+            case 'Escape':
+                e.preventDefault()
+                setIsFontDropdownOpen(false)
+                setHighlightedIndex(-1)
+                break
+        }
     }
 
     return (
@@ -208,7 +292,7 @@ const Settings: React.FC<SettingsProps> = ({
                     {!showPhotos && (
                         <SettingItem style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
                             <SettingLabel>Background Gradient</SettingLabel>
-                            <ProviderSelector>
+                            <GradientSelector>
                                 {Object.entries(gradients).map(([key, config]) => (
                                     <GradientButton
                                         key={key}
@@ -218,11 +302,57 @@ const Settings: React.FC<SettingsProps> = ({
                                             handleGradientChange(key as GradientType)
                                         }
                                         title={config.name}
-                                    />
+                                        isRandom={key === 'random'}
+                                    >
+                                        {key === 'random' && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="white"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                                <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                                                <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                                                <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                            </svg>
+                                        )}
+                                    </GradientButton>
                                 ))}
-                            </ProviderSelector>
+                            </GradientSelector>
                         </SettingItem>
                     )}
+                    <SettingItem style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
+                        <SettingLabel>Font Family</SettingLabel>
+                        <FontSelectorWrapper ref={fontDropdownRef}>
+                            <FontSelectorButton
+                                isOpen={isFontDropdownOpen}
+                                onClick={() => setIsFontDropdownOpen(!isFontDropdownOpen)}
+                                onKeyDown={handleKeyDown}
+                            >
+                                {fonts[selectedFont].name}
+                            </FontSelectorButton>
+                            <FontDropdown isOpen={isFontDropdownOpen} data-dropdown>
+                                {fontEntries.map(([key, config], index) => (
+                                    <FontOption
+                                        key={key}
+                                        selected={selectedFont === key || highlightedIndex === index}
+                                        onClick={() => handleFontChange(key as FontFamily)}
+                                        onMouseEnter={() => setHighlightedIndex(index)}
+                                    >
+                                        {config.name}
+                                    </FontOption>
+                                ))}
+                            </FontDropdown>
+                        </FontSelectorWrapper>
+                    </SettingItem>
                 </ModalBody>
             </ModalContainer>
         </ModalBackdrop>
