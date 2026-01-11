@@ -28,19 +28,28 @@ export const Container = styled.section<ContainerProps>`
     left: 0;
 `
 
-export const ContentWrapper = styled.div<{ themeColor?: string }>`
+export const ContentWrapper = styled.div<{ themeColor?: string; allElementsShown?: boolean }>`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: ${(props) => props.allElementsShown ? 'flex-start' : 'center'};
     flex-direction: column;
     align-items: center;
-    padding: 0em 15% 2.5em 15%;
+    padding: ${(props) => props.allElementsShown ? '15vh 15% 2.5em 15%' : '0em 15% 2.5em 15%'};
     background: ${(props) =>
         props.themeColor
             ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5))`
             : 'rgba(0, 0, 0, 0.8)'};
     gap: 2.5rem;
+
+    @media only screen and (max-height: 800px) {
+        padding-top: ${(props) => props.allElementsShown ? '10vh' : '0'};
+    }
+
+    @media only screen and (max-height: 600px) {
+        padding-top: ${(props) => props.allElementsShown ? '5vh' : '0'};
+        gap: 1.5rem;
+    }
 `
 
 export const QuoteContainer = styled.div<{ hasOtherElements?: boolean }>`
@@ -58,9 +67,9 @@ interface TitleProps {
 }
 
 export const Title = styled.h2<TitleProps>`
-    width: ${(props) => (props.hasSettings ? '600px' : '100%')};
+    width: ${(props) => (props.hasSettings ? '700px' : '100%')};
     font-size: ${(props) => (props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em')};
-    font-weight: 500;
+    font-weight: ${props => props.hasSettings ? 400 : 500};
     letter-spacing: 0.85px;
     text-align: center;
     color: ${(props) => props.themeColor || 'white'} !important;

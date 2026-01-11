@@ -38,6 +38,18 @@ export const TimeDisplay = styled.div<{ themeColor?: string }>`
     font-weight: 300;
     color: ${(props) => props.themeColor || 'white'};
     letter-spacing: 0.5px;
+
+    @media only screen and (max-height: 800px) {
+        font-size: 3.5rem;
+    }
+
+    @media only screen and (max-height: 600px) {
+        font-size: 3rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2.5rem;
+    }
 `
 
 export const TimeDigit = styled.span<{ isChanging: boolean; isSeconds?: boolean }>`
@@ -71,10 +83,26 @@ export const GregorianDate = styled.div<{ themeColor?: string }>`
     font-size: 1rem;
     font-weight: 300;
     color: ${(props) => (props.themeColor ? props.themeColor + 'dd' : 'rgba(255, 255, 255, 0.8)')};
+
+    @media only screen and (max-height: 600px) {
+        font-size: 0.9rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 0.85rem;
+    }
 `
 
 export const HijriDate = styled.div<{ themeColor?: string }>`
     font-size: 0.9rem;
     font-weight: 300;
     color: ${(props) => (props.themeColor ? props.themeColor + '99' : 'rgba(255, 255, 255, 0.6)')};
+
+    @media only screen and (max-height: 600px) {
+        font-size: 0.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 0.75rem;
+    }
 `

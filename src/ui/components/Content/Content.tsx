@@ -151,7 +151,10 @@ const Content: React.FC = () => {
                 themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
             />
 
-            <ContentWrapper themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}>
+            <ContentWrapper
+                themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
+                allElementsShown={showClock && showSearch && showContent}
+            >
                 {showClock && <Clock themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
                 {showSearch && <SearchBar provider={searchProvider} themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
                 {showBookmarks && <Bookmarks themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
