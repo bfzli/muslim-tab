@@ -69,11 +69,12 @@ export const CloseButton = styled.button`
     border: none;
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    padding: 0.3rem;
+    padding: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    border-radius: 8px;
 
     svg {
         width: 18px;
@@ -82,11 +83,13 @@ export const CloseButton = styled.button`
 
     &:hover {
         color: white;
+        background: rgba(255, 255, 255, 0.1);
     }
 `
 
-export const ModalBody = styled.div`
+export const ModalBody = styled.div<{ extraPadding?: boolean }>`
     padding: 0.25rem 1rem;
+    padding-bottom: ${(props) => (props.extraPadding ? '200px' : '0.25rem')};
     flex: 1;
     overflow-y: auto;
 `
@@ -296,7 +299,7 @@ export const FontDropdown = styled.div<{ isOpen: boolean }>`
     background: rgb(30, 30, 30);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 6px;
-    max-height: 240px;
+    max-height: 180px;
     overflow-y: auto;
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
@@ -325,5 +328,41 @@ export const FontOption = styled.div<{ selected: boolean }>`
     &:last-child {
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
+        margin-bottom: 0.5rem;
+    }
+`
+
+export const SettingsFooter = styled.div`
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+`
+
+export const FooterLeft = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+`
+
+export const FooterLink = styled.a`
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    &:hover {
+        color: white;
+    }
+
+    svg {
+        width: 14px;
+        height: 14px;
     }
 `

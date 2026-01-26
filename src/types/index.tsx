@@ -66,6 +66,7 @@ export type SearchProvider =
     | 'chatgpt'
     | 'ecosia'
     | 'perplexity'
+    | 'claude'
 
 export interface SearchProviderConfig {
     name: string
@@ -124,6 +125,13 @@ export const searchProviders: Record<SearchProvider, SearchProviderConfig> = {
         url: 'https://www.perplexity.ai/search?q=',
         icon: <Icon icon="simple-icons:perplexity" width="16" height="16" />,
         color: '#20808D',
+        verb: 'Ask'
+    },
+    claude: {
+        name: 'Claude',
+        url: 'https://claude.ai/new?q=',
+        icon: <Icon icon="simple-icons:anthropic" width="16" height="16" />,
+        color: '#D97757',
         verb: 'Ask'
     }
 }
