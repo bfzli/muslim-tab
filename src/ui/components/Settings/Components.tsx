@@ -87,9 +87,8 @@ export const CloseButton = styled.button`
     }
 `
 
-export const ModalBody = styled.div<{ extraPadding?: boolean }>`
+export const ModalBody = styled.div`
     padding: 0.25rem 1rem;
-    padding-bottom: ${(props) => (props.extraPadding ? '200px' : '0.25rem')};
     flex: 1;
     overflow-y: auto;
 `
@@ -114,7 +113,7 @@ export const SettingLabel = styled.label`
 
 export const ProviderSelector = styled.div`
     display: flex;
-    gap: 0.5rem;
+    gap: 0.35rem;
     flex-wrap: wrap;
 `
 
@@ -132,13 +131,13 @@ export const ProviderButton = styled.button<{ selected: boolean; color: string }
         ${(props) =>
             props.selected ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 255, 255, 0.1)'};
     border-radius: 6px;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.85rem;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.8rem;
     font-weight: 300;
     cursor: ${(props) => (props.selected ? 'default' : 'pointer')};
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.3rem;
     transition: all 0.2s ease;
     font-family: inherit;
 

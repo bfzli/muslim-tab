@@ -269,17 +269,7 @@ const Settings: React.FC<SettingsProps> = ({
                         </svg>
                     </CloseButton>
                 </ModalHeaderSection>
-                <ModalBody extraPadding={isFontDropdownOpen} ref={modalBodyRef}>
-                    <SettingItem>
-                        <SettingLabel htmlFor="clock-toggle">
-                            Show Clock
-                        </SettingLabel>
-                        <ToggleSwitch
-                            checked={showClock}
-                            onClick={handleClockToggle}
-                            id="clock-toggle"
-                        />
-                    </SettingItem>
+                <ModalBody ref={modalBodyRef}>
                     <SettingItem>
                         <SettingLabel htmlFor="search-toggle">
                             Show Search Bar
@@ -310,26 +300,6 @@ const Settings: React.FC<SettingsProps> = ({
                             </ProviderSelector>
                         </SettingItem>
                     )}
-                    <SettingItem>
-                        <SettingLabel htmlFor="bookmarks-toggle">
-                            Show Bookmarks
-                        </SettingLabel>
-                        <ToggleSwitch
-                            checked={showBookmarks}
-                            onClick={handleBookmarksToggle}
-                            id="bookmarks-toggle"
-                        />
-                    </SettingItem>
-                    <SettingItem>
-                        <SettingLabel htmlFor="content-toggle">
-                            Show Content
-                        </SettingLabel>
-                        <ToggleSwitch
-                            checked={showContent}
-                            onClick={handleContentToggle}
-                            id="content-toggle"
-                        />
-                    </SettingItem>
                     <SettingItem>
                         <SettingLabel htmlFor="photos-toggle">
                             Show Photos
@@ -430,6 +400,36 @@ const Settings: React.FC<SettingsProps> = ({
                                 )}
                             </FontDropdown>
                         </FontSelectorWrapper>
+                    </SettingItem>
+                    <SettingItem>
+                        <SettingLabel htmlFor="clock-toggle">
+                            Show Clock
+                        </SettingLabel>
+                        <ToggleSwitch
+                            checked={showClock}
+                            onClick={handleClockToggle}
+                            id="clock-toggle"
+                        />
+                    </SettingItem>
+                    <SettingItem>
+                        <SettingLabel htmlFor="bookmarks-toggle">
+                            Show Bookmarks
+                        </SettingLabel>
+                        <ToggleSwitch
+                            checked={showBookmarks}
+                            onClick={handleBookmarksToggle}
+                            id="bookmarks-toggle"
+                        />
+                    </SettingItem>
+                    <SettingItem>
+                        <SettingLabel htmlFor="content-toggle">
+                            Show Content
+                        </SettingLabel>
+                        <ToggleSwitch
+                            checked={showContent}
+                            onClick={handleContentToggle}
+                            id="content-toggle"
+                        />
                     </SettingItem>
                 </ModalBody>
                 <SettingsFooter>
