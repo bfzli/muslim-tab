@@ -10,10 +10,10 @@
     "styled-components": "^5.3.3"
   },
   "scripts": {
-    "dev": "vite build --watch --mode development",
-    "build": "vite build",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "tsc --noEmit --watch",
+    "extension:dev": "vite build --watch --mode development",
+    "extension:build": "vite build",
+    "extension:type-check": "tsc --noEmit",
+    "extension:type-check:watch": "tsc --noEmit --watch",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\"",
