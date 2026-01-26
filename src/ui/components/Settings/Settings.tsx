@@ -16,12 +16,16 @@ import {
     FontSelectorWrapper,
     FontSelectorButton,
     FontDropdown,
+    FontSearchWrapper,
+    FontSearchInput,
+    FontNotFound,
     FontOption,
     SettingsFooter,
     FooterLink,
     FooterLeft
 } from '@styled/settings'
-import { SearchProvider, searchProviders, GradientType, gradients, FontFamily, fonts } from '@types'
+import { SearchProvider, searchProviders, GradientType, gradients, FontConfig } from '@types'
+import { loadGoogleFont } from '../../../services/googleFonts'
 import manifest from '../../../../public/manifest.json'
 
 interface SettingsProps {
@@ -41,8 +45,9 @@ interface SettingsProps {
     setShowPhotos: (value: boolean) => void
     selectedGradient: GradientType
     setSelectedGradient: (value: GradientType) => void
-    selectedFont: FontFamily
-    setSelectedFont: (value: FontFamily) => void
+    selectedFont: string
+    setSelectedFont: (value: string) => void
+    allFonts: Record<string, FontConfig>
 }
 
 const Settings: React.FC<SettingsProps> = ({
@@ -63,15 +68,21 @@ const Settings: React.FC<SettingsProps> = ({
     selectedGradient,
     setSelectedGradient,
     selectedFont,
-    setSelectedFont
+    setSelectedFont,
+    allFonts
 }) => {
     const [isClosing, setIsClosing] = useState(false)
     const [shouldRender, setShouldRender] = useState(isOpen)
     const [isFontDropdownOpen, setIsFontDropdownOpen] = useState(false)
     const [highlightedIndex, setHighlightedIndex] = useState<number>(-1)
+    const [fontSearch, setFontSearch] = useState('')
     const fontDropdownRef = useRef<HTMLDivElement>(null)
     const modalBodyRef = useRef<HTMLDivElement>(null)
-    const fontEntries = Object.entries(fonts)
+    const searchInputRef = useRef<HTMLInputElement>(null)
+
+    const fontEntries = Object.entries(allFonts).filter(([, config]) =>
+        config.name.toLowerCase().includes(fontSearch.toLowerCase())
+    )
 
     useEffect(() => {
         if (isOpen) {
@@ -96,9 +107,9 @@ const Settings: React.FC<SettingsProps> = ({
         }
 
         if (isFontDropdownOpen) {
-            document.addEventListener('mousedown', handleClickOutside)
+            document.addEventListener('click', handleClickOutside)
             return () => {
-                document.removeEventListener('mousedown', handleClickOutside)
+                document.removeEventListener('click', handleClickOutside)
             }
         }
 
@@ -127,15 +138,25 @@ const Settings: React.FC<SettingsProps> = ({
 
     useEffect(() => {
         if (isFontDropdownOpen && modalBodyRef.current) {
-            setTimeout(() => {
-                const body = modalBodyRef.current
-                if (body && body.scrollHeight > body.clientHeight) {
-                    body.scrollTo({
-                        top: body.scrollHeight,
-                        behavior: 'smooth'
-                    })
-                }
-            }, 1)
+            // Wait for padding to be applied, then scroll to bottom
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    const body = modalBodyRef.current
+                    if (body) {
+                        body.scrollTo({
+                            top: body.scrollHeight,
+                            behavior: 'smooth'
+                        })
+                    }
+                    // Focus search input after scroll starts
+                    setTimeout(() => {
+                        searchInputRef.current?.focus()
+                    }, 100)
+                }, 50)
+            })
+        } else {
+            // Clear search when dropdown closes
+            setFontSearch('')
         }
     }, [isFontDropdownOpen])
 
@@ -181,9 +202,11 @@ const Settings: React.FC<SettingsProps> = ({
         localStorage.setItem('selectedGradient', gradient)
     }
 
-    const handleFontChange = (font: FontFamily) => {
-        setSelectedFont(font)
-        localStorage.setItem('selectedFont', font)
+    const handleFontChange = (fontKey: string) => {
+        loadGoogleFont(fontKey, allFonts).then(() => {
+            setSelectedFont(fontKey)
+            localStorage.setItem('selectedFont', fontKey)
+        }).catch(console.error)
         setIsFontDropdownOpen(false)
         setHighlightedIndex(-1)
     }
@@ -213,7 +236,7 @@ const Settings: React.FC<SettingsProps> = ({
                 e.preventDefault()
                 if (highlightedIndex >= 0) {
                     const [key] = fontEntries[highlightedIndex]
-                    handleFontChange(key as FontFamily)
+                    handleFontChange(key)
                 }
                 break
             case 'Escape':
@@ -365,19 +388,46 @@ const Settings: React.FC<SettingsProps> = ({
                                 onClick={() => setIsFontDropdownOpen(!isFontDropdownOpen)}
                                 onKeyDown={handleKeyDown}
                             >
-                                {fonts[selectedFont].name}
+                                {allFonts[selectedFont]?.name || 'DM Sans'}
                             </FontSelectorButton>
                             <FontDropdown isOpen={isFontDropdownOpen} data-dropdown>
-                                {fontEntries.map(([key, config], index) => (
-                                    <FontOption
-                                        key={key}
-                                        selected={selectedFont === key || highlightedIndex === index}
-                                        onClick={() => handleFontChange(key as FontFamily)}
-                                        onMouseEnter={() => setHighlightedIndex(index)}
+                                <FontSearchWrapper onClick={(e) => e.stopPropagation()}>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     >
-                                        {config.name}
-                                    </FontOption>
-                                ))}
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.3-4.3"></path>
+                                    </svg>
+                                    <FontSearchInput
+                                        ref={searchInputRef}
+                                        type="text"
+                                        placeholder="Search fonts..."
+                                        value={fontSearch}
+                                        onChange={(e) => setFontSearch(e.target.value)}
+                                    />
+                                </FontSearchWrapper>
+                                {fontEntries.length === 0 ? (
+                                    <FontNotFound>
+                                        No fonts found for "{fontSearch.length > 18 ? fontSearch.slice(0, 18) + '...' : fontSearch}"
+                                    </FontNotFound>
+                                ) : (
+                                    fontEntries.map(([key, config], index) => (
+                                        <FontOption
+                                            key={key}
+                                            selected={selectedFont === key || highlightedIndex === index}
+                                            onClick={() => handleFontChange(key)}
+                                            onMouseEnter={() => setHighlightedIndex(index)}
+                                        >
+                                            {config.name}
+                                        </FontOption>
+                                    ))
+                                )}
                             </FontDropdown>
                         </FontSelectorWrapper>
                     </SettingItem>

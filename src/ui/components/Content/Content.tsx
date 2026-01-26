@@ -1,5 +1,6 @@
-import { ContentItem, ContentMode, SearchProvider, GradientType, gradients, FontFamily, fonts, loadFont } from '@types'
+import { ContentItem, ContentMode, SearchProvider, GradientType, gradients, fonts, FontConfig } from '@types'
 import React, { useEffect, useState } from 'react'
+import { getAllFonts, loadGoogleFont } from '../../../services/googleFonts'
 import { Container, ContentWrapper, QuoteContainer, Title, Reference } from '@styled/content'
 import Footer from '@components/Footer'
 import Logo from '@components/Logo'
@@ -65,10 +66,12 @@ const Content: React.FC = () => {
         return saved || 'ocean'
     })
 
-    const [selectedFont, setSelectedFont] = useState<FontFamily>(() => {
+    const [selectedFont, setSelectedFont] = useState<string>(() => {
         const saved = localStorage.getItem('selectedFont')
-        return (saved as FontFamily) || 'dm-sans'
+        return saved || 'dm-sans'
     })
+
+    const [allFonts] = useState<Record<string, FontConfig>>(() => getAllFonts())
 
     const top = isHover === false ? mt_30 : mt_2
     const bottom = isHover === false ? mb_30 : mb_2
@@ -106,21 +109,22 @@ const Content: React.FC = () => {
     useEffect(() => {
         const applyFont = async () => {
             try {
-                await loadFont(selectedFont)
+                await loadGoogleFont(selectedFont, allFonts)
 
-                if (selectedFont !== 'dm-sans') {
-                    const fontName = fonts[selectedFont].name
-                    await document.fonts.load(`400 16px "${fontName}"`)
+                const fontConfig = allFonts[selectedFont]
+                if (selectedFont !== 'dm-sans' && fontConfig) {
+                    await document.fonts.load(`400 16px "${fontConfig.name}"`)
                     await document.fonts.ready
                 }
 
-                document.body.style.setProperty('font-family', fonts[selectedFont].family, 'important')
+                const family = fontConfig?.family || fonts['dm-sans'].family
+                document.body.style.setProperty('font-family', family, 'important')
             } catch (error) {
                 document.body.style.setProperty('font-family', fonts['dm-sans'].family, 'important')
             }
         }
         applyFont()
-    }, [selectedFont])
+    }, [selectedFont, allFonts])
 
     const handleSettingsClick = () => {
         setIsSettingsOpen(true)
@@ -205,6 +209,7 @@ const Content: React.FC = () => {
                 setSelectedGradient={setSelectedGradient}
                 selectedFont={selectedFont}
                 setSelectedFont={setSelectedFont}
+                allFonts={allFonts}
             />
         </Container>
     )

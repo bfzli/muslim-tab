@@ -306,6 +306,47 @@ export const FontDropdown = styled.div<{ isOpen: boolean }>`
     display: ${(props) => (props.isOpen ? 'block' : 'none')};
 `
 
+export const FontSearchWrapper = styled.div`
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    svg {
+        width: 14px;
+        height: 14px;
+        color: rgba(255, 255, 255, 0.4);
+        flex-shrink: 0;
+    }
+`
+
+export const FontSearchInput = styled.input`
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+    }
+`
+
+export const FontNotFound = styled.div`
+    padding: 1.5rem 0.75rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+`
+
 export const FontOption = styled.div<{ selected: boolean }>`
     padding: 0.6rem 0.75rem;
     color: ${(props) => (props.selected ? 'white' : 'rgba(255, 255, 255, 0.8)')};
@@ -320,15 +361,9 @@ export const FontOption = styled.div<{ selected: boolean }>`
         color: white;
     }
 
-    &:first-child {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-    }
-
     &:last-child {
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
-        margin-bottom: 0.5rem;
     }
 `
 
