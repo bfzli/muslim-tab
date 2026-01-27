@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import {
-    ModalBackdrop,
     ModalContainer,
     ModalHeader,
     ModalHeaderSection,
@@ -8,6 +8,8 @@ import {
     CloseButton,
     SettingItem,
     SettingLabel,
+    SettingLabelRow,
+    ResetButton,
     ToggleSwitch,
     ProviderSelector,
     ProviderButton,
@@ -78,6 +80,7 @@ const Settings: React.FC<SettingsProps> = ({
     const [fontSearch, setFontSearch] = useState('')
     const fontDropdownRef = useRef<HTMLDivElement>(null)
     const modalBodyRef = useRef<HTMLDivElement>(null)
+    const modalContainerRef = useRef<HTMLDivElement>(null)
     const searchInputRef = useRef<HTMLInputElement>(null)
 
     const fontEntries = Object.entries(allFonts).filter(([, config]) =>
@@ -159,6 +162,23 @@ const Settings: React.FC<SettingsProps> = ({
             setFontSearch('')
         }
     }, [isFontDropdownOpen])
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalContainerRef.current && !modalContainerRef.current.contains(event.target as Node)) {
+                setTimeout(() => onClose(), 0)
+            }
+        }
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside)
+            return () => {
+                document.removeEventListener('mousedown', handleClickOutside)
+            }
+        }
+
+        return undefined
+    }, [isOpen, onClose])
 
     if (!shouldRender) return null
 
@@ -247,9 +267,11 @@ const Settings: React.FC<SettingsProps> = ({
         }
     }
 
-    return (
-        <ModalBackdrop>
-            <ModalContainer isClosing={isClosing}>
+    return createPortal(
+        <ModalContainer
+            isClosing={isClosing}
+            ref={modalContainerRef}
+        >
                 <ModalHeaderSection>
                     <ModalHeader>Settings</ModalHeader>
                     <CloseButton onClick={onClose}>
@@ -351,7 +373,19 @@ const Settings: React.FC<SettingsProps> = ({
                         </SettingItem>
                     )}
                     <SettingItem style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
-                        <SettingLabel>Font Family</SettingLabel>
+                        <SettingLabelRow>
+                            <SettingLabel>Font Family</SettingLabel>
+                            <ResetButton
+                                hidden={selectedFont === 'dm-sans'}
+                                onClick={() => {
+                                    if (selectedFont !== 'dm-sans') {
+                                        handleFontChange('dm-sans')
+                                    }
+                                }}
+                            >
+                                Reset
+                            </ResetButton>
+                        </SettingLabelRow>
                         <FontSelectorWrapper ref={fontDropdownRef}>
                             <FontSelectorButton
                                 isOpen={isFontDropdownOpen}
@@ -450,8 +484,8 @@ const Settings: React.FC<SettingsProps> = ({
                         GitHub
                     </FooterLink>
                 </SettingsFooter>
-            </ModalContainer>
-        </ModalBackdrop>
+        </ModalContainer>,
+        document.body
     )
 }
 

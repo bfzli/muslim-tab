@@ -36,16 +36,24 @@ export const ModalContainer = styled.div<{ isClosing?: boolean }>`
     position: fixed;
     top: 0;
     right: 0;
-    background: rgb(25, 25, 25);
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(
+        180deg,
+        rgba(40, 40, 50, 0.95) 0%,
+        rgba(30, 30, 38, 0.97) 100%
+    );
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     width: 300px;
     height: 100vh;
-    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
+    box-shadow:
+        -8px 0 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     animation: ${(props) => (props.isClosing ? slideOut : slideIn)} 0.3s ease-out;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
+    z-index: 9999;
 `
 
 export const ModalHeaderSection = styled.div`
@@ -97,7 +105,7 @@ export const SettingItem = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.65rem 0;
 
     &:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -109,6 +117,32 @@ export const SettingLabel = styled.label`
     font-size: 0.95rem;
     font-weight: 300;
     cursor: pointer;
+`
+
+export const SettingLabelRow = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+`
+
+export const ResetButton = styled.button<{ hidden?: boolean }>`
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: 300;
+    cursor: ${(props) => (props.hidden ? 'default' : 'pointer')};
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    visibility: ${(props) => (props.hidden ? 'hidden' : 'visible')};
+
+    &:hover {
+        color: ${(props) => (props.hidden ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.9)')};
+        background: ${(props) => (props.hidden ? 'transparent' : 'rgba(255, 255, 255, 0.1)')};
+    }
 `
 
 export const ProviderSelector = styled.div`
