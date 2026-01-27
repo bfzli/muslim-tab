@@ -15,4 +15,4 @@ const CopyToClipboard = (
         .catch(() => alert(msg))
 }
 
-export default CopyToClipboard
+export { CopyToClipboard }

@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const VerseIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
@@ -30,4 +30,4 @@ const VerseIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default VerseIcon
+export { VerseIcon }

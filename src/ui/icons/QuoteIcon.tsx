@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const QuoteIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
@@ -24,4 +24,4 @@ const QuoteIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default QuoteIcon
+export { QuoteIcon }

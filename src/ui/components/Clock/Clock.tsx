@@ -6,20 +6,10 @@ import {
     TimeSeparator,
     DateDisplay,
     GregorianDate,
-    HijriDate
+    HijriDate as HijriDateDisplay
 } from '@styled/clock'
-import { convertToHijri } from '@utils/HijriConverter'
-
-interface TimeString {
-    hours: string
-    minutes: string
-    seconds: string
-    period: string
-}
-
-interface ClockProps {
-    themeColor?: string
-}
+import { convertToHijri } from '@utils'
+import type { TimeString, ClockProps } from '@types'
 
 const Clock: React.FC<ClockProps> = ({ themeColor }) => {
     const [time, setTime] = useState<Date>(new Date())
@@ -92,7 +82,12 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
         }
         previousTimeRef.current = timeString
         return undefined
-    }, [timeString.hours, timeString.minutes, timeString.seconds, timeString.period])
+    }, [
+        timeString.hours,
+        timeString.minutes,
+        timeString.seconds,
+        timeString.period
+    ])
 
     const formatGregorianDate = (date: Date): string => {
         return date.toLocaleDateString('en-US', {
@@ -131,18 +126,24 @@ const Clock: React.FC<ClockProps> = ({ themeColor }) => {
                 <TimeDigit isChanging={changedDigits.has('s1')} isSeconds>
                     {timeString.seconds[1]}
                 </TimeDigit>
-                <TimeSeparator style={{ marginLeft: '0.3rem', fontSize: '0.5em' }}>
+                <TimeSeparator
+                    style={{ marginLeft: '0.3rem', fontSize: '0.5em' }}
+                >
                     <TimeDigit isChanging={changedDigits.has('period')}>
                         {timeString.period}
                     </TimeDigit>
                 </TimeSeparator>
             </TimeDisplay>
             <DateDisplay>
-                <GregorianDate themeColor={themeColor}>{formatGregorianDate(time)}</GregorianDate>
-                <HijriDate themeColor={themeColor}>{formatHijriDate(time)}</HijriDate>
+                <GregorianDate themeColor={themeColor}>
+                    {formatGregorianDate(time)}
+                </GregorianDate>
+                <HijriDateDisplay themeColor={themeColor}>
+                    {formatHijriDate(time)}
+                </HijriDateDisplay>
             </DateDisplay>
         </ClockContainer>
     )
 }
 
-export default Clock
+export { Clock }

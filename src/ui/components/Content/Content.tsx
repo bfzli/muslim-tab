@@ -1,13 +1,26 @@
-import { ContentItem, ContentMode, SearchProvider, GradientType, gradients, fonts, FontConfig } from '@types'
+import type {
+    ContentItem,
+    ContentMode,
+    SearchProvider,
+    GradientType,
+    FontConfig
+} from '@types'
+import { gradients, fonts } from '@types'
 import React, { useEffect, useState } from 'react'
-import { getAllFonts, loadGoogleFont } from '../../../services/googleFonts'
-import { Container, ContentWrapper, QuoteContainer, Title, Reference } from '@styled/content'
-import Footer from '@components/Footer'
-import Logo from '@components/Logo'
-import Bookmarks from '@components/Bookmarks'
-import Settings from '@components/Settings'
-import SearchBar from '@components/SearchBar'
-import Clock from '@components/Clock'
+import { getAllFonts, loadGoogleFont } from '@services'
+import {
+    Container,
+    ContentWrapper,
+    QuoteContainer,
+    Title,
+    Reference
+} from '@styled/content'
+import { Footer } from '@components/Footer'
+import { Logo } from '@components/Logo'
+import { Bookmarks } from '@components/Bookmarks'
+import { Settings } from '@components/Settings'
+import { SearchBar } from '@components/SearchBar'
+import { Clock } from '@components/Clock'
 import {
     ContentGenerator,
     InitalMode,
@@ -52,15 +65,19 @@ const Content: React.FC = () => {
         const saved = localStorage.getItem('showPhotos')
         return saved !== null ? JSON.parse(saved) : true
     })
-    const [selectedGradient, setSelectedGradient] = useState<GradientType>(() => {
-        const saved = localStorage.getItem('selectedGradient')
-        return (saved as GradientType) || 'ocean'
-    })
+    const [selectedGradient, setSelectedGradient] = useState<GradientType>(
+        () => {
+            const saved = localStorage.getItem('selectedGradient')
+            return (saved as GradientType) || 'ocean'
+        }
+    )
 
     const [actualGradient, setActualGradient] = useState<GradientType>(() => {
         const saved = localStorage.getItem('selectedGradient') as GradientType
         if (saved === 'random') {
-            const gradientKeys = Object.keys(gradients).filter(key => key !== 'random') as GradientType[]
+            const gradientKeys = Object.keys(gradients).filter(
+                (key) => key !== 'random'
+            ) as GradientType[]
             return gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
         }
         return saved || 'ocean'
@@ -90,8 +107,11 @@ const Content: React.FC = () => {
 
     useEffect(() => {
         if (selectedGradient === 'random') {
-            const gradientKeys = Object.keys(gradients).filter(key => key !== 'random' && key !== actualGradient) as GradientType[]
-            const randomGradient = gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
+            const gradientKeys = Object.keys(gradients).filter(
+                (key) => key !== 'random' && key !== actualGradient
+            ) as GradientType[]
+            const randomGradient =
+                gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
             setActualGradient(randomGradient)
         } else {
             setActualGradient(selectedGradient)
@@ -100,8 +120,11 @@ const Content: React.FC = () => {
 
     useEffect(() => {
         if (selectedGradient === 'random') {
-            const gradientKeys = Object.keys(gradients).filter(key => key !== 'random' && key !== actualGradient) as GradientType[]
-            const randomGradient = gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
+            const gradientKeys = Object.keys(gradients).filter(
+                (key) => key !== 'random' && key !== actualGradient
+            ) as GradientType[]
+            const randomGradient =
+                gradientKeys[Math.floor(Math.random() * gradientKeys.length)]
             setActualGradient(randomGradient)
         }
     }, [wallpaper, selectedGradient])
@@ -118,9 +141,17 @@ const Content: React.FC = () => {
                 }
 
                 const family = fontConfig?.family || fonts['dm-sans'].family
-                document.body.style.setProperty('font-family', family, 'important')
+                document.body.style.setProperty(
+                    'font-family',
+                    family,
+                    'important'
+                )
             } catch (error) {
-                document.body.style.setProperty('font-family', fonts['dm-sans'].family, 'important')
+                document.body.style.setProperty(
+                    'font-family',
+                    fonts['dm-sans'].family,
+                    'important'
+                )
             }
         }
         applyFont()
@@ -146,28 +177,77 @@ const Content: React.FC = () => {
                 setIsHover={setIsHover}
                 onSettingsClick={handleSettingsClick}
                 isSettingsOpen={isSettingsOpen}
-                themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
+                themeColor={
+                    !showPhotos
+                        ? gradients[actualGradient].themeColor
+                        : undefined
+                }
             />
 
             <ContentWrapper
-                themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
+                themeColor={
+                    !showPhotos
+                        ? gradients[actualGradient].themeColor
+                        : undefined
+                }
                 allElementsShown={showClock && showSearch && showContent}
             >
-                {showClock && <Clock themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
-                {showSearch && <SearchBar provider={searchProvider} themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
-                {showBookmarks && <Bookmarks themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined} />}
+                {showClock && (
+                    <Clock
+                        themeColor={
+                            !showPhotos
+                                ? gradients[actualGradient].themeColor
+                                : undefined
+                        }
+                    />
+                )}
+                {showSearch && (
+                    <SearchBar
+                        provider={searchProvider}
+                        themeColor={
+                            !showPhotos
+                                ? gradients[actualGradient].themeColor
+                                : undefined
+                        }
+                    />
+                )}
+                {showBookmarks && (
+                    <Bookmarks
+                        themeColor={
+                            !showPhotos
+                                ? gradients[actualGradient].themeColor
+                                : undefined
+                        }
+                    />
+                )}
 
                 {showContent && (
-                    <QuoteContainer hasOtherElements={showClock || showSearch || showBookmarks}>
+                    <QuoteContainer
+                        hasOtherElements={
+                            showClock || showSearch || showBookmarks
+                        }
+                    >
                         <Title
                             compact={showClock && showSearch && showBookmarks}
-                            hasSettings={showClock || showSearch || showBookmarks}
-                            themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
+                            hasSettings={
+                                showClock || showSearch || showBookmarks
+                            }
+                            themeColor={
+                                !showPhotos
+                                    ? gradients[actualGradient].themeColor
+                                    : undefined
+                            }
                         >
                             {content?.content}
                         </Title>
 
-                        <Reference themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}>
+                        <Reference
+                            themeColor={
+                                !showPhotos
+                                    ? gradients[actualGradient].themeColor
+                                    : undefined
+                            }
+                        >
                             {content?.reference}
                         </Reference>
                     </QuoteContainer>
@@ -186,7 +266,11 @@ const Content: React.FC = () => {
                     setIsHover={setIsHover}
                     isModal={isModal}
                     setModal={setIsModal}
-                    themeColor={!showPhotos ? gradients[actualGradient].themeColor : undefined}
+                    themeColor={
+                        !showPhotos
+                            ? gradients[actualGradient].themeColor
+                            : undefined
+                    }
                 />
             )}
 
@@ -215,4 +299,4 @@ const Content: React.FC = () => {
     )
 }
 
-export default Content
+export { Content }

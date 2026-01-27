@@ -1,4 +1,4 @@
-import { ContentMode } from '@types'
+import type { ContentMode } from '@types'
 
 const InitalMode = (): ContentMode => {
     const mode = localStorage.getItem('view')
@@ -17,4 +17,4 @@ const InitalMode = (): ContentMode => {
     }
 }
 
-export default InitalMode
+export { InitalMode }

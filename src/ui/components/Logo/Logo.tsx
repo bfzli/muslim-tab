@@ -1,15 +1,22 @@
-import { LogoProps } from '@types'
+import type { LogoExtendedProps } from '@types'
 import React, { useState } from 'react'
-import { Container, InnerContainer, Elements, SettingsButtonWrapper } from '@styled/logo'
-import LogoIcon from '@icons/LogoIcon'
-import { SettingsButton } from '@components/Settings/Components'
+import {
+    Container,
+    InnerContainer,
+    Elements,
+    SettingsButtonWrapper
+} from '@styled/logo'
+import { LogoIcon } from '@icons'
+import { SettingsButton } from '@styled/settings'
 import { Settings } from 'lucide-react'
 
-interface LogoExtendedProps extends LogoProps {
-    themeColor?: string
-}
-
-const Logo: React.FC<LogoExtendedProps> = ({ top, setIsHover, onSettingsClick, isSettingsOpen, themeColor }) => {
+const Logo: React.FC<LogoExtendedProps> = ({
+    top,
+    setIsHover,
+    onSettingsClick,
+    isSettingsOpen,
+    themeColor
+}) => {
     const [isHovering, setIsHovering] = useState(false)
 
     const enter = (): void => {
@@ -28,8 +35,14 @@ const Logo: React.FC<LogoExtendedProps> = ({ top, setIsHover, onSettingsClick, i
                 <Elements>
                     <LogoIcon size='2.5em' color={themeColor} />
                 </Elements>
-                <SettingsButtonWrapper visible={isHovering} disabled={isSettingsOpen}>
-                    <SettingsButton onClick={onSettingsClick} themeColor={themeColor}>
+                <SettingsButtonWrapper
+                    visible={isHovering}
+                    disabled={isSettingsOpen}
+                >
+                    <SettingsButton
+                        onClick={onSettingsClick}
+                        themeColor={themeColor}
+                    >
                         <Settings size={18} />
                     </SettingsButton>
                 </SettingsButtonWrapper>
@@ -38,4 +51,4 @@ const Logo: React.FC<LogoExtendedProps> = ({ top, setIsHover, onSettingsClick, i
     )
 }
 
-export default Logo
+export { Logo }

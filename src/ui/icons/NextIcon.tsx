@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const NextIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
@@ -26,4 +26,4 @@ const NextIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default NextIcon
+export { NextIcon }

@@ -1,4 +1,4 @@
-import { ContentMode, ContentItem } from '@types'
+import type { ContentMode, ContentItem } from '@types'
 import Quotes from '@data/Quotes.json'
 import Hadiths from '@data/Hadiths.json'
 import Verses from '@data/Verses.json'
@@ -60,4 +60,4 @@ function ContentGenerator(
     else if (setContent) setContent(SelectedQuote)
 }
 
-export default ContentGenerator
+export { ContentGenerator }

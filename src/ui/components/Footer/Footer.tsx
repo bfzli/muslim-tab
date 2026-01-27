@@ -1,13 +1,7 @@
-import { FooterProps } from '@types'
+import type { FooterExtendedProps } from '@types'
 import React from 'react'
 import { Container, Elements, Breakspace } from '@styled/footer'
-import Next from '@elements/Next'
-import Copy from '@elements/Copy'
-import Mode from '@elements/Mode'
-
-interface FooterExtendedProps extends FooterProps {
-    themeColor?: string
-}
+import { Next, Copy, Mode } from '@elements'
 
 const Footer: React.FC<FooterExtendedProps> = (props) => {
     const enter = (): void => props.setIsHover(true)
@@ -17,9 +11,17 @@ const Footer: React.FC<FooterExtendedProps> = (props) => {
         <Container onMouseEnter={enter} onMouseLeave={leave}>
             <Elements style={props.bottom}>
                 <Breakspace />
-                <Copy content={props.content} setContent={props.setContent} themeColor={props.themeColor} />
+                <Copy
+                    content={props.content}
+                    setContent={props.setContent}
+                    themeColor={props.themeColor}
+                />
                 <Breakspace />
-                <Mode mode={props.mode} setMode={props.setMode} themeColor={props.themeColor} />
+                <Mode
+                    mode={props.mode}
+                    setMode={props.setMode}
+                    themeColor={props.themeColor}
+                />
                 <Breakspace />
                 <Next
                     mode={props.mode}
@@ -34,4 +36,4 @@ const Footer: React.FC<FooterExtendedProps> = (props) => {
     )
 }
 
-export default Footer
+export { Footer }

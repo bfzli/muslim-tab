@@ -1,1 +1,1 @@
-export { default } from '@components/Settings/Settings'
+export { Settings } from '@components/Settings/Settings'

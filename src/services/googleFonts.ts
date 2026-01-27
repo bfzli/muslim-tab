@@ -1,7 +1,10 @@
-import { FontConfig, fonts as localFonts } from '@types'
+import type { FontConfig } from '@types'
+import { fonts as localFonts } from '@types'
 
-// Popular Google Fonts (sorted by popularity)
-const popularGoogleFonts: Array<{ name: string; category: 'sans-serif' | 'serif' | 'display' }> = [
+const popularGoogleFonts: Array<{
+    name: string
+    category: 'sans-serif' | 'serif' | 'display'
+}> = [
     { name: 'Roboto', category: 'sans-serif' },
     { name: 'Open Sans', category: 'sans-serif' },
     { name: 'Noto Sans', category: 'sans-serif' },
@@ -101,18 +104,17 @@ const popularGoogleFonts: Array<{ name: string; category: 'sans-serif' | 'serif'
     { name: 'Archivo Black', category: 'sans-serif' },
     { name: 'Yanone Kaffeesatz', category: 'sans-serif' },
     { name: 'Saira', category: 'sans-serif' },
-    { name: 'Saira Condensed', category: 'sans-serif' },
+    { name: 'Saira Condensed', category: 'sans-serif' }
 ]
 
 const fontNameToKey = (name: string): string => {
     return name.toLowerCase().replace(/\s+/g, '-')
 }
 
-// Build fonts from the popular list
 const buildPopularFonts = (): Record<string, FontConfig> => {
     const fonts: Record<string, FontConfig> = {}
 
-    popularGoogleFonts.forEach(font => {
+    popularGoogleFonts.forEach((font) => {
         const key = fontNameToKey(font.name)
 
         fonts[key] = {
@@ -127,22 +129,18 @@ const buildPopularFonts = (): Record<string, FontConfig> => {
     return fonts
 }
 
-// Get all fonts (DM Sans first, then local fonts, then popular Google Fonts)
 export const getAllFonts = (): Record<string, FontConfig> => {
     const result: Record<string, FontConfig> = {}
     const popularFonts = buildPopularFonts()
 
-    // 1. Add DM Sans first
     result['dm-sans'] = localFonts['dm-sans']
 
-    // 2. Add rest of local fonts
     Object.entries(localFonts).forEach(([key, config]) => {
         if (key !== 'dm-sans') {
             result[key] = config
         }
     })
 
-    // 3. Add popular fonts (skip duplicates)
     Object.entries(popularFonts).forEach(([key, config]) => {
         if (!result[key]) {
             result[key] = config
@@ -155,7 +153,10 @@ export const getAllFonts = (): Record<string, FontConfig> => {
 const loadedFonts = new Set<string>()
 loadedFonts.add('dm-sans')
 
-export const loadGoogleFont = (fontKey: string, allFonts: Record<string, FontConfig>): Promise<void> => {
+export const loadGoogleFont = (
+    fontKey: string,
+    allFonts: Record<string, FontConfig>
+): Promise<void> => {
     return new Promise((resolve, reject) => {
         if (fontKey === 'dm-sans') {
             resolve()

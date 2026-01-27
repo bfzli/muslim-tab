@@ -1,1 +1,1 @@
-export { default } from '@components/Bookmarks/Bookmarks'
+export { Bookmarks } from '@components/Bookmarks/Bookmarks'

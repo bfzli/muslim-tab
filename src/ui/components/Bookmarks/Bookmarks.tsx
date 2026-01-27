@@ -5,12 +5,7 @@ import {
     BookmarkIcon,
     BookmarkTitle
 } from '@styled/bookmarks'
-
-interface Bookmark {
-    id: string
-    title: string
-    url?: string
-}
+import type { Bookmark, BookmarksProps } from '@types'
 
 const isAppropriateContent = (url: string, title: string): boolean => {
     const inappropriate = [
@@ -43,10 +38,6 @@ const isAppropriateContent = (url: string, title: string): boolean => {
     )
 }
 
-interface BookmarksProps {
-    themeColor?: string
-}
-
 const Bookmarks: React.FC<BookmarksProps> = ({ themeColor }) => {
     const [bookmarks, setBookmarks] = useState<Bookmark[]>([])
 
@@ -59,10 +50,7 @@ const Bookmarks: React.FC<BookmarksProps> = ({ themeColor }) => {
                     .filter(
                         (bookmark) =>
                             bookmark.url &&
-                            isAppropriateContent(
-                                bookmark.url,
-                                bookmark.title
-                            )
+                            isAppropriateContent(bookmark.url, bookmark.title)
                     )
                     .slice(0, 16)
                     .map((bookmark) => ({
@@ -143,11 +131,13 @@ const Bookmarks: React.FC<BookmarksProps> = ({ themeColor }) => {
                             getFirstLetter(bookmark.title)
                         )}
                     </BookmarkIcon>
-                    <BookmarkTitle themeColor={themeColor}>{bookmark.title}</BookmarkTitle>
+                    <BookmarkTitle themeColor={themeColor}>
+                        {bookmark.title}
+                    </BookmarkTitle>
                 </BookmarkItem>
             ))}
         </BookmarksContainer>
     )
 }
 
-export default Bookmarks
+export { Bookmarks }

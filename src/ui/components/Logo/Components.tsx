@@ -30,10 +30,14 @@ export const Elements = styled.section`
     flex: 1;
 `
 
-export const SettingsButtonWrapper = styled.div<{ visible: boolean; disabled?: boolean }>`
+export const SettingsButtonWrapper = styled.div<{
+    visible: boolean
+    disabled?: boolean
+}>`
     opacity: ${(props) => (props.disabled ? 0.5 : props.visible ? 1 : 0)};
     transition: opacity 0.3s ease;
-    pointer-events: ${(props) => (props.disabled ? 'none' : props.visible ? 'auto' : 'none')};
+    pointer-events: ${(props) =>
+        props.disabled ? 'none' : props.visible ? 'auto' : 'none'};
     display: flex;
     align-items: center;
 
@@ -41,7 +45,8 @@ export const SettingsButtonWrapper = styled.div<{ visible: boolean; disabled?: b
         cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
 
         &:hover {
-            background: ${(props) => (props.disabled ? 'transparent' : '#383e4760')};
+            background: ${(props) =>
+                props.disabled ? 'transparent' : '#383e4760'};
         }
     }
 `

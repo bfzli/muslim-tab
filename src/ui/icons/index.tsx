@@ -1,25 +1,11 @@
-import CopyIcon from '@icons/CopyIcon'
-import NextIcon from '@icons/NextIcon'
-import ViewIcon from '@icons/ViewIcon'
-import LogoIcon from '@icons/LogoIcon'
-import CopiedIcon from '@icons/CopiedIcon'
-import CupIcon from '@icons/CupIcon'
-import QuoteIcon from '@icons/QuoteIcon'
-import VerseIcon from '@icons/VerseIcon'
-import HadithIcon from '@icons/HadithIcon'
-import AutoIcon from '@icons/AutoIcon'
-import SettingsIcon from '@icons/SettingsIcon'
-
-export {
-    CopyIcon,
-    NextIcon,
-    ViewIcon,
-    LogoIcon,
-    CopiedIcon,
-    CupIcon,
-    QuoteIcon,
-    VerseIcon,
-    HadithIcon,
-    AutoIcon,
-    SettingsIcon
-}
+export { CopyIcon } from '@icons/CopyIcon'
+export { NextIcon } from '@icons/NextIcon'
+export { ViewIcon } from '@icons/ViewIcon'
+export { LogoIcon } from '@icons/LogoIcon'
+export { CopiedIcon } from '@icons/CopiedIcon'
+export { CupIcon } from '@icons/CupIcon'
+export { QuoteIcon } from '@icons/QuoteIcon'
+export { VerseIcon } from '@icons/VerseIcon'
+export { HadithIcon } from '@icons/HadithIcon'
+export { AutoIcon } from '@icons/AutoIcon'
+export { SettingsIcon } from '@icons/SettingsIcon'

@@ -20,7 +20,8 @@ export const Element = styled.section<{ themeColor?: string }>`
     }
 
     &:hover {
-        background: ${(props) => props.themeColor ? props.themeColor + '30' : '#383e4760'};
+        background: ${(props) =>
+            props.themeColor ? props.themeColor + '30' : '#383e4760'};
     }
 
     &:last-of-type {

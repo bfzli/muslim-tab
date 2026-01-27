@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const AutoIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
@@ -14,7 +14,6 @@ const AutoIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
                 stroke={color}
                 strokeWidth='8'
             />
-            {/* Shuffle/Auto icon - two curved arrows forming a circular pattern */}
             <path
                 d='M75 45L85 45L85 55M85 45L75 55'
                 stroke={color}
@@ -43,4 +42,4 @@ const AutoIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default AutoIcon
+export { AutoIcon }

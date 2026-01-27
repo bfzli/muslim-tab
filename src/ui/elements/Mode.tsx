@@ -1,10 +1,7 @@
-import { ModeProps, ContentMode } from '@types'
+import type { ModeExtendedProps, ContentMode } from '@types'
 import React from 'react'
 import { Element, Name } from '@styled/elements'
-import HadithIcon from '@icons/HadithIcon'
-import QuoteIcon from '@icons/QuoteIcon'
-import VerseIcon from '@icons/VerseIcon'
-import AutoIcon from '@icons/AutoIcon'
+import { HadithIcon, QuoteIcon, VerseIcon, AutoIcon } from '@icons'
 import { ModeSwitcher } from '@utils'
 
 const modeLabels: Record<ContentMode, string> = {
@@ -12,10 +9,6 @@ const modeLabels: Record<ContentMode, string> = {
     hadith: 'Hadiths',
     quote: 'Quotes',
     auto: 'Random'
-}
-
-interface ModeExtendedProps extends ModeProps {
-    themeColor?: string
 }
 
 const Mode: React.FC<ModeExtendedProps> = ({ mode, setMode, themeColor }) => {
@@ -38,4 +31,4 @@ const Mode: React.FC<ModeExtendedProps> = ({ mode, setMode, themeColor }) => {
     )
 }
 
-export default Mode
+export { Mode }

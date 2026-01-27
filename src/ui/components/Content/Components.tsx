@@ -1,11 +1,5 @@
 import styled from 'styled-components'
-import { BackgroundProps } from '@types'
-
-interface ContainerProps extends BackgroundProps {
-    isSettingsOpen?: boolean
-    showPhotos?: boolean
-    gradient?: string
-}
+import type { ContainerProps, TitleProps } from '@types'
 
 export const Container = styled.section<ContainerProps>`
     width: 100vw;
@@ -18,7 +12,8 @@ export const Container = styled.section<ContainerProps>`
     background: ${(props) =>
         props.showPhotos
             ? `url('${props.background}')`
-            : props.gradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'};
+            : props.gradient ||
+              'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'};
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -29,14 +24,19 @@ export const Container = styled.section<ContainerProps>`
     left: 0;
 `
 
-export const ContentWrapper = styled.div<{ themeColor?: string; allElementsShown?: boolean }>`
+export const ContentWrapper = styled.div<{
+    themeColor?: string
+    allElementsShown?: boolean
+}>`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: ${(props) => props.allElementsShown ? 'flex-start' : 'center'};
+    justify-content: ${(props) =>
+        props.allElementsShown ? 'flex-start' : 'center'};
     flex-direction: column;
     align-items: center;
-    padding: ${(props) => props.allElementsShown ? '15vh 15% 2.5em 15%' : '0em 15% 2.5em 15%'};
+    padding: ${(props) =>
+        props.allElementsShown ? '15vh 15% 2.5em 15%' : '0em 15% 2.5em 15%'};
     background: ${(props) =>
         props.themeColor
             ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5))`
@@ -44,11 +44,11 @@ export const ContentWrapper = styled.div<{ themeColor?: string; allElementsShown
     gap: 2.5rem;
 
     @media only screen and (max-height: 800px) {
-        padding-top: ${(props) => props.allElementsShown ? '10vh' : '0'};
+        padding-top: ${(props) => (props.allElementsShown ? '10vh' : '0')};
     }
 
     @media only screen and (max-height: 600px) {
-        padding-top: ${(props) => props.allElementsShown ? '5vh' : '0'};
+        padding-top: ${(props) => (props.allElementsShown ? '5vh' : '0')};
         gap: 1.5rem;
     }
 `
@@ -61,16 +61,11 @@ export const QuoteContainer = styled.div<{ hasOtherElements?: boolean }>`
     gap: 1rem;
 `
 
-interface TitleProps {
-    compact?: boolean
-    hasSettings?: boolean
-    themeColor?: string
-}
-
 export const Title = styled.h2<TitleProps>`
     width: ${(props) => (props.hasSettings ? '700px' : '100%')};
-    font-size: ${(props) => (props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em')};
-    font-weight: ${props => props.hasSettings ? 400 : 500};
+    font-size: ${(props) =>
+        props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em'};
+    font-weight: ${(props) => (props.hasSettings ? 400 : 500)};
     letter-spacing: 0.85px;
     text-align: center;
     color: ${(props) => props.themeColor || 'white'} !important;
@@ -79,15 +74,22 @@ export const Title = styled.h2<TitleProps>`
     -webkit-animation: fill 0.5s infinite alternate;
 
     @media only screen and (max-width: 1000px) {
-        font-size: ${(props) => (props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em')};
+        font-size: ${(props) =>
+            props.hasSettings ? '2rem' : props.compact ? '1.75em' : '2.75em'};
     }
 
     @media only screen and (max-width: 850px) {
-        font-size: ${(props) => (props.hasSettings ? '1.75rem' : props.compact ? '1.5em' : '2.5em')};
+        font-size: ${(props) =>
+            props.hasSettings ? '1.75rem' : props.compact ? '1.5em' : '2.5em'};
     }
 
     @media only screen and (max-width: 600px) {
-        font-size: ${(props) => (props.hasSettings ? '1.5rem' : props.compact ? '1.5em' : '2.25em')} !important;
+        font-size: ${(props) =>
+            props.hasSettings
+                ? '1.5rem'
+                : props.compact
+                  ? '1.5em'
+                  : '2.25em'} !important;
     }
 `
 
@@ -129,11 +131,14 @@ export const Reference = styled.p<{ themeColor?: string }>`
     border-radius: 99rem;
     transition: all ease-in-out 0.3s;
     z-index: 100;
-    color: ${(props) => props.themeColor ? props.themeColor + 'cc' : 'white'} !important;
+    color: ${(props) =>
+        props.themeColor ? props.themeColor + 'cc' : 'white'} !important;
     font-size: 0.8rem !important;
     -webkit-text-stroke: 0px ${(props) => props.themeColor || 'white'};
-    -webkit-text-fill-color: ${(props) => props.themeColor ? props.themeColor + 'cc' : 'white'};
-    background: ${(props) => props.themeColor ? props.themeColor + '15' : '#383e4720'};
+    -webkit-text-fill-color: ${(props) =>
+        props.themeColor ? props.themeColor + 'cc' : 'white'};
+    background: ${(props) =>
+        props.themeColor ? props.themeColor + '15' : '#383e4720'};
     text-decoration: none;
     cursor: default;
 `

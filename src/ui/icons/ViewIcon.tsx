@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const ViewIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
@@ -27,4 +27,4 @@ const ViewIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default ViewIcon
+export { ViewIcon }

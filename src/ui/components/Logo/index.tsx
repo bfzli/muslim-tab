@@ -1,3 +1,1 @@
-import Logo from '@components/Logo/Logo'
-
-export default Logo
+export { Logo } from '@components/Logo/Logo'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 
 const LogoIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     return (
@@ -32,4 +32,4 @@ const LogoIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default LogoIcon
+export { LogoIcon }

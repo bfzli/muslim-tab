@@ -1,8 +1,6 @@
-import Footer from '@components/Footer'
-import Logo from '@components/Logo'
-import Content from '@components/Content'
-import Bookmarks from '@components/Bookmarks'
-import Settings from '@components/Settings'
-import SearchBar from '@components/SearchBar'
-
-export { Footer, Logo, Content, Bookmarks, Settings, SearchBar }
+export { Footer } from '@components/Footer'
+export { Logo } from '@components/Logo'
+export { Content } from '@components/Content'
+export { Bookmarks } from '@components/Bookmarks'
+export { Settings } from '@components/Settings'
+export { SearchBar } from '@components/SearchBar'

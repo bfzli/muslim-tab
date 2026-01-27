@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const CupIcon: React.FC<IconProps> = ({ size = '1em' }) => {
@@ -66,4 +66,4 @@ const CupIcon: React.FC<IconProps> = ({ size = '1em' }) => {
     )
 }
 
-export default CupIcon
+export { CupIcon }

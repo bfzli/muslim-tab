@@ -57,6 +57,96 @@ export interface LogoProps extends HoverProps {
     isSettingsOpen: boolean
 }
 
+export interface FooterExtendedProps extends FooterProps {
+    themeColor?: string
+}
+
+export interface LogoExtendedProps extends LogoProps {
+    themeColor?: string
+}
+
+export interface ModeExtendedProps extends ModeProps {
+    themeColor?: string
+}
+
+export interface CopyProps extends ContentProps {
+    themeColor?: string
+}
+
+export type NextProps = ContentProps &
+    WallpaperProps & {
+        mode: ContentMode
+        wallpaper: number
+        themeColor?: string
+    }
+
+export interface HijriDate {
+    day: number
+    month: number
+    year: number
+    monthName: string
+}
+
+export interface Bookmark {
+    id: string
+    title: string
+    url?: string
+}
+
+export interface BookmarksProps {
+    themeColor?: string
+}
+
+export interface TimeString {
+    hours: string
+    minutes: string
+    seconds: string
+    period: string
+}
+
+export interface ClockProps {
+    themeColor?: string
+}
+
+export interface SearchBarProps {
+    provider: SearchProvider
+    themeColor?: string
+}
+
+export interface SettingsProps {
+    isOpen: boolean
+    onClose: () => void
+    showClock: boolean
+    setShowClock: (value: boolean) => void
+    showBookmarks: boolean
+    setShowBookmarks: (value: boolean) => void
+    showSearch: boolean
+    setShowSearch: (value: boolean) => void
+    searchProvider: SearchProvider
+    setSearchProvider: (value: SearchProvider) => void
+    showContent: boolean
+    setShowContent: (value: boolean) => void
+    showPhotos: boolean
+    setShowPhotos: (value: boolean) => void
+    selectedGradient: GradientType
+    setSelectedGradient: (value: GradientType) => void
+    selectedFont: string
+    setSelectedFont: (value: string) => void
+    allFonts: Record<string, FontConfig>
+}
+
+export interface ContainerProps extends BackgroundProps {
+    isSettingsOpen?: boolean
+    showPhotos?: boolean
+    gradient?: string
+}
+
+export interface TitleProps {
+    compact?: boolean
+    hasSettings?: boolean
+    themeColor?: string
+}
+
 export type SearchProvider =
     | 'google'
     | 'duckduckgo'
@@ -80,57 +170,57 @@ export const searchProviders: Record<SearchProvider, SearchProviderConfig> = {
     google: {
         name: 'Google',
         url: 'https://www.google.com/search?q=',
-        icon: <Icon icon="simple-icons:google" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:google' width='16' height='16' />,
         color: '#4285F4'
     },
     duckduckgo: {
         name: 'DuckDuckGo',
         url: 'https://duckduckgo.com/?q=',
-        icon: <Icon icon="simple-icons:duckduckgo" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:duckduckgo' width='16' height='16' />,
         color: '#DE5833'
     },
     bing: {
         name: 'Bing',
         url: 'https://www.bing.com/search?q=',
-        icon: <Icon icon="mdi:microsoft-bing" width="16" height="16" />,
+        icon: <Icon icon='mdi:microsoft-bing' width='16' height='16' />,
         color: '#008373'
     },
     brave: {
         name: 'Brave',
         url: 'https://search.brave.com/search?q=',
-        icon: <Icon icon="simple-icons:brave" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:brave' width='16' height='16' />,
         color: '#FB542B'
     },
     yahoo: {
         name: 'Yahoo',
         url: 'https://search.yahoo.com/search?p=',
-        icon: <Icon icon="simple-icons:yahoo" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:yahoo' width='16' height='16' />,
         color: '#5F01D1'
     },
     chatgpt: {
         name: 'ChatGPT',
         url: 'https://chat.openai.com/?q=',
-        icon: <Icon icon="simple-icons:openai" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:openai' width='16' height='16' />,
         color: '#10A37F',
         verb: 'Ask'
     },
     ecosia: {
         name: 'Ecosia',
         url: 'https://www.ecosia.org/search?q=',
-        icon: <Icon icon="simple-icons:ecosia" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:ecosia' width='16' height='16' />,
         color: '#60B515'
     },
     perplexity: {
         name: 'Perplexity',
         url: 'https://www.perplexity.ai/search?q=',
-        icon: <Icon icon="simple-icons:perplexity" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:perplexity' width='16' height='16' />,
         color: '#20808D',
         verb: 'Ask'
     },
     claude: {
         name: 'Claude',
         url: 'https://claude.ai/new?q=',
-        icon: <Icon icon="simple-icons:anthropic" width="16" height="16" />,
+        icon: <Icon icon='simple-icons:anthropic' width='16' height='16' />,
         color: '#D97757',
         verb: 'Ask'
     }
@@ -173,7 +263,8 @@ export interface GradientConfig {
 export const gradients: Record<GradientType, GradientConfig> = {
     random: {
         name: 'Random',
-        gradient: 'conic-gradient(from 0deg, #667eea, #764ba2, #f093fb, #f5576c, #0ba360, #3cba92, #a8edea, #fed6e3)',
+        gradient:
+            'conic-gradient(from 0deg, #667eea, #764ba2, #f093fb, #f5576c, #0ba360, #3cba92, #a8edea, #fed6e3)',
         themeColor: '#ffffff'
     },
     ocean: {
@@ -248,7 +339,8 @@ export const gradients: Record<GradientType, GradientConfig> = {
     },
     azure: {
         name: 'Azure',
-        gradient: 'linear-gradient(135deg, #12c2e9 0%, #c471ed 0%, #f64f59 100%)',
+        gradient:
+            'linear-gradient(135deg, #12c2e9 0%, #c471ed 0%, #f64f59 100%)',
         themeColor: '#e8f4ff'
     },
     ember: {
@@ -351,14 +443,14 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'DM+Sans',
         weights: '300;400;500;600'
     },
-    'inter': {
+    inter: {
         name: 'Inter',
         family: "'Inter', sans-serif",
         category: 'sans-serif',
         googleFontName: 'Inter',
         weights: '300;400;500;600'
     },
-    'poppins': {
+    poppins: {
         name: 'Poppins',
         family: "'Poppins', sans-serif",
         category: 'sans-serif',
@@ -379,7 +471,7 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'Playfair+Display',
         weights: '400;500;600'
     },
-    'manrope': {
+    manrope: {
         name: 'Manrope',
         family: "'Manrope', sans-serif",
         category: 'sans-serif',
@@ -400,35 +492,35 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'Plus+Jakarta+Sans',
         weights: '300;400;500;600'
     },
-    'lora': {
+    lora: {
         name: 'Lora',
         family: "'Lora', serif",
         category: 'serif',
         googleFontName: 'Lora',
         weights: '400;500;600'
     },
-    'merriweather': {
+    merriweather: {
         name: 'Merriweather',
         family: "'Merriweather', serif",
         category: 'serif',
         googleFontName: 'Merriweather',
         weights: '300;400;700'
     },
-    'outfit': {
+    outfit: {
         name: 'Outfit',
         family: "'Outfit', sans-serif",
         category: 'display',
         googleFontName: 'Outfit',
         weights: '300;400;500;600'
     },
-    'sora': {
+    sora: {
         name: 'Sora',
         family: "'Sora', sans-serif",
         category: 'display',
         googleFontName: 'Sora',
         weights: '300;400;500;600'
     },
-    'lexend': {
+    lexend: {
         name: 'Lexend',
         family: "'Lexend', sans-serif",
         category: 'display',
@@ -442,21 +534,21 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'Crimson+Pro',
         weights: '400;500;600'
     },
-    'epilogue': {
+    epilogue: {
         name: 'Epilogue',
         family: "'Epilogue', sans-serif",
         category: 'sans-serif',
         googleFontName: 'Epilogue',
         weights: '300;400;500;600'
     },
-    'roboto': {
+    roboto: {
         name: 'Roboto',
         family: "'Roboto', sans-serif",
         category: 'sans-serif',
         googleFontName: 'Roboto',
         weights: '300;400;500;700'
     },
-    'montserrat': {
+    montserrat: {
         name: 'Montserrat',
         family: "'Montserrat', sans-serif",
         category: 'sans-serif',
@@ -470,14 +562,14 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'Open+Sans',
         weights: '300;400;500;600'
     },
-    'raleway': {
+    raleway: {
         name: 'Raleway',
         family: "'Raleway', sans-serif",
         category: 'sans-serif',
         googleFontName: 'Raleway',
         weights: '300;400;500;600'
     },
-    'nunito': {
+    nunito: {
         name: 'Nunito',
         family: "'Nunito', sans-serif",
         category: 'sans-serif',
@@ -491,21 +583,21 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'Bebas+Neue',
         weights: '400'
     },
-    'archivo': {
+    archivo: {
         name: 'Archivo',
         family: "'Archivo', sans-serif",
         category: 'sans-serif',
         googleFontName: 'Archivo',
         weights: '300;400;500;600'
     },
-    'karla': {
+    karla: {
         name: 'Karla',
         family: "'Karla', sans-serif",
         category: 'sans-serif',
         googleFontName: 'Karla',
         weights: '300;400;500;600'
     },
-    'rubik': {
+    rubik: {
         name: 'Rubik',
         family: "'Rubik', sans-serif",
         category: 'sans-serif',
@@ -540,14 +632,14 @@ export const fonts: Record<FontFamily, FontConfig> = {
         googleFontName: 'Source+Serif+Pro',
         weights: '300;400;600'
     },
-    'spectral': {
+    spectral: {
         name: 'Spectral',
         family: "'Spectral', serif",
         category: 'serif',
         googleFontName: 'Spectral',
         weights: '300;400;500;600'
     },
-    'bitter': {
+    bitter: {
         name: 'Bitter',
         family: "'Bitter', serif",
         category: 'serif',

@@ -1,9 +1,10 @@
-import CopyToClipboard from '@utils/CopyToClipboard'
-import InitalMode from '@utils/InitalMode'
-import ModeSwitcher from '@utils/ModeSwitcher'
-import ContentGenerator from '@utils/ContentGenerator'
-import preloadImage from '@utils/PreloadImage'
-import {
+export { CopyToClipboard } from '@utils/CopyToClipboard'
+export { InitalMode } from '@utils/InitalMode'
+export { ModeSwitcher } from '@utils/ModeSwitcher'
+export { ContentGenerator } from '@utils/ContentGenerator'
+export { preloadImage } from '@utils/PreloadImage'
+export { convertToHijri } from '@utils/HijriConverter'
+export {
     RandomNumber,
     mt_30,
     mb_30,
@@ -11,17 +12,3 @@ import {
     mb_2,
     getRandomNumber
 } from '@utils/Constants'
-
-export {
-    CopyToClipboard,
-    InitalMode,
-    ModeSwitcher,
-    ContentGenerator,
-    preloadImage,
-    RandomNumber,
-    getRandomNumber,
-    mt_30,
-    mb_30,
-    mt_2,
-    mb_2
-}

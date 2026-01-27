@@ -1,4 +1,4 @@
-import { StyleProp } from '@types'
+import type { StyleProp } from '@types'
 
 export const mt_30: StyleProp = { marginTop: '-30vh' }
 export const mt_2: StyleProp = { marginTop: '-8vh' }

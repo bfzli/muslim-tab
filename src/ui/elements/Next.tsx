@@ -1,12 +1,17 @@
-import { ContentProps, WallpaperProps, ContentMode } from '@types'
+import type { NextProps } from '@types'
 import React from 'react'
 import { Element, Name } from '@styled/elements'
-import NextIcon from '@icons/NextIcon'
+import { NextIcon } from '@icons'
 import { getRandomNumber, ContentGenerator, preloadImage } from '@utils'
 
-type NextProps = ContentProps & WallpaperProps & { mode: ContentMode; wallpaper: number; themeColor?: string }
-
-const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWallpaper, themeColor }) => {
+const Next: React.FC<NextProps> = ({
+    mode,
+    content,
+    setContent,
+    wallpaper,
+    setWallpaper,
+    themeColor
+}) => {
     const next = async (): Promise<void> => {
         const newWallpaper = getRandomNumber(wallpaper)
         try {
@@ -24,4 +29,4 @@ const Next: React.FC<NextProps> = ({ mode, content, setContent, wallpaper, setWa
     )
 }
 
-export default Next
+export { Next }

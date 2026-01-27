@@ -1,4 +1,4 @@
-import { ContentMode } from '@types'
+import type { ContentMode } from '@types'
 
 const ModeSwitcher = (
     mode: ContentMode,
@@ -32,4 +32,4 @@ const ModeSwitcher = (
     }
 }
 
-export default ModeSwitcher
+export { ModeSwitcher }

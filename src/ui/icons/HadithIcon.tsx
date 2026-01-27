@@ -1,4 +1,4 @@
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 import React from 'react'
 
 const HadithIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
@@ -32,4 +32,4 @@ const HadithIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default HadithIcon
+export { HadithIcon }

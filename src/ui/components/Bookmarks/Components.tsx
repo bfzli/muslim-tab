@@ -33,14 +33,21 @@ export const BookmarkItem = styled.a`
 export const BookmarkIcon = styled.div<{ themeColor?: string }>`
     width: 32px;
     height: 32px;
-    background: ${(props) => props.themeColor ? props.themeColor + '25' : 'rgba(255, 255, 255, 0.05)'};
+    background: ${(props) =>
+        props.themeColor
+            ? props.themeColor + '25'
+            : 'rgba(255, 255, 255, 0.05)'};
     backdrop-filter: blur(10px);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    border: 1px solid ${(props) => props.themeColor ? props.themeColor + '60' : 'rgba(255, 255, 255, 0.05)'};
+    border: 1px solid
+        ${(props) =>
+            props.themeColor
+                ? props.themeColor + '60'
+                : 'rgba(255, 255, 255, 0.05)'};
     overflow: hidden;
 
     img {

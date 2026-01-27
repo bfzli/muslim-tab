@@ -32,18 +32,27 @@ export const ModalBackdrop = styled.div<{ isClosing?: boolean }>`
     pointer-events: none;
 `
 
-export const ModalContainer = styled.div<{ isClosing?: boolean; showPhotos?: boolean }>`
+export const ModalContainer = styled.div<{
+    isClosing?: boolean
+    showPhotos?: boolean
+}>`
     position: fixed;
     top: 0;
     right: 0;
-    background: rgba(10, 10, 12, ${(props) => props.showPhotos ? '0.90' : '0.95'});
+    background: rgba(
+        10,
+        10,
+        12,
+        ${(props) => (props.showPhotos ? '0.90' : '0.95')}
+    );
     backdrop-filter: blur(24px) saturate(150%);
     -webkit-backdrop-filter: blur(24px) saturate(150%);
     border-left: 1px solid rgba(255, 255, 255, 0.06);
     width: 300px;
     height: 100vh;
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.3);
-    animation: ${(props) => (props.isClosing ? slideOut : slideIn)} 0.3s ease-out;
+    animation: ${(props) => (props.isClosing ? slideOut : slideIn)} 0.3s
+        ease-out;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
@@ -134,8 +143,12 @@ export const ResetButton = styled.button<{ hidden?: boolean }>`
     visibility: ${(props) => (props.hidden ? 'hidden' : 'visible')};
 
     &:hover {
-        color: ${(props) => (props.hidden ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.9)')};
-        background: ${(props) => (props.hidden ? 'transparent' : 'rgba(255, 255, 255, 0.1)')};
+        color: ${(props) =>
+            props.hidden
+                ? 'rgba(255, 255, 255, 0.5)'
+                : 'rgba(255, 255, 255, 0.9)'};
+        background: ${(props) =>
+            props.hidden ? 'transparent' : 'rgba(255, 255, 255, 0.1)'};
     }
 `
 
@@ -151,13 +164,21 @@ export const GradientSelector = styled.div`
     gap: 0.45rem;
 `
 
-export const ProviderButton = styled.button<{ selected: boolean; color: string }>`
+export const ProviderButton = styled.button<{
+    selected: boolean
+    color: string
+}>`
     background: ${(props) =>
-        props.selected ? 'rgba(255, 255, 255, 0.15)' : 'rgba(255, 255, 255, 0.05)'};
-    color: ${(props) => (props.selected ? 'white' : 'rgba(255, 255, 255, 0.7)')};
+        props.selected
+            ? 'rgba(255, 255, 255, 0.15)'
+            : 'rgba(255, 255, 255, 0.05)'};
+    color: ${(props) =>
+        props.selected ? 'white' : 'rgba(255, 255, 255, 0.7)'};
     border: 1px solid
         ${(props) =>
-            props.selected ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 255, 255, 0.1)'};
+            props.selected
+                ? 'rgba(255, 255, 255, 0.4)'
+                : 'rgba(255, 255, 255, 0.1)'};
     border-radius: 6px;
     padding: 0.35rem 0.55rem;
     font-size: 0.8rem;
@@ -171,9 +192,13 @@ export const ProviderButton = styled.button<{ selected: boolean; color: string }
 
     &:hover {
         background: ${(props) =>
-            props.selected ? 'rgba(255, 255, 255, 0.15)' : 'rgba(255, 255, 255, 0.1)'};
+            props.selected
+                ? 'rgba(255, 255, 255, 0.15)'
+                : 'rgba(255, 255, 255, 0.1)'};
         border-color: ${(props) =>
-            props.selected ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 255, 255, 0.3)'};
+            props.selected
+                ? 'rgba(255, 255, 255, 0.4)'
+                : 'rgba(255, 255, 255, 0.3)'};
         color: white;
     }
 
@@ -186,13 +211,18 @@ export const ToggleSwitch = styled.div<{ checked: boolean }>`
     width: 40px;
     height: 20px;
     background: ${(props) =>
-        props.checked ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.15)'};
+        props.checked
+            ? 'rgba(255, 255, 255, 0.9)'
+            : 'rgba(255, 255, 255, 0.15)'};
     border-radius: 10px;
     position: relative;
     cursor: pointer;
     transition: background 0.3s ease;
-    border: 1px solid ${(props) =>
-        props.checked ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.2)'};
+    border: 1px solid
+        ${(props) =>
+            props.checked
+                ? 'rgba(255, 255, 255, 0.9)'
+                : 'rgba(255, 255, 255, 0.2)'};
 
     &::after {
         content: '';
@@ -221,7 +251,8 @@ export const SettingsButton = styled.button<{ themeColor?: string }>`
     color: ${(props) => props.themeColor || 'white'};
 
     &:hover {
-        background: ${(props) => props.themeColor ? props.themeColor + '30' : '#383e4750'};
+        background: ${(props) =>
+            props.themeColor ? props.themeColor + '30' : '#383e4750'};
     }
 
     svg {
@@ -229,7 +260,11 @@ export const SettingsButton = styled.button<{ themeColor?: string }>`
     }
 `
 
-export const GradientButton = styled.button<{ gradient: string; selected: boolean; isRandom?: boolean }>`
+export const GradientButton = styled.button<{
+    gradient: string
+    selected: boolean
+    isRandom?: boolean
+}>`
     width: 32px;
     height: 32px;
     background: ${(props) => props.gradient};
@@ -250,7 +285,9 @@ export const GradientButton = styled.button<{ gradient: string; selected: boolea
 
     &:hover {
         box-shadow: ${(props) =>
-            props.selected ? '0 0 0 2px white' : '0 0 0 1.5px rgba(255, 255, 255, 0.6)'};
+            props.selected
+                ? '0 0 0 2px white'
+                : '0 0 0 1.5px rgba(255, 255, 255, 0.6)'};
         transform: ${(props) => (props.selected ? 'none' : 'translateY(-2px)')};
     }
 
@@ -308,7 +345,8 @@ export const FontSelectorButton = styled.button<{ isOpen: boolean }>`
         position: absolute;
         right: 0.75rem;
         top: 50%;
-        transform: translateY(-50%) ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+        transform: translateY(-50%)
+            ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
         width: 0;
         height: 0;
         border-left: 4px solid transparent;
@@ -376,8 +414,10 @@ export const FontNotFound = styled.div`
 
 export const FontOption = styled.div<{ selected: boolean }>`
     padding: 0.6rem 0.75rem;
-    color: ${(props) => (props.selected ? 'white' : 'rgba(255, 255, 255, 0.8)')};
-    background: ${(props) => (props.selected ? 'rgba(255, 255, 255, 0.1)' : 'transparent')};
+    color: ${(props) =>
+        props.selected ? 'white' : 'rgba(255, 255, 255, 0.8)'};
+    background: ${(props) =>
+        props.selected ? 'rgba(255, 255, 255, 0.1)' : 'transparent'};
     cursor: pointer;
     transition: all 0.15s ease;
     font-size: 0.9rem;

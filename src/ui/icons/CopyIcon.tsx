@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconProps } from '@types'
+import type { IconProps } from '@types'
 
 const CopyIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     return (
@@ -26,4 +26,4 @@ const CopyIcon: React.FC<IconProps> = ({ size = '1em', color = '#fff' }) => {
     )
 }
 
-export default CopyIcon
+export { CopyIcon }

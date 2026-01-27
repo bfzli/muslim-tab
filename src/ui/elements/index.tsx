@@ -1,5 +1,3 @@
-import Next from '@elements/Next'
-import Copy from '@elements/Copy'
-import Mode from '@elements/Mode'
-
-export { Next, Copy, Mode }
+export { Next } from '@elements/Next'
+export { Copy } from '@elements/Copy'
+export { Mode } from '@elements/Mode'

@@ -6,5 +6,3 @@ export const preloadImage = (imageNumber: number): Promise<void> => {
         img.src = `/backgrounds/${imageNumber}.webp`
     })
 }
-
-export default preloadImage

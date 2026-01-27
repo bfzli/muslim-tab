@@ -52,16 +52,19 @@ export const TimeDisplay = styled.div<{ themeColor?: string }>`
     }
 `
 
-export const TimeDigit = styled.span<{ isChanging: boolean; isSeconds?: boolean }>`
+export const TimeDigit = styled.span<{
+    isChanging: boolean
+    isSeconds?: boolean
+}>`
     display: inline-block;
     min-width: 0.6em;
     text-align: center;
     animation: ${(props) =>
-        props.isChanging
-            ? props.isSeconds
-                ? flipInSeconds
-                : flipIn
-            : 'none'}
+            props.isChanging
+                ? props.isSeconds
+                    ? flipInSeconds
+                    : flipIn
+                : 'none'}
         0.4s ease-out;
     transform-origin: center;
     opacity: ${(props) => (props.isSeconds ? 0.5 : 1)};
@@ -82,7 +85,10 @@ export const DateDisplay = styled.div`
 export const GregorianDate = styled.div<{ themeColor?: string }>`
     font-size: 1rem;
     font-weight: 300;
-    color: ${(props) => (props.themeColor ? props.themeColor + 'dd' : 'rgba(255, 255, 255, 0.8)')};
+    color: ${(props) =>
+        props.themeColor
+            ? props.themeColor + 'dd'
+            : 'rgba(255, 255, 255, 0.8)'};
 
     @media only screen and (max-height: 600px) {
         font-size: 0.9rem;
@@ -96,7 +102,10 @@ export const GregorianDate = styled.div<{ themeColor?: string }>`
 export const HijriDate = styled.div<{ themeColor?: string }>`
     font-size: 0.9rem;
     font-weight: 300;
-    color: ${(props) => (props.themeColor ? props.themeColor + '99' : 'rgba(255, 255, 255, 0.6)')};
+    color: ${(props) =>
+        props.themeColor
+            ? props.themeColor + '99'
+            : 'rgba(255, 255, 255, 0.6)'};
 
     @media only screen and (max-height: 600px) {
         font-size: 0.8rem;
