@@ -8,12 +8,13 @@ interface ContainerProps extends BackgroundProps {
 }
 
 export const Container = styled.section<ContainerProps>`
-    width: ${(props) => (props.isSettingsOpen ? 'calc(100vw - 300px)' : '100vw')};
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding-right: ${(props) => (props.isSettingsOpen ? '300px' : '0')};
     background: ${(props) =>
         props.showPhotos
             ? `url('${props.background}')`
@@ -22,7 +23,7 @@ export const Container = styled.section<ContainerProps>`
     background-size: cover;
     object-fit: cover;
     background-position: center center;
-    transition: width 0.3s ease-out;
+    transition: padding-right 0.3s ease-out;
     position: fixed;
     top: 0;
     left: 0;

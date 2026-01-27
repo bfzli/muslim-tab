@@ -32,23 +32,17 @@ export const ModalBackdrop = styled.div<{ isClosing?: boolean }>`
     pointer-events: none;
 `
 
-export const ModalContainer = styled.div<{ isClosing?: boolean }>`
+export const ModalContainer = styled.div<{ isClosing?: boolean; showPhotos?: boolean }>`
     position: fixed;
     top: 0;
     right: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(40, 40, 50, 0.95) 0%,
-        rgba(30, 30, 38, 0.97) 100%
-    );
-    border-left: 1px solid rgba(255, 255, 255, 0.12);
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    background: rgba(10, 10, 12, ${(props) => props.showPhotos ? '0.90' : '0.95'});
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
     width: 300px;
     height: 100vh;
-    box-shadow:
-        -8px 0 32px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.3);
     animation: ${(props) => (props.isClosing ? slideOut : slideIn)} 0.3s ease-out;
     display: flex;
     flex-direction: column;

@@ -271,6 +271,7 @@ const Settings: React.FC<SettingsProps> = ({
         <ModalContainer
             isClosing={isClosing}
             ref={modalContainerRef}
+            showPhotos={showPhotos}
         >
                 <ModalHeaderSection>
                     <ModalHeader>Settings</ModalHeader>
