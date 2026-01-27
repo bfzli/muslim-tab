@@ -1,0 +1,6 @@
+export { Footer } from '@components/Footer'
+export { Logo } from '@components/Logo'
+export { Content } from '@components/Content'
+export { Bookmarks } from '@components/Bookmarks'
+export { Settings } from '@components/Settings'
+export { SearchBar } from '@components/SearchBar'
