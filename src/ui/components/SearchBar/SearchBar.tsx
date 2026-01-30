@@ -16,9 +16,17 @@ const SearchBar: React.FC<SearchBarProps> = ({ provider, themeColor }) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (query.trim()) {
-            window.location.href = `${currentProvider.url}${encodeURIComponent(
-                query.trim()
-            )}`
+            const useNativeSearch =
+                chrome?.search?.query &&
+                (provider === 'google' || provider === 'brave')
+
+            if (useNativeSearch) {
+                chrome.search.query({ text: query.trim() })
+            } else {
+                window.location.href = `${currentProvider.url}${encodeURIComponent(
+                    query.trim()
+                )}`
+            }
         }
     }
 

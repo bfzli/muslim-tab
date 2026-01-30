@@ -26,6 +26,7 @@ import {
     InitalMode,
     getRandomNumber,
     preloadImage,
+    getDefaultSearchProvider,
     mb_2,
     mb_30,
     mt_2,
@@ -51,7 +52,7 @@ const Content: React.FC = () => {
     })
     const [searchProvider, setSearchProvider] = useState<SearchProvider>(() => {
         const saved = localStorage.getItem('searchProvider')
-        return (saved as SearchProvider) || 'google'
+        return (saved as SearchProvider) || getDefaultSearchProvider()
     })
     const [showClock, setShowClock] = useState<boolean>(() => {
         const saved = localStorage.getItem('showClock')

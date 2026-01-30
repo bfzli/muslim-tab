@@ -12,7 +12,8 @@
     "128": "muslim-tab.png"
   },
   "permissions": [
-    "bookmarks"
+    "bookmarks",
+    "search"
   ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"

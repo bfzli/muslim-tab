@@ -1,4 +1,5 @@
 export { CopyToClipboard } from '@utils/CopyToClipboard'
+export { getDefaultSearchProvider } from '@utils/BrowserDetect'
 export { InitalMode } from '@utils/InitalMode'
 export { ModeSwitcher } from '@utils/ModeSwitcher'
 export { ContentGenerator } from '@utils/ContentGenerator'
