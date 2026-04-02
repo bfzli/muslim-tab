@@ -1,89 +1,22 @@
 {
-  "version": "7.0",
-  "private": true,
+  "name": "super-duper-calculator",
   "type": "module",
-  "dependencies": {
-    "@iconify/react": "^6.0.2",
-    "lucide-react": "^0.263.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.3"
-  },
+  "version": "0.0.1",
   "scripts": {
-    "extension:dev": "vite build --watch --mode development",
-    "extension:build": "vite build",
-    "extension:type-check": "tsc --noEmit",
-    "extension:type-check:watch": "tsc --noEmit --watch",
-    "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,json,css}\""
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "react-hooks"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": [
-        "warn",
-        {
-          "argsIgnorePattern": "^_",
-          "varsIgnorePattern": "^_"
-        }
-      ],
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "off"
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "astro": "^5.0.8",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.3",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@types/chrome": "^0.1.32",
-    "@types/node": "^25.0.5",
-    "@types/react": "^17.0.90",
-    "@types/react-dom": "^17.0.26",
-    "@types/styled-components": "^5.1.36",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "@vitejs/plugin-react": "^4.7.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "prettier": "^3.7.4",
-    "typescript": "^4.9.5",
-    "vite": "^6.4.1",
-    "vite-plugin-static-copy": "^3.1.4",
-    "vite-tsconfig-paths": "^6.0.4"
+    "@types/node": "^22.10.1"
   }
 }
